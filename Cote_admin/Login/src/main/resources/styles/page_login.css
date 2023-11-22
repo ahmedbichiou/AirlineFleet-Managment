@@ -5,3 +5,47 @@
 .mainFxmlClass {
 
 }
+
+
+
+/* buttonStyles.css */
+
+.btn_login {
+   -fx-background-color: #2196F3; /* Button background color */
+    -fx-text-fill: white;          /* Button text color */
+    -fx-font-size: 14px;           /* Button text size */
+    -fx-font-weight: bold;         /* Button text weight */
+    -fx-padding: 10;            /* Button padding */
+    -fx-background-radius: 8px;    /* Rounded corners */
+    -fx-background-insets: 0 0 0 0, 0 0 1 0; /* Elevated effect */
+   
+}
+
+.btn_login:hover {
+    -fx-background-color: #1565C0; /* Button background color on hover */
+}
+
+.btn_login:pressed {
+    -fx-background-color: #0D47A1; /* Button background color when pressed */
+}
+
+.main_rectangle{
+    -fx-fill: rgba(169, 169, 169, 0.2); /* Gray color with low opacity */
+    -fx-stroke: rgba(0, 0, 0, 0.2);      /* Border color with low opacity */
+    -fx-stroke-width: 0.5px;              /* Border width */
+     -fx-arc-width: 10px;                /* Horizontal arc width for rounded corners */
+    -fx-arc-height: 10px;               /* Vertical arc height for rounded corners */
+}
+.btn_creation {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-text-fill: gray;
+    -fx-border-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0;
+}
+
+.btn_creation:hover {
+    -fx-text-fill:  #1565C0;
+}
