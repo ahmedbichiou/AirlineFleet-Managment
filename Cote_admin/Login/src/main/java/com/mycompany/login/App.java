@@ -18,8 +18,7 @@ import javafx.stage.StageStyle;
 public class App extends Application {
 
     private static Scene scene;
-     private static Stage loginStage; 
-     private static Stage create_accountStage;
+  
 
     @Override
      public void start(Stage stage) throws IOException {
@@ -31,17 +30,49 @@ public class App extends Application {
         stage.setTitle("Flight Booking");
         stage.setScene(scene);
         stage.show();
-        loginStage = stage;
+     
     }
 
     public static void main(String[] args) {
         launch();
     }
     
-     public static void openNewScene() throws Exception {
+     public static void openInscrir() throws Exception {
          
          
          FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_Creation_Compte.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+         
+         
+    }
+     public static void openLogin() throws Exception {
+         
+         
+         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_Login.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+         
+         
+    }
+     
+      public static void openConfirmation_inscri() throws Exception {
+         
+         
+         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_confirmation_inscri.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+         
+         
+    }
+      
+       public static void openmenu_principal_admin() throws Exception {
+         
+         
+         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Menu_principal_admin.fxml"));
         Parent newSceneRoot = fxmlLoader.load();
         Parent currentRoot = scene.getRoot();
         scene.setRoot(newSceneRoot);

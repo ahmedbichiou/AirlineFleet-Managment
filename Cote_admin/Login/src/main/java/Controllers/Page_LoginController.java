@@ -6,9 +6,9 @@ import com.mycompany.login.App;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.time.Duration;
+
 import java.util.ResourceBundle;
-import javafx.animation.FadeTransition;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -87,8 +87,13 @@ public class Page_LoginController implements Initializable {
        System.out.println(e.getMessage());
     }
 }
-   public void openNewPage() throws Exception {
-        App.openNewScene();
+  
+   public void openInscrir() throws Exception {
+        App.openInscrir();
+    }
+   
+   public void openmenu_principal_admin() throws Exception {
+        App.openmenu_principal_admin();
     }
    private void hints() 
     {
@@ -100,7 +105,8 @@ public class Page_LoginController implements Initializable {
             btn_login.getStyleClass().add("btn_login");
             main_rectangle.getStyleClass().add("main_rectangle");
             btn_creation.getStyleClass().add("btn_creation"); 
-           
+            nom_login.getStyleClass().add( "text-field-custom");
+            password_login.getStyleClass().add( "text-field-custom");
     }
 }
   

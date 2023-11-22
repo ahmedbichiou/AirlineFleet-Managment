@@ -14,7 +14,7 @@
     </stylesheets>
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="468.0" layoutX="125.0" layoutY="138.0" stroke="#00000039" strokeType="INSIDE" width="358.0" />
-      <TextField  fx:id="nom_inscri" layoutX="173.0" layoutY="261.0" prefHeight="43.0" prefWidth="268.0" />
+      <TextField fx:id="nom_inscri" layoutX="173.0" layoutY="261.0" prefHeight="43.0" prefWidth="268.0" />
       <TextField fx:id="password_inscri" layoutX="173.0" layoutY="322.0" prefHeight="43.0" prefWidth="268.0" />
       <TextField fx:id="pays_inscri" layoutX="173.0" layoutY="379.0" prefHeight="43.0" prefWidth="268.0" />
       <TextField fx:id="annee_inscri" layoutX="173.0" layoutY="436.0" prefHeight="43.0" prefWidth="268.0" />
@@ -27,7 +27,10 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Text>
-      <Button layoutX="173.0" layoutY="500.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="créer compte" />
-      <Button layoutX="315.0" layoutY="500.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="125.0" text="Deja inscrit" />
+      <Button fx:id="btn_inscri" layoutX="173.0" layoutY="500.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="118.0" text="Créer compte" onAction="#openConfirmation_inscri">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnback_inscri" layoutX="307.0" layoutY="500.0" mnemonicParsing="false" onAction="#openLogin" prefHeight="43.0" prefWidth="125.0" text="Deja inscrit?" />
    </children>
 </AnchorPane>

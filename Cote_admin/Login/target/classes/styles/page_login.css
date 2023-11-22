@@ -29,13 +29,7 @@
     -fx-background-color: #0D47A1; /* Button background color when pressed */
 }
 
-.main_rectangle{
-    -fx-fill: rgba(169, 169, 169, 0.2); /* Gray color with low opacity */
-    -fx-stroke: rgba(0, 0, 0, 0.2);      /* Border color with low opacity */
-    -fx-stroke-width: 0.5px;              /* Border width */
-     -fx-arc-width: 10px;                /* Horizontal arc width for rounded corners */
-    -fx-arc-height: 10px;               /* Vertical arc height for rounded corners */
-}
+
 .btn_creation {
     -fx-background-color: transparent;
     -fx-border-width: 0;
@@ -49,3 +43,18 @@
 .btn_creation:hover {
     -fx-text-fill:  #1565C0;
 }
+
+
+.text-field-custom {
+    -fx-background-color: transparent;
+    -fx-border-color: #000099;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 2; /* Set the radius according to your preference */
+}
+
+.text-field-custom:focused {
+    -fx-border-color: orange;
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+}
+
