@@ -1,6 +1,7 @@
 com\mycompany\login\Page_LoginController.class
 com\mycompany\login\App.class
 module-info.class
+Controllers\Page_ajout_volController.class
 Controllers\Page_confirmation_inscriController.class
 Controllers\Page_LoginController.class
 Controllers\Page_ajout_avionController.class
