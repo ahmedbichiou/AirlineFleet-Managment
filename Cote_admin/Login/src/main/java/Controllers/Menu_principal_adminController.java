@@ -95,5 +95,10 @@ public class Menu_principal_adminController implements Initializable {
         
         
     }
+    public void open_ajout_vol() throws Exception {
+        App.open_ajout_vol();
+        
+        
+    }
     
 }

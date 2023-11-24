@@ -91,5 +91,16 @@ public class App extends Application {
          
          
     }
+        public static void open_ajout_vol() throws Exception {
+         
+         
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_ajout_vol.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+         
+         
+    }
+        
 
 }

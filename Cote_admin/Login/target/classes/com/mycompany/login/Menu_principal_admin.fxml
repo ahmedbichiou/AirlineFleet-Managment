@@ -33,7 +33,7 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <Button fx:id="vol_ajouter" layoutX="17.0" layoutY="279.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Créer vol" />
+      <Button fx:id="vol_ajouter" layoutX="17.0" layoutY="279.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Créer vol" onAction="#open_ajout_vol"/>
       <Button fx:id="vol_annuler" layoutX="161.0" layoutY="338.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="129.0" styleClass="button_under" text="Annuler vol" />
       <Button fx:id="vol_modifier" layoutX="19.0" layoutY="338.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="135.0" styleClass="button_under" text="Modifier vol" />
       <Button fx:id="vol_afficher" layoutX="17.0" layoutY="402.0" mnemonicParsing="false" opacity="0.76" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Afficher tous les vols" />
