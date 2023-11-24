@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Page_ajout_avionController">
+    <stylesheets>
+        <URL value="@/styles/page_ajout_avion.css" />
+    </stylesheets>
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d4d44c" height="681.0" layoutX="3.0" layoutY="14.0" stroke="TRANSPARENT" strokeType="INSIDE" width="592.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1d1d1b2" height="187.0" layoutX="14.0" layoutY="422.0" stroke="TRANSPARENT" strokeType="INSIDE" width="274.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1d1d1b2" height="187.0" layoutX="312.0" layoutY="422.0" stroke="TRANSPARENT" strokeType="INSIDE" width="274.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1d1d1b2" height="187.0" layoutX="312.0" layoutY="218.0" stroke="TRANSPARENT" strokeType="INSIDE" width="274.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1d1d1b2" height="187.0" layoutX="13.0" layoutY="218.0" stroke="TRANSPARENT" strokeType="INSIDE" width="274.0" />
+      <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="328.0" layoutY="575.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+            <Image url="@/Images/Icons/avion_icon.png" />
+        </image>
+    </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="230.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+            <Image url="@/Images/Icons/chaisse_icon.png" />
+        </image>
+         </ImageView>
+      <Circle fill="DODGERBLUE" layoutX="167.0" layoutY="667.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#1f93ff2b" layoutX="418.0" layoutY="667.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#1f93ff1f" layoutX="292.0" layoutY="667.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Line endX="77.0" layoutX="196.0" layoutY="667.0" startX="-9.0" />
+      <Line endX="77.0" layoutX="321.0" layoutY="667.0" startX="-9.0" />
+      <Text layoutX="160.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="285.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="411.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Text>
+      <Text layoutX="106.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir Avion">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+      </Text>
+      <Text layoutX="60.0" layoutY="394.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Airbus A330" wrappingWidth="154.0283203125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="33.0" fitWidth="22.0" layoutX="533.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
+             <image>
+            <Image url="@/Images/Icons/chaisse_icon.png" />
+        </image>
+    </ImageView>
+      <Text layoutX="60.0" layoutY="599.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Airbus A320">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      
+      <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="26.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+        <image>
+            <Image url="@/Images/Icons/avion_icon.png" />
+        </image>
+    </ImageView>
+      <Text layoutX="263.0" layoutY="597.0" strokeType="OUTSIDE" strokeWidth="0.0" text="170" />
+      <Button layoutX="37.0" layoutY="96.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="227.0" styleClass="Airbus_icon" text="Airbus" />
+      <Button layoutX="342.0" layoutY="96.0" mnemonicParsing="false" prefHeight="110.0" prefWidth="214.0" styleClass="Boeing_icon" text="Boeing" />
+      <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="26.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+            <Image url="@/Images/Icons/avion_icon.png" />
+        </image>
+    </ImageView>
+      <Text layoutX="263.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="260" />
+      <Text layoutX="360.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boeing 737" wrappingWidth="154.0283203125">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="360.0" layoutY="599.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Boeing 747">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="557.0" layoutY="393.0" strokeType="OUTSIDE" strokeWidth="0.0" text="215" />
+      <Text layoutX="556.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="467" />
+      <ImageView fitHeight="33.0" fitWidth="22.0" layoutX="533.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+            <Image url="@/Images/Icons/chaisse_icon.png" />
+        </image>
+    </ImageView>
+      <ImageView fx:id="image_avion_1" fitHeight="136.0" fitWidth="255.0" layoutX="24.0" layoutY="244.0" pickOnBounds="true" preserveRatio="true">
+              <image>
+            <Image url="@/Images/Icons/Airbus_A330.png" />
+        </image>
+            </ImageView>
+      <ImageView fx:id="image_avion_2" fitHeight="136.0" fitWidth="255.0" layoutX="21.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+       <image>
+            <Image url="@/Images/Icons/Airbus_A320.png" />
+        </image>
+            </ImageView>
+      <ImageView fx:id="image_avion_3" fitHeight="136.0" fitWidth="255.0" layoutX="311.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+            <Image url="@/Images/Icons/Boeing_737.png" />
+        </image>
+    </ImageView>
+      <ImageView fx:id="image_avion_4" fitHeight="136.0" fitWidth="255.0" layoutX="322.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+            <Image url="@/Images/Icons/Boeing_747.png" />
+        </image>
+    </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="235.0" layoutY="576.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@/Images/Icons/chaisse_icon.png" />
+        </image>
+    </ImageView> 
+      <Button fx:id="A330_selected" layoutX="14.0" layoutY="218.0" mnemonicParsing="false" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
+      <Button fx:id="A340_selected" layoutX="13.0" layoutY="422.0" mnemonicParsing="false" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
+      <Button fx:id="B737_selected" layoutX="312.0" layoutY="218.0" mnemonicParsing="false" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
+      <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="328.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+            <Image url="@/Images/Icons/avion_icon.png" />
+        </image>
+    </ImageView>
+      <Button fx:id="B747_selected" layoutX="313.0" layoutY="422.0" mnemonicParsing="false" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
+      <Text fill="#00000099" layoutX="105.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etape 1" />
+      <ImageView fx:id="arrow" fitHeight="72.0" fitWidth="120.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+            <Image url="@/Images/Icons/arrow.png" />
+        </image>
+    </ImageView>
+   </children>
+</AnchorPane>

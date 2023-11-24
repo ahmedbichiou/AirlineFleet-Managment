@@ -79,5 +79,17 @@ public class App extends Application {
          
          
     }
+       
+       //MENUS AVIONS
+        public static void open_ajout_avion() throws Exception {
+         
+         
+         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_ajout_avion.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+         
+         
+    }
 
 }

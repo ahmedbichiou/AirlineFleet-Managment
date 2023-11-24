@@ -13,7 +13,7 @@
         <URL value="@/styles/page_confirmation_inscri.css" />
     </stylesheets>
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ececec" height="578.0" layoutX="70.0" layoutY="59.0" stroke="#0000000f" strokeType="INSIDE" width="460.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f4" height="578.0" layoutX="70.0" layoutY="59.0" stroke="#0000000f" strokeType="INSIDE" width="460.0" />
       <ImageView fx:id="img_confirmation" fitHeight="280.0" fitWidth="338.0" layoutX="132.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true" />
       <Text layoutX="99.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compte de Compagnie aérienne créer">
          <font>

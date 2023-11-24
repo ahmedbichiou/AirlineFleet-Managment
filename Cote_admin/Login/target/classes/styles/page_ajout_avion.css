@@ -1,0 +1,44 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.Airbus_icon{
+    -fx-background-image: url('/Images/Icons/Airbus_icon.png');
+    -fx-background-size: cover; /* Adjust as needed */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-text-fill: transparent; /* Make text transparent to see the image */
+    -fx-background-color: transparent; /* Make background transparent */
+    
+}
+
+
+.Boeing_icon {
+    -fx-background-image: url('/Images/Icons/Boeing_icon.png');
+    -fx-background-size: contain;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-text-fill: transparent;
+    -fx-background-color: transparent;
+   
+}
+
+.transparent-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-border-color: gray; /* Border color, adjust as needed */
+    -fx-border-width: 2; /* Border width, adjust as needed */
+    -fx-border-radius: 5; /* Border radius, adjust as needed */
+}
+.transparent-button:pressed {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: transparent;
+      -fx-border-color: blue; /* Border color, adjust as needed */
+    -fx-border-width: 3; /* Border width, adjust as needed */
+    -fx-border-radius: 10; /* Border radius, adjust as needed */
+}
