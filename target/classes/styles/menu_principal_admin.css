@@ -1,0 +1,43 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.avion_settings{
+    
+    -fx-arc-width: 20; /* Adjust the corner radius as needed */
+    -fx-arc-height: 20; /* Adjust the corner radius as needed */
+    -fx-border-color: gray;
+    -fx-border-width: 0.1; /* You can adjust the width of the border */
+}
+
+.button_under {
+    -fx-background-color: orange; /* Button background color */
+    -fx-text-fill: white;          /* Button text color */
+    -fx-font-size: 14px;           /* Button text size */
+    -fx-font-weight: bold;         /* Button text weight */
+    -fx-padding: 10;            /* Button padding */
+    -fx-background-radius: 15px;    /* Rounded corners */
+    -fx-background-insets: 0 0 0 0, 0 0 10 0; /* Elevated effect */
+   
+}
+
+.button_under:hover {
+    -fx-background-color: #0099ff; /* Button background color on hover */
+    
+}
+
+.button_under:pressed {
+    -fx-background-color: #0D47A1; /* Button background color when pressed */
+}
+
+.image-button {
+    -fx-background-image: url('/Images/back.png');
+    -fx-background-size: cover; /* Adjust as needed */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-text-fill: transparent; /* Make text transparent to see the image */
+    -fx-background-color: transparent; /* Make background transparent */
+}
