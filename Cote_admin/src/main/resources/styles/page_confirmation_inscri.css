@@ -1,0 +1,28 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+
+ 
+
+.btn_menu {
+   -fx-background-color: #2196F3; /* Button background color */
+    -fx-text-fill: white;          /* Button text color */
+    -fx-font-size: 14px;           /* Button text size */
+    -fx-font-weight: bold;         /* Button text weight */
+    -fx-padding: 10;            /* Button padding */
+    -fx-background-radius: 8px;    /* Rounded corners */
+    -fx-background-insets: 0 0 0 0, 0 0 1 0; /* Elevated effect */
+   
+}
+
+.btn_menu:hover {
+    -fx-background-color: #1565C0; /* Button background color on hover */
+}
+
+.btn_menu:pressed {
+    -fx-background-color: #0D47A1; /* Button background color when pressed */
+}
