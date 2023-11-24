@@ -1,8 +1,10 @@
+com\mycompany\login\Page_LoginController.class
 com\mycompany\login\App.class
 module-info.class
 Controllers\Page_confirmation_inscriController.class
 Controllers\Page_LoginController.class
 Controllers\Page_ajout_avionController.class
 Controllers\Page_Creation_CompteController.class
+com\mycompany\login\Compagnie_aerienne.class
 Classes\Compagnie_aerienne.class
 Controllers\Menu_principal_adminController.class

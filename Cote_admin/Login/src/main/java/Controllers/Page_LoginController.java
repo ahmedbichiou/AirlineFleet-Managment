@@ -72,7 +72,7 @@ public class Page_LoginController implements Initializable {
        Image_User.setOpacity(0); 
        Image_circle.setOpacity(0);  
         }
-    }
+    } //switch
     
     
   //Utilities  
