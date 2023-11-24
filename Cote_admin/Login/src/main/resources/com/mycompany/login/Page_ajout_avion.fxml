@@ -16,7 +16,7 @@
         <URL value="@/styles/page_ajout_avion.css" />
     </stylesheets>
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d4d44c" height="681.0" layoutX="3.0" layoutY="14.0" stroke="TRANSPARENT" strokeType="INSIDE" width="592.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d4d44c" height="617.0" layoutX="3.0" layoutY="14.0" stroke="TRANSPARENT" strokeType="INSIDE" width="592.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1d1d1b2" height="187.0" layoutX="14.0" layoutY="422.0" stroke="TRANSPARENT" strokeType="INSIDE" width="274.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1d1d1b2" height="187.0" layoutX="312.0" layoutY="422.0" stroke="TRANSPARENT" strokeType="INSIDE" width="274.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d1d1d1b2" height="187.0" layoutX="312.0" layoutY="218.0" stroke="TRANSPARENT" strokeType="INSIDE" width="274.0" />
@@ -128,15 +128,15 @@
             <Image url="@/Images/Icons/chaisse_icon.png" />
         </image>
     </ImageView> 
-      <Button fx:id="A330_selected" layoutX="14.0" layoutY="218.0" mnemonicParsing="false" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
-      <Button fx:id="A340_selected" layoutX="13.0" layoutY="422.0" mnemonicParsing="false" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
-      <Button fx:id="B737_selected" layoutX="312.0" layoutY="218.0" mnemonicParsing="false" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
+      <Button fx:id="A330_selected" layoutX="14.0" layoutY="218.0" mnemonicParsing="false" onAction="#A330_selected" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
+      <Button fx:id="A340_selected" layoutX="13.0" layoutY="422.0" mnemonicParsing="false" onAction="#A340_selected" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
+      <Button fx:id="B737_selected" layoutX="312.0" layoutY="218.0" mnemonicParsing="false" onAction="#B737_selected" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
       <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="328.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
             <image>
             <Image url="@/Images/Icons/avion_icon.png" />
         </image>
     </ImageView>
-      <Button fx:id="B747_selected" layoutX="313.0" layoutY="422.0" mnemonicParsing="false" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
+      <Button fx:id="B747_selected" layoutX="313.0" layoutY="422.0" mnemonicParsing="false" onAction="#B747_selected" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
       <Text fill="#00000099" layoutX="105.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etape 1" />
       <ImageView fx:id="arrow" fitHeight="72.0" fitWidth="120.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
             <image>
