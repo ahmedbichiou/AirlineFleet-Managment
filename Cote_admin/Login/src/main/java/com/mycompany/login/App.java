@@ -102,6 +102,19 @@ public class App extends Application {
          
          
     }
+        public static void addFlight() throws Exception {
+
+    }
+         public static void handleBack() throws Exception {
+         
+         
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Menu_principal_admin.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+         
+         
+    }
         
          public static void open_ajout_avion_form(String avion_selected) throws Exception {
     FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_ajout_avion_form.fxml"));
