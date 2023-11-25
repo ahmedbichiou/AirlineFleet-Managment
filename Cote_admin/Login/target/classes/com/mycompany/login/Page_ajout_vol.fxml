@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?> 
+<?import javafx.geometry.*?>
+<?import java.net.URL?>
+<?import javafx.scene.image.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Page_ajout_volController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Page_ajout_volController" styleClass="mainFxmlClass" prefHeight="700.0" prefWidth="600.0">
     <stylesheets>
-        <URL value="@/styles/page_ajout_vol.css"/>
+        <URL value="@/styles/page_ajout_vol.css" />
     </stylesheets>
+        <Button layoutY="12.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="73.0" styleClass="image-button" onAction="#handleBack" />
+        <ImageView fx:id="Image_utilisateur" fitHeight="120.0" fitWidth="159.0" layoutX="115.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+    <VBox spacing="15" alignment="TOP_CENTER" styleClass="form-container" AnchorPane.bottomAnchor="100" AnchorPane.leftAnchor="100" AnchorPane.rightAnchor="100" AnchorPane.topAnchor="100">
+        <Label text="Ajouter Vol" styleClass="title-label" />
+        <TextField fx:id="txtFlightNumber" promptText="Numéro de vol" styleClass="text-field"/>
+        <TextField fx:id="txtDepartureCity" promptText="Ville de départ" styleClass="text-field"/>
+        <TextField fx:id="txtArrivalCity" promptText="Ville d'arrivée" styleClass="text-field"/>
+        <DatePicker fx:id="datePickerDeparture" promptText="Date de départ" styleClass="date-picker"/>
+        <DatePicker fx:id="datePickerArrival" promptText="Date d'arrivée" styleClass="date-picker"/>
+
+        <Button text="Ajouter Vol" onAction="#addFlight" styleClass="action-button"/>
+    </VBox>
 </AnchorPane>
