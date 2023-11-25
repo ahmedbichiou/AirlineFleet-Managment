@@ -1,0 +1,77 @@
+/* Main application container styles */
+.mainFxmlClass {
+  -fx-background-color: #f4f4f4; /* This matches the grey background */
+}
+
+/* Back button styling */
+.back-button {
+  -fx-background-radius: 15;
+  -fx-min-width: 30px;
+  -fx-min-height: 30px;
+  -fx-max-width: 30px;
+  -fx-max-height: 30px;
+}
+
+/* General button styling */
+.button {
+  -fx-background-color: #ffcc00; /* Orange background for buttons */
+  -fx-text-fill: white;
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-border-radius: 5;
+  -fx-background-radius: 5;
+}
+
+.button:hover {
+  -fx-background-color: #e6b800; /* Slightly darker orange for hover effect */
+}
+
+/* Title label styling */
+.title-label {
+  -fx-font-size: 20px;
+  -fx-font-weight: bold;
+  -fx-text-fill: #333; /* Dark grey color for text */
+  -fx-padding: 20px;
+}
+
+/* Form container styling */
+.form-container {
+  -fx-background-color: #ffffff; /* White background */
+  -fx-background-radius: 10;
+  -fx-border-color: #cccccc; /* Light grey border */
+  -fx-border-width: 1;
+  -fx-border-radius: 10;
+  -fx-padding: 20px;
+  -fx-spacing: 15px; /* Spacing between form elements */
+}
+
+/* Text field styling */
+.text-field {
+  -fx-pref-width: 400;
+  -fx-pref-height: 35;
+  -fx-background-color: #ffffff; /* White background */
+  -fx-border-color: #cccccc; /* Light grey border */
+  -fx-border-width: 1;
+  -fx-border-radius: 5;
+  -fx-padding: 4 8;
+}
+
+/* Focused text field styling */
+.text-field:focused {
+  -fx-border-color: #ffcc00; /* Orange border for focused text field */
+}
+
+/* Confirm button styling to match the application's button theme */
+.confirm-button {
+  -fx-background-color: #ffcc00; /* Orange color for the button */
+  -fx-text-fill: #ffffff; /* White text */
+  -fx-pref-width: 400;
+  -fx-pref-height: 40;
+  -fx-font-weight: bold;
+  -fx-font-size: 14px;
+  -fx-border-radius: 5; /* rounded corners */
+}
+
+.confirm-button:hover {
+  -fx-background-color: #e6b800; /* lighter shade of orange for hover */
+}

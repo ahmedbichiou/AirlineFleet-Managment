@@ -100,5 +100,15 @@ public class Menu_principal_adminController implements Initializable {
         
         
     }
+    public void open_modifier_vol() throws Exception {
+        App.open_modifier_vol();
+        
+        
+    }
+    public void open_annuler_vol() throws Exception {
+        App.open_annuler_vol();
+        
+        
+    }
     
 }

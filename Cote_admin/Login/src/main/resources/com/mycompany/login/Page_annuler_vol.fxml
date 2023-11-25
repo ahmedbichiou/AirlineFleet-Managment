@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Page_annuler_volController" styleClass="mainFxmlClass" prefHeight="700.0" prefWidth="600.0">
+    <stylesheets>
+        <URL value="@/styles/page_annuler_vol.css" />
+    </stylesheets>
+    <VBox spacing="20" alignment="CENTER">
+        <Button fx:id="backButton" onAction="#handleBack" styleClass="back-button">
+            <graphic>
+                <ImageView fitHeight="30" fitWidth="30" preserveRatio="true">
+                    <Image url="@/images/back.png"/> <!-- Update the icon path -->
+                </ImageView>
+            </graphic>
+        </Button>
+        <Label text="Annuler Vol" styleClass="title-label"/>
+        <TextField fx:id="txtFlightNumber" promptText="Numéro de vol" styleClass="text-field"/>
+        <Button text="Confirmer" onAction="#confirmCancellation" styleClass="confirm-button"/>
+    </VBox>
+</StackPane>

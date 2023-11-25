@@ -105,6 +105,27 @@ public class App extends Application {
          
          
     }
+    //added code here jihed
+    public static void open_modifier_vol() throws Exception {
+         
+         
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_modifier_vol.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+         
+         
+    }
+    public static void open_annuler_vol() throws Exception {
+         
+         
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_annuler_vol.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+         
+         
+    }
         
          
                   
@@ -136,10 +157,15 @@ public class App extends Application {
 
     // Call the setup method explicitly
     controller.setup();
-}
-public static void addFlight() throws Exception {
+}       
+        //added code here jihed
+        public static void addFlight() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Menu_principal_admin.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
 
-    }
+        }
          public static void handleBack() throws Exception {
 
 
@@ -149,7 +175,7 @@ public static void addFlight() throws Exception {
         scene.setRoot(newSceneRoot);
 
 
-    }
+        }
         
 
 }
