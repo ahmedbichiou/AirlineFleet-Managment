@@ -25,7 +25,7 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <Button fx:id="avion_ajouter" layoutX="313.0" layoutY="279.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="273.0" text="Ajouter avion" onAction="#open_ajout_avion" />
+      <Button fx:id="avion_ajouter" layoutX="313.0" layoutY="279.0" mnemonicParsing="false" onAction="#open_ajout_avion" prefHeight="47.0" prefWidth="273.0" text="Ajouter avion" />
       <Button fx:id="avion_supprimer" layoutX="313.0" layoutY="338.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="273.0" text="Supprimer avion" />
       <Button fx:id="avion_afficher" layoutX="313.0" layoutY="402.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="273.0" text="Afficher avions" />
       <Text layoutX="61.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des vols" wrappingWidth="185.0">
@@ -33,13 +33,13 @@
             <Font size="22.0" />
          </font>
       </Text>
-      <Button fx:id="vol_ajouter" layoutX="17.0" layoutY="279.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Créer vol" onAction="#open_ajout_vol"/>
-      <Button fx:id="vol_annuler" layoutX="161.0" layoutY="338.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="129.0" styleClass="button_under" text="Annuler vol" />
-      <Button fx:id="vol_modifier" layoutX="19.0" layoutY="338.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="135.0" styleClass="button_under" text="Modifier vol" />
+      <Button fx:id="vol_ajouter" layoutX="17.0" layoutY="279.0" mnemonicParsing="false" onAction="#open_ajout_vol" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Créer vol" />
+      <Button fx:id="vol_annuler" layoutX="161.0" layoutY="338.0" mnemonicParsing="false" onAction="#open_annuler_vol" prefHeight="47.0" prefWidth="129.0" styleClass="button_under" text="Annuler vol" />
+      <Button fx:id="vol_modifier" layoutX="19.0" layoutY="338.0" mnemonicParsing="false" onAction="#open_modifier_vol" prefHeight="47.0" prefWidth="135.0" styleClass="button_under" text="Modifier vol" />
       <Button fx:id="vol_afficher" layoutX="17.0" layoutY="402.0" mnemonicParsing="false" opacity="0.76" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Afficher tous les vols" />
-      <Circle fill="#1f93ff00" layoutX="194.0" layoutY="95.0" radius="83.0" stroke="#0d0d0d" strokeType="INSIDE" strokeWidth="0.2" />
-      <Button layoutY="12.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="73.0" styleClass="image-button" onAction="#openLogin" />
-      <ImageView fx:id="Image_utilisateur" fitHeight="120.0" fitWidth="159.0" layoutX="115.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
+      <Circle fill="#1f93ff00" layoutX="185.0" layoutY="100.0" radius="85.0" stroke="#0d0d0d" strokeType="INSIDE" strokeWidth="0.2" />
+      <Button layoutY="12.0" mnemonicParsing="false" onAction="#openLogin" prefHeight="47.0" prefWidth="73.0" styleClass="image-button" />
+      <ImageView fx:id="Image_utilisateur" fitHeight="118.0" fitWidth="110.0" layoutX="130.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
       <Text layoutX="290.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue" wrappingWidth="159.13671875">
          <font>
             <Font name="System Bold" size="29.0" />

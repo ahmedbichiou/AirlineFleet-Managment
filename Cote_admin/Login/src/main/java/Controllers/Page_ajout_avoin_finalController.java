@@ -15,7 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
-
+import Controllers.Page_LoginController;
 /**
  * FXML Controller class
  *
@@ -119,7 +119,16 @@ public void showImage(String img) {
 }
   public void openmenu_principal_admin() throws Exception
       {
-          App.openmenu_principal_admin();
+          
+       try {
+    Page_LoginController.getCompte_ouvert().ajouterAvion(avion_selected.getReference(), avion_selected);
+    App.openmenu_principal_admin();
+} catch (Exception e) {
+    
+    System.err.println("An error occurred: " + e.getMessage());
+
+}
+          
       }
      public void open_ajout_avion_form() throws Exception
       {

@@ -53,7 +53,7 @@
 }
 
 .action-button {
-  -fx-background-color: #ffcc00; /* yellow color for the button */
+  -fx-background-color: orange; /* yellow color for the button */
   -fx-text-fill: #ffffff; /* white text */
   -fx-pref-width: 400;
   -fx-pref-height: 40;
@@ -63,7 +63,7 @@
 }
 
 .action-button:hover {
-  -fx-background-color: #3498db; /* Blue color for button hover */
+  -fx-background-color: #0099ff;
 }
 
 .image-button {
@@ -83,5 +83,19 @@
     /* You may need to set a specific size for your images */
     -fx-fit-height: 50; /* Adjust as necessary */
     -fx-fit-width: 50;  /* Adjust as necessary */
+}
+
+.combo-box {
+    -fx-pref-width: 400;
+    -fx-pref-height: 35;
+    -fx-background-color: #ffffff; /* white background */
+    -fx-border-color: #D3D3D3; /* light grey border */
+    -fx-border-width: 1; /* border width */
+    -fx-border-radius: 5;
+    -fx-padding: 4 8; /* padding inside combo box */
+}
+
+.combo-box:hover {
+    -fx-background-color: #0099ff;
 }
 

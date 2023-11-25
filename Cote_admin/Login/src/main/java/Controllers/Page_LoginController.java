@@ -3,6 +3,7 @@ package Controllers;
 
 
 import com.mycompany.login.App;
+import Classes.Compagnie_aerienne;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
@@ -26,9 +27,11 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Page_LoginController implements Initializable {
-
+    public static Compagnie_aerienne compte_ouvert;
     @FXML
     private ImageView logo_notre_entreprise;
+
+   
     @FXML
     private TextField nom_login;
     @FXML
@@ -40,7 +43,7 @@ public class Page_LoginController implements Initializable {
     @FXML
     private Button btn_creation;
     @FXML
-    private Text login_label;
+    private Text Error_text;
     @FXML
     private ImageView Image_User;
     @FXML
@@ -56,23 +59,55 @@ public class Page_LoginController implements Initializable {
     public  void image_username()
     {
         
-        if(nom_login.getText().toString().equals("Tunisair"))
+      switch (nom_login.getText().toString()) {
+    case "Tunisair":
+        if(App.searchCompagnieByNom("Tunisair") != null)
         {
-
-       logo_notre_entreprise.setOpacity(0);
-       Image image = new Image("Images/Tunisair.png");
-       Image_User.setImage(image);
-       Image_circle.setOpacity(0.5);  
-
-    
+        logo_notre_entreprise.setOpacity(0);
+        Image imageTunisair = new Image("Images/Tunisair.png");
+        Image_User.setImage(imageTunisair);
+        Image_circle.setOpacity(0.5);
         }
-        else
+       
+        break;
+
+    case "AirFrance":
+        if(App.searchCompagnieByNom("AirFrance") != null)
         {
-       logo_notre_entreprise.setOpacity(1);
-       Image_User.setOpacity(0); 
-       Image_circle.setOpacity(0);  
+        logo_notre_entreprise.setOpacity(0);
+        Image imageAirFrance = new Image("Images/Airlines/AirFrance.png");
+        Image_User.setImage(imageAirFrance);
+        Image_circle.setOpacity(0.5);
         }
-    } //switch
+        break;
+
+    case "Transavia":
+        if(App.searchCompagnieByNom("Transavia") != null)
+        {
+        logo_notre_entreprise.setOpacity(0);
+        Image imageTransavia = new Image("Images/Airlines/Transavia.png");
+        Image_User.setImage(imageTransavia);
+        Image_circle.setOpacity(0.5);
+        }
+        break;
+
+    case "TurkishAirlines":
+        if(App.searchCompagnieByNom("TurkishAirlines") != null)
+        {
+        logo_notre_entreprise.setOpacity(0);
+        Image imageTurkishAirlines = new Image("Images/Airlines/TurkishAirlines.png");
+        Image_User.setImage(imageTurkishAirlines);
+        Image_circle.setOpacity(0.5);
+        }
+        break;
+
+    default:
+        logo_notre_entreprise.setOpacity(1);
+        Image_User.setOpacity(0);
+        Image_circle.setOpacity(0);
+        break;
+}
+    }
     
     
   //Utilities  
@@ -92,8 +127,31 @@ public class Page_LoginController implements Initializable {
         App.openInscrir();
     }
    
-   public void openmenu_principal_admin() throws Exception {
-        App.openmenu_principal_admin();
+    public   void openmenu_principal_admin() throws Exception {
+       
+       try {
+           
+          
+           if(App.searchCompagnieByNom(nom_login.getText().toString())!= null)
+                   {
+                      if (App.searchCompagnieByNom(nom_login.getText().toString()).getmot_pass().equals(password_login.getText())) {
+                                    
+                                    compte_ouvert =App.searchCompagnieByNom(nom_login.getText().toString());
+                                     App.openmenu_principal_admin();
+                    } else {
+                                    
+                                    Error_text.setText("Mot de pass invalide");
+                    } 
+                   }
+           else
+           {
+           Error_text.setText("Compte invalide");  
+           }
+   
+} catch (Exception e) {
+    System.err.println("An error occurred: " + e.getMessage());
+}
+       
     }
    private void hints() 
     {
@@ -107,6 +165,14 @@ public class Page_LoginController implements Initializable {
             btn_creation.getStyleClass().add("btn_creation"); 
             nom_login.getStyleClass().add( "text-field-custom");
             password_login.getStyleClass().add( "text-field-custom");
+    }
+    
+     public static Compagnie_aerienne getCompte_ouvert() {
+        return compte_ouvert;
+    }
+
+    public void setCompte_ouvert(Compagnie_aerienne compte_ouvert) {
+        this.compte_ouvert = compte_ouvert;
     }
 }
   
