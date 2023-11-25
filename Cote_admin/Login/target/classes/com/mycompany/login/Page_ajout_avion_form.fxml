@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
@@ -9,25 +11,24 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.image.Image?>
 
 <AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Page_ajout_avion_formController">
     <stylesheets>
         <URL value="@/styles/page_ajout_avion_form.css" />
     </stylesheets>
    <children>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d4d44c" height="339.0" layoutX="92.0" layoutY="183.0" stroke="#ab9f9f" strokeType="INSIDE" styleClass="main_rectange" width="429.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d4d44c" height="229.0" layoutX="92.0" layoutY="183.0" stroke="#ab9f9f" strokeType="INSIDE" styleClass="main_rectange" width="429.0" />
       <Circle fill="DODGERBLUE" layoutX="300.0" layoutY="666.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="DODGERBLUE" layoutX="175.0" layoutY="667.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#1f93ff2b" layoutX="426.0" layoutY="667.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
       <Line endX="77.0" layoutX="204.0" layoutY="667.0" startX="-9.0" stroke="#0511ff" />
       <Line endX="77.0" layoutX="329.0" layoutY="667.0" startX="-9.0" />
-      <Text layoutX="168.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Text fill="WHITE" layoutX="168.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="293.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
+      <Text fill="WHITE" layoutX="293.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
@@ -37,22 +38,19 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <TextField fx:id="nom_inscri" layoutX="184.0" layoutY="430.0" prefHeight="43.0" prefWidth="268.0" styleClass="text-field-custom" />
-      <Text layoutX="105.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir Reference">
+      <TextField fx:id="avion_reference" layoutX="113.0" layoutY="329.0" prefHeight="43.0" prefWidth="268.0" styleClass="text-field-custom" />
+      <Text fill="ORANGE" layoutX="105.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir Reference">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
       </Text>
       <Text fill="#00000099" layoutX="105.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etape 2" />
-      <Text layoutX="133.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Avion Choisi" wrappingWidth="156.13671875">
-         <font>
-            <Font size="23.0" />
-         </font>
-      </Text>
-      <ImageView fx:id="avion_icon" fitHeight="78.0" fitWidth="96.0" layoutX="156.0" layoutY="340.0" pickOnBounds="true" preserveRatio="true" >
-            <image>
+      <ImageView fx:id="avion_icon" fitHeight="78.0" fitWidth="96.0" layoutX="397.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true">
+          <image>
             <Image url="@/Images/Icons/avion_icon.png" />
         </image>
     </ImageView>
+      <Button layoutX="397.0" layoutY="329.0" mnemonicParsing="false" onAction="#etape2" prefHeight="43.0" prefWidth="109.0" styleClass=" btn_login" text="Confirmer" />
+      <Button layoutX="143.0" layoutY="644.0" mnemonicParsing="false" onAction="#open_Ajout_avion" prefHeight="43.0" prefWidth="69.0" styleClass="transparent-button" text="" />
    </children>
 </AnchorPane>

@@ -1,6 +1,8 @@
 package com.mycompany.login;
 
+import Classes.Avion;
 import Controllers.Page_ajout_avion_formController;
+import Controllers.Page_ajout_avoin_finalController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -92,6 +94,7 @@ public class App extends Application {
          
          
     }
+        
         public static void open_ajout_vol() throws Exception {
          
          
@@ -103,7 +106,24 @@ public class App extends Application {
          
     }
         
-         public static void open_ajout_avion_form(String avion_selected) throws Exception {
+         
+                  
+    public static void open_Ajout_avion_final(Avion avion_selected) throws Exception {
+         
+         
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_ajout_avoin_final.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Page_ajout_avoin_finalController controller = fxmlLoader.getController();
+        controller.setAvion_selected(avion_selected);
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+        controller.setup();
+         
+         
+    }
+    
+        
+         public static void open_ajout_avion_form(Avion avion_selected) throws Exception {
     FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_ajout_avion_form.fxml"));
     Parent newSceneRoot = fxmlLoader.load();
 

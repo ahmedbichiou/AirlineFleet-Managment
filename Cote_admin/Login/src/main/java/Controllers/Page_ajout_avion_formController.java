@@ -4,9 +4,13 @@
  */
 package Controllers;
 
+import Classes.Avion;
+import com.mycompany.login.App;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -15,25 +19,52 @@ import javafx.fxml.Initializable;
  */
 public class Page_ajout_avion_formController implements Initializable {
 
-     private String avion_selected;
+     private Avion avion_selected;
 
     // Getter and setter for avion_selected
-    public String getAvion_selected() {
+    public Avion getAvion_selected() {
         return avion_selected;
     }
 
-    public void setAvion_selected(String avion_selected) {
+    public void setAvion_selected(Avion avion_selected) {
         this.avion_selected = avion_selected;
     }
      
-
+    @FXML
+    private TextField avion_reference; 
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        hints();
         
     }    
     
     public void setup() {
         
-        System.out.println("setup "+avion_selected);
+        System.out.println(avion_selected);
     }
+    
+    public void etape2()throws Exception
+    {
+        if(avion_reference.getText().toString().equals(""))
+        {
+           
+        }else{
+             avion_selected.setReference(avion_reference.getText().toString());
+              System.out.println(avion_selected);
+              App.open_Ajout_avion_final(avion_selected);
+        }
+        
+    }
+    private void hints() 
+    {
+        avion_reference.setPromptText("Enter reference interne de l'avion");
+        
+    }
+    public void open_Ajout_avion() throws Exception {
+        App.open_ajout_avion();
+        
+        
+    }
+   
 }

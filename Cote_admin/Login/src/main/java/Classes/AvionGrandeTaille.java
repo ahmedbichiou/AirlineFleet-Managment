@@ -9,54 +9,63 @@ package Classes;
  * @author Spray
  */
 public class AvionGrandeTaille extends Avion {
-private double porteeMaximale;
-    private int capaciteMaximale;
+ private double capacite_cargo_kg;
 
-    public AvionGrandeTaille(String modele, String compagnieFabricante,String reference, double porteeMaximale, int capaciteMaximale) {
-        super(modele, compagnieFabricante,reference);
-        this.porteeMaximale = porteeMaximale;
-        this.capaciteMaximale = capaciteMaximale;
+    public AvionGrandeTaille(String modele, String compagnieFabricante,String reference, double portee,int capacite,double cargo) {
+        super(modele, compagnieFabricante,reference,portee,capacite);
+       this.capacite_cargo_kg= cargo;
     }
 
     // Getters et setters
     // ...
 
-    public double getPorteeMaximale() {
-        return porteeMaximale;
+    public double getCapacite_cargo_kg() {
+        return capacite_cargo_kg;
     }
 
-    public void setPorteeMaximale(double porteeMaximale) {
-        this.porteeMaximale = porteeMaximale;
+    public void setCapacite_cargo_kg(double capcite_cargo_kg) {
+        this.capacite_cargo_kg = capcite_cargo_kg;
     }
 
-    public int getCapaciteMaximale() {
-        return capaciteMaximale;
-    }
-
-    public void setCapaciteMaximale(int capaciteMaximale) {
-        this.capaciteMaximale = capaciteMaximale;
-    }
-
-    @Override
     public String getModele() {
         return modele;
     }
 
-    @Override
     public void setModele(String modele) {
         this.modele = modele;
     }
 
-    @Override
     public String getCompagnieFabricante() {
         return compagnieFabricante;
     }
 
-    @Override
     public void setCompagnieFabricante(String compagnieFabricante) {
         this.compagnieFabricante = compagnieFabricante;
     }
+
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
+
+    @Override
+    public String toString() {
+          return "AvionGrandeTaille{" +
+                "modele='" + getModele() + '\'' +
+                ", compagnieFabricante='" + getCompagnieFabricante() + '\'' +
+                ", reference='" + getReference() + '\'' +
+                ", portee=" + getPortee() +
+                ", capacite_cargo_kg=" + capacite_cargo_kg +
+                '}';
+    }
+    }
+
     
-}
+
+    
+
 
 

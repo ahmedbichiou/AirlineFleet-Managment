@@ -36,7 +36,7 @@
       <Circle fill="#1f93ff1f" layoutX="292.0" layoutY="667.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
       <Line endX="77.0" layoutX="196.0" layoutY="667.0" startX="-9.0" />
       <Line endX="77.0" layoutX="321.0" layoutY="667.0" startX="-9.0" />
-      <Text layoutX="160.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
+      <Text fill="WHITE" layoutX="160.0" layoutY="676.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
@@ -51,7 +51,7 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="106.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir Avion">
+      <Text fill="ORANGE" layoutX="106.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choisir Avion">
          <font>
             <Font name="System Bold" size="26.0" />
          </font>
@@ -129,7 +129,7 @@
         </image>
     </ImageView> 
       <Button fx:id="A330_selected" layoutX="14.0" layoutY="218.0" mnemonicParsing="false" onAction="#A330_selected" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
-      <Button fx:id="A340_selected" layoutX="13.0" layoutY="422.0" mnemonicParsing="false" onAction="#A340_selected" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
+      <Button fx:id="A340_selected" layoutX="13.0" layoutY="422.0" mnemonicParsing="false" onAction="#A320_selected" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
       <Button fx:id="B737_selected" layoutX="312.0" layoutY="218.0" mnemonicParsing="false" onAction="#B737_selected" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
       <ImageView fitHeight="33.0" fitWidth="28.0" layoutX="328.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -138,10 +138,6 @@
     </ImageView>
       <Button fx:id="B747_selected" layoutX="313.0" layoutY="422.0" mnemonicParsing="false" onAction="#B747_selected" prefHeight="187.0" prefWidth="274.0" styleClass="transparent-button" text="Button" />
       <Text fill="#00000099" layoutX="105.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etape 1" />
-      <ImageView fx:id="arrow" fitHeight="72.0" fitWidth="120.0" layoutX="8.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-            <Image url="@/Images/Icons/arrow.png" />
-        </image>
-    </ImageView>
+      <Button layoutX="-10.0" layoutY="17.0" mnemonicParsing="false" onAction="#openmenu_principal_admin" prefHeight="50.0" prefWidth="80.0" styleClass="image-button" />
    </children>
 </AnchorPane>

@@ -5,5 +5,6 @@ module com.mycompany.login {
 
     opens com.mycompany.login to javafx.fxml;
     opens Controllers to javafx.fxml;
+    opens Classes to javafx.fxml;
     exports com.mycompany.login;
 }

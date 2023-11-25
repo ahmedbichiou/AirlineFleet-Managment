@@ -9,17 +9,48 @@ package Classes;
  * @author Spray
  */
 public class AvionPetitTaille extends Avion {
-    private double portee;
-    private int capacite;
+ private int siege_1ereclass;
 
-    public AvionPetitTaille(String modele, String compagnieFabricante,String reference, double portee, int capacite) {
-        super(modele, compagnieFabricante,reference);
-        this.portee = portee;
-        this.capacite = capacite;
+
+    public AvionPetitTaille(String modele, String compagnieFabricante,String reference, double portee, int capacite,int siege_1ereclass) {
+        super(modele, compagnieFabricante,reference,portee,capacite);
+       this.siege_1ereclass =siege_1ereclass;
     }
 
     // Getters et setters
     // ...
+
+    public int getSiege_1ereclass() {
+        return siege_1ereclass;
+    }
+
+    public void setSiege_1ereclass(int siege_1ereclass) {
+        this.siege_1ereclass = siege_1ereclass;
+    }
+
+    public String getModele() {
+        return modele;
+    }
+
+    public void setModele(String modele) {
+        this.modele = modele;
+    }
+
+    public String getCompagnieFabricante() {
+        return compagnieFabricante;
+    }
+
+    public void setCompagnieFabricante(String compagnieFabricante) {
+        this.compagnieFabricante = compagnieFabricante;
+    }
+
+    public String getReference() {
+        return reference;
+    }
+
+    public void setReference(String reference) {
+        this.reference = reference;
+    }
 
     public double getPortee() {
         return portee;
@@ -36,27 +67,23 @@ public class AvionPetitTaille extends Avion {
     public void setCapacite(int capacite) {
         this.capacite = capacite;
     }
+
+    @Override
+    public String toString() {
+
+        return "AvionPetitTaille{" +
+                "modele='" + getModele() + '\'' +
+                ", compagnieFabricante='" + getCompagnieFabricante() + '\'' +
+                ", reference='" + getReference() + '\'' +
+                ", portee=" + getPortee() +
+                ", siege_1ereclass=" + siege_1ereclass +
+                ", capacite=" + capacite +
+                '}';
+    }
+    }
+
+   
     
-    @Override
-    public String getModele() {
-        return modele;
-    }
 
-    @Override
-    public void setModele(String modele) {
-        this.modele = modele;
-    }
-
-    @Override
-    public String getCompagnieFabricante() {
-        return compagnieFabricante;
-    }
-
-    @Override
-    public void setCompagnieFabricante(String compagnieFabricante) {
-        this.compagnieFabricante = compagnieFabricante;
-    }
-    
-}
 
 
