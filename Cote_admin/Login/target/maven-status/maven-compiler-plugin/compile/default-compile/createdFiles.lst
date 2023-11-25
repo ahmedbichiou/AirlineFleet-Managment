@@ -5,6 +5,7 @@ Controllers\Page_ajout_avionController.class
 Classes\AvionGrandeTaille.class
 Controllers\Page_Creation_CompteController.class
 Classes\Compagnie_aerienne.class
+Controllers\Page_ajout_avoin_finalController.class
 Controllers\Menu_principal_adminController.class
 com\mycompany\login\App.class
 module-info.class

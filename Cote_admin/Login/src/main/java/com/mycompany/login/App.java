@@ -137,7 +137,19 @@ public class App extends Application {
     // Call the setup method explicitly
     controller.setup();
 }
+public static void addFlight() throws Exception {
 
+    }
+         public static void handleBack() throws Exception {
+
+
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Menu_principal_admin.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+
+
+    }
         
 
 }
