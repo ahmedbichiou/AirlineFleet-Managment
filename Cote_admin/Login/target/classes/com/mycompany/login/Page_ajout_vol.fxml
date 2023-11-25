@@ -19,7 +19,12 @@
         <TextField fx:id="txtArrivalCity" promptText="Ville d'arrivée" styleClass="text-field"/>
         <DatePicker fx:id="datePickerDeparture" promptText="Date de départ" styleClass="date-picker"/>
         <DatePicker fx:id="datePickerArrival" promptText="Date d'arrivée" styleClass="date-picker"/>
-
+        <VBox>
+        <!-- Existing elements -->
+        <Label text="Type d'Avion" styleClass="form-label" />
+        <ComboBox fx:id="comboBoxPlaneType" promptText="Choisir le type d'avion" styleClass="combo-box"/>
+        <!-- Continue with the rest of the form -->
+        </VBox>
         <Button text="Ajouter Vol" onAction="#addFlight" styleClass="action-button"/>
     </VBox>
 </AnchorPane>

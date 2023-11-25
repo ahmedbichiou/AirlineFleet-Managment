@@ -11,6 +11,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -32,7 +33,8 @@ public class Page_ajout_avion_formController implements Initializable {
      
     @FXML
     private TextField avion_reference; 
-    
+    @FXML
+    private Text Error_text ;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         hints();
@@ -48,11 +50,19 @@ public class Page_ajout_avion_formController implements Initializable {
     {
         if(avion_reference.getText().toString().equals(""))
         {
-           
+           Error_text.setText("Le champ reference est obligatoire");
         }else{
-             avion_selected.setReference(avion_reference.getText().toString());
+            if(Page_LoginController.getCompte_ouvert().getList_Avions().get(avion_reference.getText())== null)
+                    {
+                avion_selected.setReference(avion_reference.getText().toString());
               System.out.println(avion_selected);
               App.open_Ajout_avion_final(avion_selected);
+            }else
+            {
+                 Error_text.setText("Reference déja utilisé");
+            }
+            
+             
         }
         
     }

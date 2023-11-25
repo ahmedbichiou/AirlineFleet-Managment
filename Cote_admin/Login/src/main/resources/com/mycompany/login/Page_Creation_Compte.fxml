@@ -32,5 +32,6 @@
             <Font name="System Bold" size="12.0" />
          </font></Button>
       <Button fx:id="btnback_inscri" layoutX="307.0" layoutY="500.0" mnemonicParsing="false" onAction="#openLogin" prefHeight="43.0" prefWidth="125.0" text="Deja inscrit?" />
+      <Text fx:id="Error_text" fill="RED" layoutX="173.0" layoutY="569.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="188.13671875" />
    </children>
 </AnchorPane>

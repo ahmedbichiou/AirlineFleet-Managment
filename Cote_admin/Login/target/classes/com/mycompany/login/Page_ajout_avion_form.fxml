@@ -52,5 +52,6 @@
     </ImageView>
       <Button layoutX="397.0" layoutY="329.0" mnemonicParsing="false" onAction="#etape2" prefHeight="43.0" prefWidth="109.0" styleClass=" btn_login" text="Confirmer" />
       <Button layoutX="143.0" layoutY="644.0" mnemonicParsing="false" onAction="#open_Ajout_avion" prefHeight="43.0" prefWidth="69.0" styleClass="transparent-button" text="" />
+      <Text fx:id="Error_text" fill="RED" layoutX="114.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="160.13671875" />
    </children>
 </AnchorPane>

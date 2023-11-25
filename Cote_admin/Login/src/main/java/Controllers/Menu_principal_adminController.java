@@ -5,6 +5,8 @@
 package Controllers;
 
 import com.mycompany.login.App;
+import Controllers.Page_LoginController;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -14,6 +16,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -44,13 +47,14 @@ public class Menu_principal_adminController implements Initializable {
     public Button avion_afficher;
     @FXML 
     public ImageView Image_utilisateur;
-    
+    @FXML 
+    public Text nom_utilisateur;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         styleclasses();
-        showImage();
+        showAccount();
         Initbackgrounds();
-        
+        Page_LoginController.getCompte_ouvert().afficherAvions();
     }  
     private void Initbackgrounds()
             
@@ -73,17 +77,83 @@ public class Menu_principal_adminController implements Initializable {
            
     }
     
-    public void showImage() {
+    public void showAccount() {
+        
     try {
-
-        Image image = new Image("Images/Tunisair.png");
-        Image_utilisateur.setImage(image);
+        nom_utilisateur.setText(Page_LoginController.getCompte_ouvert().getNom());
+       image_username();
        
       
     } catch (Exception e) {
        System.out.println(e.getMessage());
     }
 }
+    public  void image_username()
+    {
+        
+      switch (Page_LoginController.getCompte_ouvert().getNom()) {
+    case "Tunisair":
+        if(App.searchCompagnieByNom("Tunisair") != null)
+        {
+       
+        Image imageTunisair = new Image("Images/Tunisair.png");
+        Image_utilisateur.setImage(imageTunisair);
+        Image_utilisateur.setPreserveRatio(false);
+        Image_utilisateur.setFitWidth(120);
+        Image_utilisateur.setFitHeight(120);
+        }
+       
+        break;
+
+    case "AirFrance":
+        if(App.searchCompagnieByNom("AirFrance") != null)
+        {
+     
+        Image imageAirFrance = new Image("Images/Airlines/AirFrance.png");
+        Image_utilisateur.setImage(imageAirFrance);
+        Image_utilisateur.setPreserveRatio(false);
+        Image_utilisateur.setFitWidth(120);
+        Image_utilisateur.setFitHeight(120);
+        }
+        break;
+
+    case "Transavia":
+        if(App.searchCompagnieByNom("Transavia") != null)
+        {
+    
+        Image imageTransavia = new Image("Images/Airlines/Transavia.png");
+       Image_utilisateur.setImage(imageTransavia);
+       Image_utilisateur.setPreserveRatio(false);
+        Image_utilisateur.setFitWidth(110);
+        Image_utilisateur.setFitHeight(110);
+        Image_utilisateur.setStyle("-fx-background-size: stretch;" );
+        }
+        break;
+
+    case "TurkishAirlines":
+        if(App.searchCompagnieByNom("TurkishAirlines") != null)
+        {
+       
+        Image imageTurkishAirlines = new Image("Images/Airlines/TurkishAirlines.png");
+        Image_utilisateur.setImage(imageTurkishAirlines);
+        Image_utilisateur.setPreserveRatio(false);
+        Image_utilisateur.setFitWidth(110);
+        Image_utilisateur.setFitHeight(110);
+        Image_utilisateur.setStyle("-fx-background-size: stretch; ");
+        }
+        break;
+
+    default:
+        Image imageTurkishAirlines = new Image("Images/Airlines/default.png");
+        Image_utilisateur.setImage(imageTurkishAirlines);
+          Image_utilisateur.setPreserveRatio(false);
+        Image_utilisateur.setFitWidth(120);
+        Image_utilisateur.setFitHeight(120);
+        break;
+}
+    }
+    
+    
     //--------------------------------------->routes
     public void openLogin() throws Exception {
         App.openLogin();
@@ -91,7 +161,9 @@ public class Menu_principal_adminController implements Initializable {
         
     }
     public void open_ajout_avion() throws Exception {
-        App.open_ajout_avion();
+     System.out.println(Page_LoginController.getCompte_ouvert());
+    App.open_ajout_avion();
+
         
         
     }

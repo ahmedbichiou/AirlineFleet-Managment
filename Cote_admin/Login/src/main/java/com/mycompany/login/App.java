@@ -1,6 +1,7 @@
 package com.mycompany.login;
 
 import Classes.Avion;
+import Classes.Compagnie_aerienne;
 import Controllers.Page_ajout_avion_formController;
 import Controllers.Page_ajout_avoin_finalController;
 import javafx.application.Application;
@@ -10,6 +11,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
@@ -19,7 +23,7 @@ import javafx.stage.StageStyle;
  * JavaFX App
  */
 public class App extends Application {
-
+    public static List<Compagnie_aerienne> compagnies = new ArrayList<>();
     private static Scene scene;
   
 
@@ -37,6 +41,19 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        //added by ahmed 11/25 3.32
+        Compagnie_aerienne Tunisair = new Compagnie_aerienne("Tunisair","1","Tunisie",1996);
+        Compagnie_aerienne Tunisair2 = new Compagnie_aerienne("AirFrance", "1", "Tunisie", 1996);
+        Compagnie_aerienne Tunisair3 = new Compagnie_aerienne("TurkishAirlines", "1", "Tunisie", 1996);
+        Compagnie_aerienne Tunisair4 = new Compagnie_aerienne("Transavia", "1", "Tunisie", 1996);
+        Compagnie_aerienne yes2 = new Compagnie_aerienne("11","11","11",11);
+        compagnies.add(Tunisair);
+        compagnies.add(Tunisair2);
+        compagnies.add(Tunisair3);
+        compagnies.add(Tunisair4);
+        
+        compagnies.add(yes2);
+        //end added by ahmed 11/25 3.32
         launch();
     }
     
@@ -177,5 +194,50 @@ public class App extends Application {
 
         }
         
+//added by ahmed 11/25 3:31
+         
+      public static Compagnie_aerienne searchCompagnieByNom(String nom) {
+        for (Compagnie_aerienne compagnie : compagnies) {
+            if (compagnie.getNom().equals(nom)) {
+                return compagnie;
+            }
+        }
+        return null; // Not found
+    }
 
+    // Add Compagnie method
+    public static void addCompagnie(Compagnie_aerienne newCompagnie) {
+        compagnies.add(newCompagnie);
+        System.out.println("Compagnie added successfully: " + newCompagnie);
+    }
+
+    // Delete Compagnie by nom method
+    public static void deleteCompagnieByNom(String nom) {
+        Iterator<Compagnie_aerienne> iterator = compagnies.iterator();
+        while (iterator.hasNext()) {
+            Compagnie_aerienne compagnie = iterator.next();
+            if (compagnie.getNom().equals(nom)) {
+                iterator.remove();
+                System.out.println("Compagnie deleted successfully: " + compagnie);
+                return; // Assuming each nom is unique
+            }
+        }
+        System.out.println("Compagnie with nom " + nom + " not found.");
+    }   
+    
+    public static List<Compagnie_aerienne> getCompagnies() {
+        return compagnies;
+    }
+    public static void showAllCompagnies() {
+        System.out.println("List of Compagnies:");
+        for (Compagnie_aerienne compagnie : compagnies) {
+            System.out.println(compagnie);
+        }
+    }
+    // Set Compagnies
+    public static void setCompagnies(List<Compagnie_aerienne> newCompagnies) {
+        compagnies = newCompagnies;
+    }
+    
+ //end added by ahmed 11/25 3:31 by ahmed     
 }
