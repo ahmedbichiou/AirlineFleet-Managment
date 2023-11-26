@@ -35,6 +35,9 @@ public class Page_Creation_CompteController implements Initializable {
     private Button btnback_inscri;
        @FXML
        private Text Error_text;
+        @FXML
+    private TextField password_inscri_1;
+     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         hints();
@@ -51,6 +54,7 @@ public class Page_Creation_CompteController implements Initializable {
         password_inscri.setPromptText("Enter  mot de passe");
         annee_inscri.setPromptText("Enter  annee creation entreprise");
         pays_inscri.setPromptText("Enter pays d'origine");
+        password_inscri_1.setPromptText("Enter password à nouveau");
     }
     private void styleclasses()
     {
@@ -61,6 +65,7 @@ public class Page_Creation_CompteController implements Initializable {
            password_inscri.getStyleClass().add( "text-field-custom");
            annee_inscri.getStyleClass().add( "text-field-custom");
            pays_inscri.getStyleClass().add( "text-field-custom");
+           password_inscri_1.getStyleClass().add( "text-field-custom");
            
     }
     
@@ -78,6 +83,10 @@ public class Page_Creation_CompteController implements Initializable {
     if((nom_inscri.getText().equals("")) || (pays_inscri.getText().equals(""))||(password_inscri.getText().equals("")) || (annee_inscri.getText().equals("")) ){
              Error_text.setText("Tous les champs sont obligatoire");
             }
+    else if((!password_inscri_1.getText().equals(password_inscri.getText())))
+    {
+        Error_text.setText("Entrer le même mot de passe");
+    }
     else if(App.searchCompagnieByNom(nom_inscri.getText()) == null)
     {
        compagnies.add(v); 

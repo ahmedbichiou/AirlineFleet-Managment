@@ -72,12 +72,12 @@ public class AvionPetitTaille extends Avion {
     public String toString() {
 
         return "AvionPetitTaille{" +
-                "modele='" + getModele() + '\'' +
+                " modele='" + getModele() + '\'' +
                 ", compagnieFabricante='" + getCompagnieFabricante() + '\'' +
                 ", reference='" + getReference() + '\'' +
-                ", portee=" + getPortee() +
-                ", siege_1ereclass=" + siege_1ereclass +
-                ", capacite=" + capacite +
+                ", siege_1ereclass='" + siege_1ereclass +'\''+
+                  ", capacite='" + capacite + '\''+
+                ", portee='" + portee + '\''+
                 '}';
     }
     }

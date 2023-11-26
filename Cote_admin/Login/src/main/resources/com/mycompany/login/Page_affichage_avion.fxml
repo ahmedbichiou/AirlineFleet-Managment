@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Page_affichage_avionController">
+    <stylesheets>
+        <URL value="@/styles/page_affichage_avion.css" />
+    </stylesheets>
+    <Button layoutY="12.0" mnemonicParsing="false" onAction="#openmenu_principal_admin" prefHeight="47.0" prefWidth="73.0" styleClass="image-button" />
+    <VBox alignment="CENTER" spacing="10" xmlns:fx="http://javafx.com/fxml" />
+ <ListView fx:id="hashMapListView" layoutX="19.0" layoutY="73.0" prefHeight="597.0" prefWidth="567.0" />
+   <Text layoutX="171.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Affichage Avions">
+      <font>
+         <Font name="System Bold" size="33.0" />
+      </font>
+   </Text>
+</AnchorPane>

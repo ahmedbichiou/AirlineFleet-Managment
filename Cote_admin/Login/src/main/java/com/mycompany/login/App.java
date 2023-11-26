@@ -2,6 +2,7 @@ package com.mycompany.login;
 
 import Classes.Avion;
 import Classes.Compagnie_aerienne;
+import Controllers.Page_afficher_modifier_avionController;
 import Controllers.Page_ajout_avion_formController;
 import Controllers.Page_ajout_avoin_finalController;
 import javafx.application.Application;
@@ -161,7 +162,7 @@ public class App extends Application {
     }
     
         
-         public static void open_ajout_avion_form(Avion avion_selected) throws Exception {
+    public static void open_ajout_avion_form(Avion avion_selected) throws Exception {
     FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_ajout_avion_form.fxml"));
     Parent newSceneRoot = fxmlLoader.load();
 
@@ -238,6 +239,44 @@ public class App extends Application {
     public static void setCompagnies(List<Compagnie_aerienne> newCompagnies) {
         compagnies = newCompagnies;
     }
+    
+   
+      
+         public static void open_afficher_avion() throws Exception {
+         
+         
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_affichage_avion.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+         
+         
+    }
+         
+         
+        
+      public static void open_afficher_modifier_avion(Avion avionTo_modifier) throws Exception {
+    FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_afficher_modifier_avion.fxml"));
+    Parent newSceneRoot = fxmlLoader.load();
+    Page_afficher_modifier_avionController controller = fxmlLoader.getController();
+    controller.setAvion_selected(avionTo_modifier);
+
+    Stage newStage = new Stage();
+    newStage.setTitle("Inscription");
+
+    Scene newScene = new Scene(newSceneRoot);
+    newStage.setScene(newScene);
+
+    Image icon = new Image("Images/icon_stage.png");
+    newStage.getIcons().add(icon);
+    newStage.setTitle("Flight Booking");
+
+    // Set the stage and call setup
+    controller.setStageAndSetup(newStage);
+
+    newStage.show();
+}
+    
     
  //end added by ahmed 11/25 3:31 by ahmed     
 }

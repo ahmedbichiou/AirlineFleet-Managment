@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Page_afficher_modifier_avionController">
+    <stylesheets>
+        <URL value="@/styles/page_afficher_modifier_avion.css" />
+    </stylesheets>
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#d4d4d44c" height="308.0" layoutX="22.0" layoutY="38.0" stroke="#ab9f9f" strokeType="INSIDE" styleClass="main_rectange" width="556.0" />
+      <ImageView fx:id="edit_icon" fitHeight="402.0" fitWidth="433.0" layoutX="167.0" layoutY="3.0" opacity="0.58" pickOnBounds="true" preserveRatio="true">
+            <image>
+            <Image url="@/Images/Icons/modifier.png" />
+        </image>
+    </ImageView>
+      <TextField fx:id="avion_reference" layoutX="45.0" layoutY="212.0" prefHeight="43.0" prefWidth="268.0" styleClass="text-field-custom" />
+      <Text layoutX="45.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Modifier reference" wrappingWidth="411.337890625">
+         <font>
+            <Font name="System Bold" size="45.0" />
+         </font>
+      </Text>
+      <Button layoutX="334.0" layoutY="212.0" mnemonicParsing="false" onAction="#modifyref" prefHeight="43.0" prefWidth="109.0" styleClass=" btn_login" text="Modifier" />
+      <Text fx:id="Error_text" fill="RED" layoutX="45.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="275.13671875" />
+   </children>
+</AnchorPane>

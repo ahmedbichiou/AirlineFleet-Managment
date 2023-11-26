@@ -54,11 +54,12 @@ public class AvionGrandeTaille extends Avion {
     @Override
     public String toString() {
           return "AvionGrandeTaille{" +
-                "modele='" + getModele() + '\'' +
+                " modele='" + getModele() + '\'' +
                 ", compagnieFabricante='" + getCompagnieFabricante() + '\'' +
                 ", reference='" + getReference() + '\'' +
-                ", portee=" + getPortee() +
-                ", capacite_cargo_kg=" + capacite_cargo_kg +
+                ", capacite_cargo_kg='" + capacite_cargo_kg +'\''+
+                ", capacite='" + capacite + '\''+
+                ", portee='" + portee + '\''+
                 '}';
     }
     }

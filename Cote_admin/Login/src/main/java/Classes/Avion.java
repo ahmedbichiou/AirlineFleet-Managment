@@ -59,11 +59,11 @@ public class Avion {
     @Override
         public String toString() {
         return "Avion{" +
-                "modele='" + modele + '\'' +
+                " modele='" + modele + '\'' +
                 ", compagnieFabricante='" + compagnieFabricante + '\'' +
                 ", reference='" + reference + '\'' +
-                ", capacite=" + capacite +
-                ", portee=" + portee +
+                ", capacite='" + capacite + '\''+
+                ", portee='" + portee + '\''+
                 '}';
     
     }

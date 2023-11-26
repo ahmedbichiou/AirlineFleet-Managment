@@ -26,8 +26,7 @@
          </font>
       </Text>
       <Button fx:id="avion_ajouter" layoutX="313.0" layoutY="279.0" mnemonicParsing="false" onAction="#open_ajout_avion" prefHeight="47.0" prefWidth="273.0" text="Ajouter avion" />
-      <Button fx:id="avion_supprimer" layoutX="313.0" layoutY="338.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="273.0" text="Supprimer avion" />
-      <Button fx:id="avion_afficher" layoutX="313.0" layoutY="402.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="273.0" text="Afficher avions" />
+      <Button fx:id="avion_afficher" layoutX="313.0" layoutY="338.0" mnemonicParsing="false" onAction="#open_afficher_avion" prefHeight="47.0" prefWidth="273.0" text="Afficher avions" />
       <Text layoutX="61.0" layoutY="237.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des vols" wrappingWidth="185.0">
          <font>
             <Font size="22.0" />
