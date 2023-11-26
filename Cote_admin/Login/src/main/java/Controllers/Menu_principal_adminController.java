@@ -188,5 +188,9 @@ public class Menu_principal_adminController implements Initializable {
     App.open_afficher_avion(); 
         
     }
+     
+    public void open_Affichage_vols() throws Exception {
+    App.open_Affichage_vols();
+    }
     
 }

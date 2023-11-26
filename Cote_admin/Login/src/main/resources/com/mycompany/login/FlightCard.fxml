@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane fx:id="flightCard" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FlightCardController" styleClass="flight-card">
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <VBox alignment="CENTER_LEFT" HBox.hgrow="ALWAYS" spacing="5">
+            <Label fx:id="labelFlightNumber" styleClass="card-label"/>
+            <Label fx:id="labelDepartureArrival" styleClass="card-label"/>
+            <Label fx:id="labelTimeDuration" styleClass="card-label"/>
+        </VBox>
+    </HBox>
+</AnchorPane>

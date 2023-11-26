@@ -1,0 +1,14 @@
+.vbox-flights-container {
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+}
+
+/* You may want to style the ScrollPane or the VBox within it */
+.scroll-pane {
+    -fx-background: #f0f0f0;
+}
+
+/* Additional global styles if necessary */
+.root {
+    -fx-font-family: 'Segoe UI', sans-serif;
+}

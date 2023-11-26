@@ -1,0 +1,36 @@
+/* flightcard.css */
+.flight-card {
+    -fx-padding: 15px;
+    -fx-background-color: #FFF;
+    -fx-border-color: #FFA500;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 10);
+    -fx-alignment: center-left;
+}
+
+.card-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.button {
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px;
+    -fx-padding: 5px 15px;
+}
+
+.button-edit {
+    -fx-background-color: #FFA500;
+    -fx-text-fill: #FFF;
+}
+
+.button-delete {
+    -fx-background-color: #FF4500;
+    -fx-text-fill: #FFF;
+}
+
+.button:hover {
+    -fx-opacity: 0.8;
+}
