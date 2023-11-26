@@ -33,8 +33,7 @@ public class Menu_principal_adminController implements Initializable {
     public Rectangle vol_settings;
     @FXML
     public Button avion_ajouter;
-    @FXML
-    public Button avion_supprimer;
+   
     @FXML
     public Button vol_ajouter;
      @FXML
@@ -70,7 +69,7 @@ public class Menu_principal_adminController implements Initializable {
         
             avion_settings.getStyleClass().add("avion_settings");
             avion_ajouter.getStyleClass().add("button_under");
-            avion_supprimer.getStyleClass().add("button_under");
+          
             avion_afficher.getStyleClass().add("button_under");
             vol_settings.getStyleClass().add("avion_settings");
             account_settings.getStyleClass().add("avion_settings");
@@ -161,12 +160,13 @@ public class Menu_principal_adminController implements Initializable {
         
     }
     public void open_ajout_avion() throws Exception {
-     System.out.println(Page_LoginController.getCompte_ouvert());
+     
     App.open_ajout_avion();
 
         
         
     }
+    
     public void open_ajout_vol() throws Exception {
         App.open_ajout_vol();
         
@@ -180,6 +180,12 @@ public class Menu_principal_adminController implements Initializable {
     public void open_annuler_vol() throws Exception {
         App.open_annuler_vol();
         
+        
+    }
+    
+     public void open_afficher_avion() throws Exception {
+    
+    App.open_afficher_avion(); 
         
     }
     

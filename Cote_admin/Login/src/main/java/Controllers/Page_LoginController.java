@@ -66,6 +66,7 @@ public class Page_LoginController implements Initializable {
         logo_notre_entreprise.setOpacity(0);
         Image imageTunisair = new Image("Images/Tunisair.png");
         Image_User.setImage(imageTunisair);
+        Image_User.setOpacity(1);
         Image_circle.setOpacity(0.5);
         }
        
@@ -77,6 +78,7 @@ public class Page_LoginController implements Initializable {
         logo_notre_entreprise.setOpacity(0);
         Image imageAirFrance = new Image("Images/Airlines/AirFrance.png");
         Image_User.setImage(imageAirFrance);
+        Image_User.setOpacity(1);
         Image_circle.setOpacity(0.5);
         }
         break;
@@ -87,6 +89,7 @@ public class Page_LoginController implements Initializable {
         logo_notre_entreprise.setOpacity(0);
         Image imageTransavia = new Image("Images/Airlines/Transavia.png");
         Image_User.setImage(imageTransavia);
+        Image_User.setOpacity(1);
         Image_circle.setOpacity(0.5);
         }
         break;
@@ -97,6 +100,7 @@ public class Page_LoginController implements Initializable {
         logo_notre_entreprise.setOpacity(0);
         Image imageTurkishAirlines = new Image("Images/Airlines/TurkishAirlines.png");
         Image_User.setImage(imageTurkishAirlines);
+        Image_User.setOpacity(1);
         Image_circle.setOpacity(0.5);
         }
         break;

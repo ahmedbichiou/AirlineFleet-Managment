@@ -1,0 +1,53 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.main_rectangle {
+    -fx-arc-width: 20; /* Border radius, adjust as needed */
+    -fx-arc-height: 20; /* Border radius, adjust as needed */
+    -fx-stroke: gray; /* Border color, adjust as needed */
+    -fx-stroke-width: 6; /* Border width, adjust as needed */
+}
+
+.text-field-custom {
+    -fx-background-color: transparent;
+    -fx-border-color: #000099;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 2; /* Set the radius according to your preference */
+}
+
+.text-field-custom:focused {
+    -fx-border-color: orange;
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
+}
+
+
+.btn_login {
+   -fx-background-color: #2196F3; /* Button background color */
+    -fx-text-fill: white;          /* Button text color */
+    -fx-font-size: 14px;           /* Button text size */
+    -fx-font-weight: bold;         /* Button text weight */
+    -fx-padding: 10;            /* Button padding */
+    -fx-background-radius: 8px;    /* Rounded corners */
+    -fx-background-insets: 0 0 0 0, 0 0 1 0; /* Elevated effect */
+   
+}
+
+.btn_login:hover {
+    -fx-background-color: #1565C0; /* Button background color on hover */
+}
+
+.btn_login:pressed {
+    -fx-background-color: #0D47A1; /* Button background color when pressed */
+}
+
+.transparent-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: transparent;
+    
+}

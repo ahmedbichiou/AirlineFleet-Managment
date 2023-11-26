@@ -1,5 +1,8 @@
+Controllers\Page_affichage_avionController$1$1.class
+Controllers\Page_afficher_modifier_avionController.class
 Controllers\Page_confirmation_inscriController.class
 Controllers\Page_LoginController.class
+Controllers\Page_affichage_avionController$1.class
 Controllers\Page_ajout_avionController.class
 Classes\AvionGrandeTaille.class
 Controllers\Page_Creation_CompteController.class
@@ -8,6 +11,7 @@ Controllers\Page_ajout_avoin_finalController.class
 Controllers\Menu_principal_adminController.class
 com\mycompany\login\App.class
 module-info.class
+Controllers\Page_affichage_avionController.class
 Controllers\Page_ajout_volController.class
 Controllers\Page_ajout_avion_formController.class
 Controllers\Page_modifier_volController.class
