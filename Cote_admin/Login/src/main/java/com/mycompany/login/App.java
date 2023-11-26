@@ -252,6 +252,13 @@ public class App extends Application {
          
          
     }
+        public static void open_Affichage_vols() throws Exception {
+         
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_afficher_tous_les_vols.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+    }
          
          
         
