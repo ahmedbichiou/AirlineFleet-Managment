@@ -4,6 +4,7 @@ Controllers\Page_confirmation_inscriController.class
 Controllers\Page_LoginController.class
 Controllers\Page_affichage_avionController$1.class
 Controllers\Page_ajout_avionController.class
+Controllers\PageAfficherTousLesVolsController.class
 Classes\AvionGrandeTaille.class
 Controllers\Page_Creation_CompteController.class
 Classes\Compagnie_aerienne.class
@@ -13,9 +14,12 @@ com\mycompany\login\App.class
 module-info.class
 Controllers\Page_affichage_avionController.class
 Controllers\Page_ajout_volController.class
+Controllers\Flight.class
 Controllers\Page_ajout_avion_formController.class
+Controllers\FlightCardController.class
 Controllers\Page_modifier_volController.class
 Classes\AvionPetitTaille.class
 Controllers\Page_afficher_volController.class
+Classes\Flight.class
 Controllers\Page_annuler_volController.class
 Classes\Avion.class

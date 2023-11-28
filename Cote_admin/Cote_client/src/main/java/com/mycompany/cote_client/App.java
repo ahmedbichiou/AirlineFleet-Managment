@@ -79,6 +79,20 @@ public class App extends Application {
         scene.setRoot(newSceneRoot);
     }
     
+         public static void openPageSelectionRegionDestination() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("PageSelectionRegionDestination.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+    }
+         
+             public static void openPage_choix_Pays() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_choix_Pays.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+    }
+    
     
 
 }
