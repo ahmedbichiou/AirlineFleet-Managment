@@ -19,6 +19,7 @@
         <URL value="@/Styles/page_choix_pays.css" />
     </stylesheets>
    <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7e7e708" height="700.0" stroke="TRANSPARENT" strokeType="INSIDE" width="600.0" />
       <Text fill="ORANGE" layoutX="63.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sélectionnez les pays depart et destination" textAlignment="CENTER" wrappingWidth="459.60015869140625">
          <font>
             <Font name="System Bold" size="29.0" />
@@ -40,7 +41,7 @@
             <Font size="21.0" />
          </font>
       </Text>
-      <Button layoutX="331.0" layoutY="375.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="226.0" text="Rechercher des offers" styleClass="btn_login"/>
+      <Button layoutX="331.0" layoutY="375.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="226.0" styleClass="btn_login" text="Rechercher des offers" />
       <Text layoutX="63.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Depart" />
       <Text layoutX="52.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination" />
       <Text layoutX="352.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aller" />
@@ -81,7 +82,7 @@
          </font>
       </Text>
       <Line endX="-22.800018310546875" layoutX="183.0" layoutY="481.0" startX="-94.80001831054688" stroke="#175fe5" strokeWidth="2.0" />
-      <Line endX="-22.800018310546875" layoutX="307.0" layoutY="481.0" startX="-94.80001831054688" strokeWidth="2.0" />
+      <Line endX="-22.800018310546875" layoutX="307.0" layoutY="481.0" startX="-94.80001831054688" stroke="#3565de" strokeWidth="2.0" />
       <Line endX="-22.800018310546875" layoutX="432.0" layoutY="480.0" startX="-94.80001831054688" strokeWidth="2.0" />
       <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="50.0" layoutY="469.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -101,7 +102,6 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e7e7e708" height="700.0" stroke="TRANSPARENT" strokeType="INSIDE" width="600.0" />
       <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="175.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Images/Icons/tick.png" />
