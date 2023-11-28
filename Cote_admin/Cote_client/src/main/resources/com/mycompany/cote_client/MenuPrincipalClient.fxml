@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MenuPrincipalClientController">
+    <stylesheets>
+        <URL value="@/Styles/MenuPrincipalClient.css" />
+    </stylesheets>
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0084ff2b" height="669.0" layoutX="16.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="568.0" />
+      <Text layoutX="182.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bonjour, Nom Client !">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Text>
+      <Button fx:id="button_reserver" layoutX="102.0" layoutY="364.0" mnemonicParsing="false" onAction="#openClientReservation" styleClass="button_choix" stylesheets="@../../../Styles/MenuPrincipalClient.css" text="Réserver un vol" textAlignment="CENTER" />
+      <Button fx:id="button_consulter" layoutX="359.0" layoutY="364.0" mnemonicParsing="false" onAction="#openClientConsulterVol" styleClass="button_choix" stylesheets="@../../../Styles/MenuPrincipalClient.css" text="Consulter mes vols" />
+      <ImageView fitHeight="169.0" fitWidth="568.0" layoutX="16.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/background1.jpg" />
+         </image>
+      </ImageView>
+      <Circle fill="DODGERBLUE" layoutX="300.0" layoutY="200.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#2ba3ff2b" height="207.0" layoutX="31.0" layoutY="453.0" stroke="TRANSPARENT" strokeType="INSIDE" width="332.0" />
+      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#2ba3ff2b" height="207.0" layoutX="368.0" layoutY="453.0" stroke="TRANSPARENT" strokeType="INSIDE" width="202.0" />
+      <Text fill="WHITE" layoutX="107.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destinations populaires" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#fffefe" layoutX="432.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Support">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

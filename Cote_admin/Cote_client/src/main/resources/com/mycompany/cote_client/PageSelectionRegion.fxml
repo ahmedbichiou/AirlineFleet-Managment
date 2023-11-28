@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PageSelectionRegionController">
+    <stylesheets>
+        <URL value="@/Styles/pageselectionregion.css" />
+    </stylesheets>
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0088ff2b" height="690.0" layoutX="5.0" layoutY="4.0" opacity="0.76" stroke="#9c979700" width="591.0" />
+      <ButtonBar fx:id="america_selected" layoutX="43.0" layoutY="144.0">
+         <buttons>
+            <ImageView fitHeight="207.0" fitWidth="169.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Americaa.png" />
+               </image>
+            </ImageView>
+         </buttons>
+      </ButtonBar>
+      <ButtonBar fx:id="europe_selected" layoutX="210.0" layoutY="172.0">
+         <buttons>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Europe.png" />
+               </image>
+            </ImageView>
+         </buttons>
+      </ButtonBar>
+      <ButtonBar fx:id="africa_selected" layoutX="414.0" layoutY="172.0">
+         <buttons>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Africa.png" />
+               </image>
+            </ImageView>
+         </buttons>
+      </ButtonBar>
+      <ButtonBar fx:id="asia_selected" layoutX="92.0" layoutY="443.0">
+         <buttons>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Asia.png" />
+               </image>
+            </ImageView>
+         </buttons>
+      </ButtonBar>
+      <ButtonBar fx:id="oceania_selected" layoutX="334.0" layoutY="450.0">
+         <buttons>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Images/Australia.png" />
+               </image>
+            </ImageView>
+         </buttons>
+      </ButtonBar>
+      <Text layoutX="23.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sélectionnez la région de votre destination " textAlignment="CENTER" wrappingWidth="562.0">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Text>
+      <Text fill="#2288bf" layoutX="86.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'Amérique">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#2288bf" layoutX="270.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'Europe">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#2288bf" layoutX="468.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'Afrique">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#2288bf" layoutX="154.0" layoutY="634.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'Asie">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <Text fill="#2288bf" layoutX="395.0" layoutY="634.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L'Océanie">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" depthTest="ENABLE" prefHeight="620.0" prefWidth="638.0" stylesheets="@../../../Styles/pageloginclient.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PageLoginClientController">
+      <children>
+      <Rectangle fx:id="main_rectangle" arcHeight="5.0" arcWidth="5.0" fill="#f7ecec47" height="499.0" layoutX="142.0" layoutY="75.0" stroke="#00000020" strokeType="INSIDE" width="324.0" />
+      <Button fx:id="btn_login" layoutX="174.0" layoutY="455.0" mnemonicParsing="false" onAction="#openMenuClient" prefHeight="52.0" prefWidth="259.0" styleClass="btn_login" text="Login" />
+      <TextField fx:id="nom_login" layoutX="177.0" layoutY="289.0" prefHeight="52.0" prefWidth="259.0" styleClass="text-field-custom" />
+      <TextField fx:id="password_login" layoutX="177.0" layoutY="368.0" prefHeight="52.0" prefWidth="259.0" styleClass="text-field-custom" />
+      <Button fx:id="btn_creation" depthTest="DISABLE" layoutX="174.0" layoutY="515.0" mnemonicParsing="false" onAction="#openClientAccCreation" styleClass="btn_creation" text="créer un compte" />
+      <ImageView fitHeight="129.0" fitWidth="221.0" layoutX="196.0" layoutY="119.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/1.png" />
+         </image>
+      </ImageView>
+   </children>
+
+</AnchorPane>
