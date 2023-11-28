@@ -1,0 +1,26 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+.button_choix {
+    -fx-background-color: #0084ff2b; /* Button background color */
+    -fx-text-fill: white;          /* Button text color */
+    -fx-font-size: 14px;           /* Button text size */
+    -fx-font-weight: bold;         /* Button text weight */
+    -fx-padding: 10;            /* Button padding */
+    -fx-background-radius: 15px;    /* Rounded corners */
+    -fx-background-insets: 0 0 0 0, 0 0 10 0; /* Elevated effect */
+    -fx-border-radius: 15px;
+    -fx-border-color: white;
+   
+}
+
+.button_choix:hover {
+    -fx-background-color: #0099ff; /* Button background color on hover */
+    
+}
+
+.button_choix:pressed {
+    -fx-background-color: #0D47A1; /* Button background color when pressed */
+}
