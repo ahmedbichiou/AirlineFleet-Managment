@@ -11,7 +11,9 @@ com\mycompany\login\App.class
 module-info.class
 Controllers\Page_ajout_volController.class
 Controllers\Page_ajout_avion_formController.class
+Controllers\Page_modifier_volController.class
 Classes\AvionPetitTaille.class
 Controllers\Page_afficher_volController.class
 com\mycompany\login\Compagnie_aerienne.class
+Controllers\Page_annuler_volController.class
 Classes\Avion.class

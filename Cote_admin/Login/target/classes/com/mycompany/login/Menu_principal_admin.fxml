@@ -34,8 +34,8 @@
          </font>
       </Text>
       <Button fx:id="vol_ajouter" layoutX="17.0" layoutY="279.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Créer vol" onAction="#open_ajout_vol"/>
-      <Button fx:id="vol_annuler" layoutX="161.0" layoutY="338.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="129.0" styleClass="button_under" text="Annuler vol" />
-      <Button fx:id="vol_modifier" layoutX="19.0" layoutY="338.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="135.0" styleClass="button_under" text="Modifier vol" />
+      <Button fx:id="vol_annuler" layoutX="161.0" layoutY="338.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="129.0" styleClass="button_under" text="Annuler vol" onAction="#open_annuler_vol"/>
+      <Button fx:id="vol_modifier" layoutX="19.0" layoutY="338.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="135.0" styleClass="button_under" text="Modifier vol" onAction="#open_modifier_vol" />
       <Button fx:id="vol_afficher" layoutX="17.0" layoutY="402.0" mnemonicParsing="false" opacity="0.76" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Afficher tous les vols" />
       <Circle fill="#1f93ff00" layoutX="194.0" layoutY="95.0" radius="83.0" stroke="#0d0d0d" strokeType="INSIDE" strokeWidth="0.2" />
       <Button layoutY="12.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="73.0" styleClass="image-button" onAction="#openLogin" />
