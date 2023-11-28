@@ -4,10 +4,12 @@
  */
 package controllers;
 
+import com.mycompany.cote_client.App;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonBar;
 
 /**
@@ -17,36 +19,49 @@ import javafx.scene.control.ButtonBar;
  */
 public class PageSelectionRegionController implements Initializable {
 
-    public String selectedRegion;
+    static public String selectedRegionDepart;
+
+    public static String getSelectedRegionDepart() {
+        return selectedRegionDepart;
+    }
+
+    public static void setSelectedRegionDepart(String selectedRegionDepart) {
+        PageSelectionRegionController.selectedRegionDepart = selectedRegionDepart;
+    }
    
-  @FXML 
-  private ButtonBar america_selected;
-  @FXML 
-  private ButtonBar europe_selected;
-  @FXML 
-  private ButtonBar africa_selected;
-  @FXML 
-  private ButtonBar asia_selected;
-  @FXML 
-  private ButtonBar oceania_selected;
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
     }    
     
-    public void america_selected() throws Exception{
+    public void america_north_selected() throws Exception{
     
+        selectedRegionDepart = "america_north";
+        App.openPageSelectionRegionDestination();
+    }
+    public void america_south_selected() throws Exception{
+        selectedRegionDepart = "america_south";
+     App.openPageSelectionRegionDestination();
     }
     public void europe_selected() throws Exception{
-    
+        selectedRegionDepart = "europe";
+     App.openPageSelectionRegionDestination();
     }
     public void africa_selected() throws Exception{
-    
+        selectedRegionDepart = "africa";
+     App.openPageSelectionRegionDestination();
     }
     public void asia_selected() throws Exception{
-    
+        selectedRegionDepart = "asia";
+     App.openPageSelectionRegionDestination();
     }
     public void oceania_selected() throws Exception{
-    
+        selectedRegionDepart = "oceania";
+     App.openPageSelectionRegionDestination();
     }
+     public void back() throws Exception{
+    App.openMenuClient();
+    }
+    
 }

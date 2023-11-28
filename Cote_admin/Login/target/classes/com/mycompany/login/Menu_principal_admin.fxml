@@ -35,7 +35,7 @@
       <Button fx:id="vol_ajouter" layoutX="17.0" layoutY="279.0" mnemonicParsing="false" onAction="#open_ajout_vol" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Créer vol" />
       <Button fx:id="vol_annuler" layoutX="161.0" layoutY="338.0" mnemonicParsing="false" onAction="#open_annuler_vol" prefHeight="47.0" prefWidth="129.0" styleClass="button_under" text="Annuler vol" />
       <Button fx:id="vol_modifier" layoutX="19.0" layoutY="338.0" mnemonicParsing="false" onAction="#open_modifier_vol" prefHeight="47.0" prefWidth="135.0" styleClass="button_under" text="Modifier vol" />
-      <Button fx:id="vol_afficher" layoutX="17.0" layoutY="402.0" mnemonicParsing="false" opacity="0.76" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Afficher tous les vols" />
+      <Button fx:id="vol_afficher" layoutX="17.0" layoutY="402.0" mnemonicParsing="false" onAction="#open_Affichage_vols" opacity="0.76" prefHeight="47.0" prefWidth="273.0" styleClass="button_under" text="Afficher tous les vols" />
       <Circle fill="#1f93ff00" layoutX="185.0" layoutY="100.0" radius="85.0" stroke="#0d0d0d" strokeType="INSIDE" strokeWidth="0.2" />
       <Button layoutY="12.0" mnemonicParsing="false" onAction="#openLogin" prefHeight="47.0" prefWidth="73.0" styleClass="image-button" />
       <ImageView fx:id="Image_utilisateur" fitHeight="118.0" fitWidth="110.0" layoutX="130.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true" />
