@@ -5,56 +5,46 @@
 package classes;
 
 import java.time.LocalDate;
+import java.util.List;
 
 /**
  *
  * @author nezih
  */
-public class VolSimple {
-    private String paysDepart;
-    private String paysDest;
-    private String aeroportDep;
-    private String aeroportDest;
-    private LocalDate dateAller;
-    private String refVol;
+public class VolSimple extends Vol {
+    private String typeVol;
 
-    public VolSimple(String paysDepart, String paysDest, String aeroportDep, String aeroportDest, LocalDate dateAller, String refVol) {
-        this.paysDepart = paysDepart;
-        this.paysDest = paysDest;
-        this.aeroportDep = aeroportDep;
-        this.aeroportDest = aeroportDest;
-        this.dateAller = dateAller;
-        this.refVol = refVol;
+    // Constructor
+    public VolSimple(String refVol, String paysDepart, String paysDest, String aeroportDep, String aeroportDest,
+                     LocalDate dateAller, Avion avion, float prix, String typeVol) {
+        super(refVol, paysDepart, paysDest, aeroportDep, aeroportDest, dateAller, avion, prix);
+        this.typeVol = typeVol;
     }
 
-    public String getPaysDepart() {
-        return paysDepart;
+    // Getter and setter for typeVol
+    public String getTypeVol() {
+        return typeVol;
     }
 
-    public String getPaysDest() {
-        return paysDest;
+    public void setTypeVol(String typeVol) {
+        this.typeVol = typeVol;
     }
 
-    public String getAeroportDep() {
-        return aeroportDep;
-    }
+    // Additional methods as needed...
 
-    public String getAeroportDest() {
-        return aeroportDest;
-    }
-
-    public LocalDate getDateAller() {
-        return dateAller;
-    }
-
-    public String getRefVol() {
-        return refVol;
-    }
-
-    @Override
+    // toString method
+ @Override
     public String toString() {
-        return "VolSimple{" + "paysDepart=" + paysDepart + ", paysDest=" + paysDest + ", aeroportDep=" + aeroportDep + ", aeroportDest=" + aeroportDest + ", dateAller=" + dateAller + ", refVol=" + refVol + '}';
+        return "Vol Simple{" +
+                "refVol='" + refVol + '\'' +
+                ", paysDepart='" + paysDepart + '\'' +
+                ", paysDest='" + paysDest + '\'' +
+                ", aeroportDep='" + aeroportDep + '\'' +
+                ", aeroportDest='" + aeroportDest + '\'' +
+                ", dateAller='" + dateAller + '\'' +
+                ", typeVol='" + typeVol + '\'' +
+                ", ref avion='" + avion.getReference() + '\'' +
+                ", prix='" + prix + '\'' +
+                '}';
     }
-    
-    
 }

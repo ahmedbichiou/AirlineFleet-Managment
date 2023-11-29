@@ -1,5 +1,9 @@
 package com.mycompany.cote_client;
 
+import classes.Avion;
+import classes.Vol;
+import classes.VolAllerRetour;
+import classes.VolSimple;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +11,10 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import javafx.scene.image.Image;
 
 /**
@@ -29,8 +37,30 @@ public class App extends Application {
     }
 
 
+public static List<Vol> volList = new ArrayList<>();
 
+    public static List<Vol> getVolList() {
+        return volList;
+    }
+
+    public static void setVolList(List<Vol> volList) {
+        App.volList = volList;
+    }
     public static void main(String[] args) {
+   Avion avionExample = new Avion("ExampleModel", "ExampleManufacturer", "ABC123", 8000.0, 200);
+
+
+VolSimple volSimpleExample = new VolSimple("ABC001", "France", "Germany", "Paris Airport", "Berlin Airport",
+        LocalDate.of(2023, 12, 1), avionExample, 500.0f, "Direct");
+
+
+VolAllerRetour volAllerRetourExample = new VolAllerRetour("ABC002", "USA", "Canada", "New York Airport", "Toronto Airport",
+        LocalDate.of(2023, 11, 15), avionExample, 700.0f, LocalDate.of(2023, 11, 30));
+
+
+volList.add(volSimpleExample);
+volList.add(volAllerRetourExample);
+        volList.stream().forEach(System.out::println);
         launch();
     }
     
@@ -81,6 +111,12 @@ public class App extends Application {
     
          public static void openPageSelectionRegionDestination() throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("PageSelectionRegionDestination.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+    }
+          public static void openPage_voir_offres() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_voir_offres.fxml"));
         Parent newSceneRoot = fxmlLoader.load();
         Parent currentRoot = scene.getRoot();
         scene.setRoot(newSceneRoot);

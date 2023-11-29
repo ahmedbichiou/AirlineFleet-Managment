@@ -39,3 +39,31 @@
 .btn_login:pressed {
     -fx-background-color: #0D47A1; /* Button background color when pressed */
 }
+
+
+#dest_combo {
+    -fx-background-color: transparent;
+    -fx-border-color: orange;
+    -fx-border-width: 0.5; /* Adjust the border width as needed */
+}
+#dep_combo {
+    -fx-background-color: transparent;
+    -fx-border-color: orange;
+    -fx-border-width: 0.5; /* Adjust the border width as needed */
+    
+}
+.toggle-button {
+    -fx-background-color: orange;
+    
+    -fx-font-weight: bold;         /* Button text weight */
+    -fx-padding: 10;            /* Button padding */
+    -fx-background-radius: 8px;    /* Rounded corners */
+    -fx-background-insets: 0 0 0 0, 0 0 1 0; /* Elevated effect */
+}
+
+/* Style when selected */
+.toggle-button:selected {
+    -fx-background-color: #cccccc;
+    
+    
+}
