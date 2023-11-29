@@ -10,6 +10,7 @@ import java.time.LocalDate;
  *
  * @author nezih
  */
+/*
 public class ReservationVolSimple extends VolSimple {
      private int nbrAdultes;
     private int nbrEnfants;
@@ -25,4 +26,4 @@ public class ReservationVolSimple extends VolSimple {
     }
     
     
-}
+}*/
