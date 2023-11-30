@@ -10,11 +10,32 @@ import java.time.LocalDate;
  *
  * @author Spray
  */
-public class Reservation {
+public abstract class Reservation {
     protected  String Pays_depart;
    protected  String Pays_destination;
    protected LocalDate date_aller;
-    
+   protected String refavion;
+   protected String refvol;
+      protected float prix;
+     protected int SiegesH;
+     protected int siegesV;
+
+    public String getRefavion() {
+        return refavion;
+    }
+
+    public void setRefavion(String refavion) {
+        this.refavion = refavion;
+    }
+
+    public String getRefvol() {
+        return refvol;
+    }
+
+    public void setRefvol(String refvol) {
+        this.refvol = refvol;
+    }
+ 
       public Reservation(String pays_depart, String pays_destination, LocalDate date_aller) {
         this.Pays_depart = pays_depart;
         this.Pays_destination = pays_destination;
@@ -45,12 +66,48 @@ public class Reservation {
         this.date_aller = date_aller;
     }
 
-   @Override
+    public String getrefAvion() {
+        return refavion;
+    }
+
+    public void setrefAvion(String avion) {
+        this.refavion = avion;
+    }
+
+    public float getPrix() {
+        return prix;
+    }
+
+    public void setPrix(float prix) {
+        this.prix = prix;
+    }
+
+    public int getSiegesH() {
+        return SiegesH;
+    }
+
+    public void setSiegesH(int SiegesH) {
+        this.SiegesH = SiegesH;
+    }
+
+    public int getSiegesV() {
+        return siegesV;
+    }
+
+    public void setSiegesV(int siegesV) {
+        this.siegesV = siegesV;
+    }
+
+    @Override
     public String toString() {
         return "Reservation{" +
                 "Pays_depart='" + Pays_depart + '\'' +
                 ", Pays_destination='" + Pays_destination + '\'' +
                 ", date_aller=" + date_aller +
-                '}';
-    }
+                ", refavion='" + refavion + '\'' +
+                ", refvol='" + refvol + '\'' +
+                ", prix='" + prix +'\'' +
+                ", SiegesH='" + SiegesH +'\'' +
+                ", siegesV='" + siegesV +'\'' +
+                '}';}
 }
