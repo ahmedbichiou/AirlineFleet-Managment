@@ -16,7 +16,7 @@
     </stylesheets>
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0084ff2b" height="669.0" layoutX="16.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="568.0" />
-      <Text layoutX="182.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bonjour, Nom Client !">
+      <Text fx:id="nomClt" layoutX="132.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="bonjour, nom !" textAlignment="CENTER" wrappingWidth="325.60003662109375">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
@@ -41,5 +41,11 @@
             <Font name="System Bold" size="17.0" />
          </font>
       </Text>
+      <Button layoutX="497.0" layoutY="32.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="80.0" styleClass="image-button" stylesheets="@../../../Styles/MenuPrincipalClient.css" />
+      <ImageView fitHeight="70.0" fitWidth="72.0" layoutX="264.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/default.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

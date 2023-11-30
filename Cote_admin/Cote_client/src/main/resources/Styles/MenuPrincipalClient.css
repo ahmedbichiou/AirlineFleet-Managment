@@ -24,3 +24,15 @@
 .button_choix:pressed {
     -fx-background-color: #0D47A1; /* Button background color when pressed */
 }
+
+.image-button {
+    -fx-background-image: url('/Images/logout.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-text-fill: transparent; /* Make text transparent to see the image */
+    -fx-background-color: transparent; /* Make background transparent */
+}
+
+.bonj_client {
+    text-align: center;
+}

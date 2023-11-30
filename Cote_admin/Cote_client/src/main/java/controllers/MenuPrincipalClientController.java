@@ -4,12 +4,15 @@
  */
 package controllers;
 
+import classes.Client;
+import classes.ClientManager;
 import com.mycompany.cote_client.App;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -19,6 +22,8 @@ import javafx.scene.control.Button;
 public class MenuPrincipalClientController implements Initializable {
 
     @FXML
+    private Text nomClt;
+    @FXML
     private Button button_reserver;
     @FXML
     private Button button_consulter;
@@ -26,6 +31,10 @@ public class MenuPrincipalClientController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         styleclasses();
+        Client authenticatedClient = ClientManager.getAuthenticatedClient();
+        if (authenticatedClient != null) {
+            nomClt.setText("Bonjour, " + authenticatedClient.getNomClt()+" !");
+        }
     } 
     
     public void openClientReservation() throws Exception {
@@ -36,9 +45,14 @@ public class MenuPrincipalClientController implements Initializable {
         App.openClientConsulterVol();
     }
     
+    public void back() throws Exception{
+    App.openPageLoginClient();
+    }
+    
     private void styleclasses()
     {
             button_reserver.getStyleClass().add("buttton_choix");
+            nomClt.getStyleClass().add("bonj_client");
     }
     
 }

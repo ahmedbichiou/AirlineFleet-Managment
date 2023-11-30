@@ -1,7 +1,27 @@
-/*
- * Empty Stylesheet file.
- */
+.btn_creation {
+   -fx-background-color: #2196F3; /* Button background color */
+    -fx-text-fill: white;          /* Button text color */
+    -fx-font-size: 14px;           /* Button text size */
+    -fx-font-weight: bold;         /* Button text weight */
+    -fx-padding: 10;            /* Button padding */
+    -fx-background-radius: 8px;    /* Rounded corners */
+    -fx-background-insets: 0 0 0 0, 0 0 1 0; /* Elevated effect */
+   
+}
 
-.mainFxmlClass {
+.btn_creation:hover {
+    -fx-background-color: #1565C0; /* Button background color on hover */
+}
 
+.btn_creation:pressed {
+    -fx-background-color: #0D47A1; /* Button background color when pressed */
+}
+
+.image-button {
+    -fx-background-image: url('/Images/back.png');
+    -fx-background-size: cover; /* Adjust as needed */
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-text-fill: transparent; /* Make text transparent to see the image */
+    -fx-background-color: transparent; /* Make background transparent */
 }

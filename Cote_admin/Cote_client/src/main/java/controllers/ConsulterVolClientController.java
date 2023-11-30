@@ -4,6 +4,7 @@
  */
 package controllers;
 
+import com.mycompany.cote_client.App;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
@@ -23,4 +24,7 @@ public class ConsulterVolClientController implements Initializable {
         // TODO
     }    
     
+    public void back() throws Exception{
+    App.openMenuClient();
+    }
 }
