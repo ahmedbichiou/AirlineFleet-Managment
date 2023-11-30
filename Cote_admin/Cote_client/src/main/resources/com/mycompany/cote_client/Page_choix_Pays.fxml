@@ -28,8 +28,8 @@
       <Rectangle arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="378.0" layoutX="7.0" layoutY="176.0" stroke="TRANSPARENT" strokeType="INSIDE" width="585.0" />
       <ComboBox fx:id="dep_combo" layoutX="118.0" layoutY="258.0" prefHeight="26.0" prefWidth="163.0" />
       <ComboBox fx:id="dest_combo" layoutX="118.0" layoutY="302.0" prefHeight="26.0" prefWidth="163.0" />
-      <DatePicker layoutX="397.0" layoutY="261.0" prefHeight="26.0" prefWidth="150.0"  fx:id="aller" />
-      <DatePicker layoutX="397.0" layoutY="299.0" prefHeight="26.0" prefWidth="150.0" fx:id="retour" />
+      <DatePicker fx:id="aller" layoutX="397.0" layoutY="261.0" prefHeight="26.0" prefWidth="150.0" />
+      <DatePicker fx:id="retour" layoutX="397.0" layoutY="299.0" prefHeight="26.0" prefWidth="150.0" />
       <Text layoutX="120.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pays">
          <font>
             <Font size="21.0" />
@@ -40,11 +40,11 @@
             <Font size="21.0" />
          </font>
       </Text>
-      <Button layoutX="331.0" layoutY="375.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="226.0" styleClass="btn_login" text="Rechercher des offers" onAction="#rechercherOffre" />
+      <Button layoutX="331.0" layoutY="375.0" mnemonicParsing="false" onAction="#rechercherOffre" prefHeight="38.0" prefWidth="226.0" styleClass="btn_login" text="Rechercher des offers" />
       <Text layoutX="63.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Depart" />
       <Text layoutX="52.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination" />
       <Text layoutX="352.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aller" />
-      <Text layoutX="352.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retour" fx:id="retour_label" />
+      <Text fx:id="retour_label" layoutX="352.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retour" />
       <Text layoutX="440.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <Circle fill="#1f9bff" layoutX="311.0" layoutY="482.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="#ffffffba" layoutX="437.0" layoutY="481.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
@@ -108,5 +108,6 @@
       <Button fx:id="etape_2" layoutX="158.0" layoutY="449.0" mnemonicParsing="false" onAction="#etape_2" prefHeight="88.0" prefWidth="57.0" styleClass="transparent-button" text="Button" />
       <Button fx:id="etape_1" layoutX="34.0" layoutY="452.0" mnemonicParsing="false" onAction="#etape_1" prefHeight="88.0" prefWidth="57.0" styleClass="transparent-button" text="Button" />
       <ToggleButton fx:id="allerRetourToggleButton" layoutX="216.0" layoutY="375.0" mnemonicParsing="false" onAction="#handleAllerRetourToggleButton" prefHeight="38.0" prefWidth="106.0" text="Aller/Retour" />
+      <Text fx:id="erreur" fill="RED" layoutX="331.0" layoutY="436.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="226.39999999999986" />
    </children>
 </AnchorPane>

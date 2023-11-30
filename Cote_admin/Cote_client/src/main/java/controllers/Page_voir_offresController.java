@@ -4,10 +4,17 @@
  */
 package controllers;
 
+import classes.ReservationSimple;
+import classes.ReservationVolAllerRetour;
 import classes.Vol;
+import classes.VolAllerRetour;
+import classes.VolSimple;
 import com.mycompany.cote_client.App;
 import static com.mycompany.cote_client.App.volList;
+import static controllers.Page_choix_PaysController.reservation;
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
@@ -36,7 +43,7 @@ public class Page_voir_offresController implements Initializable {
 
     
     
-       public static String extractFromAvionString(String avionToString,String toExtract) {
+       public static String extractFromVolString(String avionToString,String toExtract) {
         int start = avionToString.indexOf(toExtract) + toExtract.length();
         int end = avionToString.indexOf("'", start);
 
@@ -49,7 +56,18 @@ public class Page_voir_offresController implements Initializable {
 
     
     
+    public static boolean isVolAllerRetour(String volString) {
+        return volString.contains("dateRetour");
+    }
     
+    public static boolean refvolcompagnie(String volString,String type) {
+        return volString.contains(type);
+    }
+
+    public static boolean isVolSimple(String volString) {
+        return !volString.contains("dateRetour");
+    }
+ 
     
       @FXML
     private ListView<Map.Entry<Integer, String>> hashMapListView;
@@ -66,7 +84,13 @@ public class Page_voir_offresController implements Initializable {
      public void etape_3() throws Exception{
          App.openPage_choix_Pays();
      }
-
+private boolean compareDates(LocalDate datePickerDate, LocalDate comparisonDate) {
+        if (datePickerDate.isEqual(comparisonDate)) {
+           return true;
+        } else {
+           return false;
+        }
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
      
@@ -74,10 +98,33 @@ public class Page_voir_offresController implements Initializable {
 int key = 0;
 
 for (Vol vol : volList) {
+    if (reservation instanceof ReservationVolAllerRetour) {
+        if(vol instanceof VolAllerRetour)
+        {
+            
+            if( compareDates(((VolAllerRetour) vol).getDateRetour(),((ReservationVolAllerRetour) reservation).getDate_retour())&& vol.getPaysDepart().equals(reservation.getPays_depart()) && vol.getPaysDest().equals(reservation.getPays_destination()) &&compareDates(vol.getDateAller(),reservation.getDate_aller()) )
+                {
+                    System.out.println("Value: " + vol);
+                exampleHashMap.put(key, vol.toString());
+                key++; 
+                }
+        }
     
-    System.out.println("Value: " + vol);
-    exampleHashMap.put(key, vol.toString());
-    key++;
+}
+    else{
+        if(vol instanceof VolSimple)
+        {
+            
+            if(vol.getPaysDepart().equals(reservation.getPays_depart()) && vol.getPaysDest().equals(reservation.getPays_destination()) &&compareDates(vol.getDateAller(),reservation.getDate_aller()) )
+                {
+                    System.out.println("Value: " + vol);
+                exampleHashMap.put(key, vol.toString());
+                key++; 
+                }
+        }
+    }
+    
+   
 }
      
 
@@ -113,9 +160,53 @@ negativeButton4.getStyleClass().add("image-button2");
         setText(null);
         setGraphic(null);
     } else {
-        setText(entry.getValue());
+            String refvol = extractFromVolString(entry.getValue(),"refVol='");
+            String pays_dep = extractFromVolString(entry.getValue(),", paysDepart='");
+            String paysDestination = extractFromVolString(entry.getValue(), ", paysDest='");
+            String aeroportDep = extractFromVolString(entry.getValue(), ", aeroportDep='");
+            String aeroportDest = extractFromVolString(entry.getValue(), ", aeroportDest='");
+            String type = extractFromVolString(entry.getValue(), ", typeVol='");
+
+            
+            String dateAller = extractFromVolString(entry.getValue(), ", dateAller='");
+            String dateRetour = extractFromVolString(entry.getValue(), ", dateRetour='"); 
+            String avionReference = extractFromVolString(entry.getValue(), ", ref avion='");
+            String prixString = extractFromVolString(entry.getValue(), ", prix='");
+
+System.out.println("Référence de l'avion: " + avionReference);
+System.out.println("Prix: " + prixString);
+        System.out.println("le valeur refvol = " + refvol );
+        System.out.println("le valeur pays_dep = " + pays_dep );
+        System.out.println("Aeroport de départ: " + aeroportDep);
+System.out.println("Aeroport de destination: " + aeroportDest);
+
+
+
+System.out.println("Pays_destination: " + paysDestination);
+System.out.println("date_aller: " + dateAller);
+System.out.println("date_retour: " + dateRetour);
+         String valuetoshow;
+        valuetoshow = "Reference vol  : "+ refvol + "\n";
+        valuetoshow += pays_dep + " -----> " + paysDestination +"\n";
+        valuetoshow += aeroportDep + " -----> " + aeroportDest +"\n" ;
+        valuetoshow += "Date aller : "+ dateAller+"\n" ;
+        if(isVolAllerRetour(entry.getValue()))valuetoshow += "Date Retour  : " + dateRetour+"\n" ;
+        if(isVolSimple(entry.getValue()))valuetoshow += "Type  : " +type+"\n" ;
+        valuetoshow += "prix: "+ prixString ;
+        //setText(entry.getValue());
+        setText(valuetoshow);
+        //setText(entry.getValue());
    String showImage= "Images/Icons/Transavia.png";
 
+
+      if (refvolcompagnie(entry.getValue(),"TO")) {
+        showImage= "Images/Icons/Transavia.png";
+       }
+      else if(refvolcompagnie(entry.getValue(),"TU"))
+       {
+          showImage= "Images/Icons/Tunisair.png";        
+        }
+        
 
          Image image = new Image(showImage);
                             imageView.setImage(image);
@@ -124,7 +215,7 @@ negativeButton4.getStyleClass().add("image-button2");
                             imageView.setFitHeight(85);
 
 
-        editButton.setOnAction(event -> handleEditButton(entry));
+        editButton.setOnAction(event -> handlechoisirButton(entry));
     
 
 
@@ -133,14 +224,43 @@ negativeButton4.getStyleClass().add("image-button2");
 
         VBox buttonsContainer = new VBox(negativeButton,editButton,negativeButton2);
        
-        HBox vBox = new HBox(buttonsContainer, imageView);
+        HBox vBox = new HBox( imageView,negativeButton4,buttonsContainer,negativeButton3);
         HBox.setHgrow(vBox, javafx.scene.layout.Priority.ALWAYS); // Make VBox expand horizontally
 
         setGraphic(vBox);
     }
 }
-    private void handleEditButton(Map.Entry<Integer, String> entry) {
-            
+
+    private void handlechoisirButton(Map.Entry<Integer, String> entry) {
+                  System.out.println("choisir button clicked for item: " + entry);
+             reservation.setRefvol(extractFromVolString(entry.getValue(),"refVol='"));
+             reservation.setPrix(Float.parseFloat(extractFromVolString(entry.getValue(), ", prix='")));
+             reservation.setrefAvion(extractFromVolString(entry.getValue(), ", ref avion='"));
+             if (reservation instanceof ReservationVolAllerRetour) {
+                 
+                 if(isVolAllerRetour(entry.getValue()))   
+                 {
+                     LocalDate  retourDate = null;
+                     try {
+                    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                    retourDate = LocalDate.parse(extractFromVolString(entry.getValue(), ", dateRetour='"), formatter);
+                     }
+                       catch (Exception e) {
+                                System.err.println("Error parsing the string to LocalDate: " + e.getMessage());
+                            }
+                     ((ReservationVolAllerRetour) reservation).setDate_retour(retourDate);
+                 }
+                 
+             }
+              if (reservation instanceof ReservationSimple) {
+              ((ReservationSimple) reservation).setType(extractFromVolString(entry.getValue(), ", typeVol='"));
+              }
+              
+                        try { 
+                          App.openPageSieges();
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                        }
    }
 
                

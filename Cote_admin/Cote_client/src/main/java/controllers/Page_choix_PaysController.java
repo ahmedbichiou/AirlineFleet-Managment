@@ -5,6 +5,7 @@
 package controllers;
 
 import classes.Reservation;
+import classes.ReservationSimple;
 import classes.ReservationVolAllerRetour;
 import com.mycompany.cote_client.App;
 import static controllers.PageSelectionRegionController.selectedRegionDepart;
@@ -42,56 +43,57 @@ private CheckBox allerRetourCheckbox;
   private  DatePicker aller;
     @FXML
     private Text retour_label;
-  
+  @FXML
+  private Text erreur;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 List<String> europeAirports = new ArrayList<>();
-europeAirports.add("Heathrow Airport (LHR), London, UK");
-europeAirports.add("Charles de Gaulle Airport (CDG), Paris, France");
-europeAirports.add("Frankfurt Airport (FRA), Frankfurt, Germany");
-europeAirports.add("Amsterdam Airport Schiphol (AMS), Amsterdam, Netherlands");
-europeAirports.add("Barcelona-El Prat Airport (BCN), Barcelona, Spain");
+europeAirports.add("UK");
+europeAirports.add("France");
+europeAirports.add("Germany");
+europeAirports.add("Netherlands");
+europeAirports.add("Spain");
 ObservableList<String> europe_airports = FXCollections.observableArrayList(europeAirports);
 
 List<String> africaAirports = new ArrayList<>();
-africaAirports.add("Tunis-Carthage International Airport (TUN), Tunis, Tunisia");
-africaAirports.add("Cairo International Airport (CAI), Cairo, Egypt");
-africaAirports.add("OR Tambo International Airport (JNB), Johannesburg, South Africa");
-africaAirports.add("Addis Ababa Bole International Airport (ADD), Addis Ababa, Ethiopia");
-africaAirports.add("Jomo Kenyatta International Airport (NBO), Nairobi, Kenya");
+africaAirports.add("Tunisia");
+africaAirports.add("Egypt");
+africaAirports.add("South Africa");
+africaAirports.add("Ethiopia");
+africaAirports.add("Kenya");
 ObservableList<String> africa_airports = FXCollections.observableArrayList(africaAirports);
 
 List<String> asiaAirports = new ArrayList<>();
-asiaAirports.add("Beijing Capital International Airport (PEK), Beijing, China");
-asiaAirports.add("Tokyo Haneda Airport (HND), Tokyo, Japan");
-asiaAirports.add("Dubai International Airport (DXB), Dubai, UAE");
-asiaAirports.add("Singapore Changi Airport (SIN), Singapore");
-asiaAirports.add("Incheon International Airport (ICN), Seoul, South Korea");
+asiaAirports.add("China");
+asiaAirports.add("Japan");
+asiaAirports.add("UAE");
+asiaAirports.add("Singapore");
+asiaAirports.add("South Korea");
 ObservableList<String> asia_airports = FXCollections.observableArrayList(asiaAirports);
 
 List<String> oceaniaAirports = new ArrayList<>();
-oceaniaAirports.add("Sydney Airport (SYD), Sydney, Australia");
-oceaniaAirports.add("Auckland Airport (AKL), Auckland, New Zealand");
-oceaniaAirports.add("Brisbane Airport (BNE), Brisbane, Australia");
-oceaniaAirports.add("Melbourne Airport (MEL), Melbourne, Australia");
-oceaniaAirports.add("Honolulu International Airport (HNL), Honolulu, USA");
+oceaniaAirports.add("Australia");
+oceaniaAirports.add("New Zealand");
+oceaniaAirports.add("Australia");
+oceaniaAirports.add("Australia");
+oceaniaAirports.add("USA");
 ObservableList<String> oceania_airports = FXCollections.observableArrayList(oceaniaAirports);
 
 List<String> northAmericaAirports = new ArrayList<>();
-northAmericaAirports.add("Hartsfield-Jackson Atlanta International Airport (ATL), Atlanta, USA");
-northAmericaAirports.add("Los Angeles International Airport (LAX), Los Angeles, USA");
-northAmericaAirports.add("John F. Kennedy International Airport (JFK), New York, USA");
-northAmericaAirports.add("Toronto Pearson International Airport (YYZ), Toronto, Canada");
-northAmericaAirports.add("Vancouver International Airport (YVR), Vancouver, Canada");
+northAmericaAirports.add("Atlanta, USA");
+northAmericaAirports.add("Los Angeles, USA");
+northAmericaAirports.add("New York, USA");
+northAmericaAirports.add("Toronto, Canada");
+northAmericaAirports.add("Vancouver, Canada");
 ObservableList<String> north_america_airports = FXCollections.observableArrayList(northAmericaAirports);
 
 List<String> southAmericaAirports = new ArrayList<>();
-southAmericaAirports.add("São Paulo/Guarulhos–Governador André Franco Montoro International Airport (GRU), São Paulo, Brazil");
-southAmericaAirports.add("El Dorado International Airport (BOG), Bogotá, Colombia");
-southAmericaAirports.add("Ministro Pistarini International Airport (EZE), Buenos Aires, Argentina");
-southAmericaAirports.add("Comodoro Arturo Merino Benítez International Airport (SCL), Santiago, Chile");
-southAmericaAirports.add("Jorge Chávez International Airport (LIM), Lima, Peru");
+southAmericaAirports.add("São Paulo, Brazil");
+southAmericaAirports.add("Bogotá, Colombia");
+southAmericaAirports.add("Buenos Aires, Argentina");
+southAmericaAirports.add("Santiago, Chile");
+southAmericaAirports.add("Lima, Peru");
 ObservableList<String> south_america_airports = FXCollections.observableArrayList(southAmericaAirports);
 
 // ... (rest of your code)
@@ -172,10 +174,30 @@ switch (selectedRegionArrive) {
       {
        LocalDate  date_retour = retour.getValue();
            reservation = new ReservationVolAllerRetour(Pays_depart,Pays_destination,date_aller,date_retour);
+           if(Pays_depart != null && Pays_destination != null && date_aller != null && retour.getValue() != null)
+      {
+         App.openPage_voir_offres();  
+      }
+            else
+      {
+          erreur.setText("Tous les champs sont obligatoire");
+      }
       }else if(isSelected == true){
-          reservation = new Reservation(Pays_depart,Pays_destination,date_aller);
+          reservation = new ReservationSimple(Pays_depart,Pays_destination,date_aller);
+               if(Pays_depart != null && Pays_destination != null && date_aller != null)
+      {
+         App.openPage_voir_offres();  
+      }
+            else
+      {
+          erreur.setText("Tous les champs sont obligatoire");
+      }
       }
       System.out.println(reservation);
-     //App.openPage_voir_offres();
+    
+    
+      
+     
+     
     }
 }

@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.transparent-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-border-color: transparent; /* Border color, adjust as needed */
+    -fx-border-width: 2; /* Border width, adjust as needed */
+    -fx-border-radius: 5; /* Border radius, adjust as needed */
+}
+.transparent-button:pressed {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-border-color: transparent; /* Border color, adjust as needed */
+    -fx-border-width: 3; /* Border width, adjust as needed */
+    -fx-border-radius: 10; /* Border radius, adjust as needed */
+}

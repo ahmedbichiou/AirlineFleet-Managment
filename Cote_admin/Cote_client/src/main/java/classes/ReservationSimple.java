@@ -8,27 +8,27 @@ import java.time.LocalDate;
 
 /**
  *
- * @author nezih
+ * @author Spray
  */
-
-public class ReservationVolAllerRetour extends Reservation {
-    private LocalDate date_retour;
-       public ReservationVolAllerRetour(String pays_depart, String pays_destination, LocalDate date_aller, LocalDate date_retour) {
+public class ReservationSimple extends Reservation {
+      private String type;
+       public ReservationSimple(String pays_depart, String pays_destination, LocalDate date_aller) {
         super(pays_depart, pays_destination, date_aller);
-        this.date_retour = date_retour;
+       
     }
 
-    public LocalDate getDate_retour() {
-        return date_retour;
+    public String getType() {
+        return type;
     }
 
-    public void setDate_retour(LocalDate date_retour) {
-        this.date_retour = date_retour;
+    public void setType(String type) {
+        this.type = type;
     }
 
-    @Override
+
+     @Override
     public String toString() {
-        return "Reservation aller-retour{" +
+        return "ReservationSimple{" +
                 "Pays_depart='" + Pays_depart + '\'' +
                 ", Pays_destination='" + Pays_destination + '\'' +
                 ", date_aller=" + date_aller +
@@ -37,7 +37,7 @@ public class ReservationVolAllerRetour extends Reservation {
                 ", prix='" + prix +'\'' +
                 ", SiegesH='" + SiegesH +'\'' +
                 ", siegesV='" + siegesV +'\'' +
-                ", date_retour=" + date_retour + '\'' +
+                ", type=" + type + '}'+ '\'' +
                 '}';
     }
        

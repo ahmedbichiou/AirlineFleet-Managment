@@ -50,15 +50,17 @@ public static List<Vol> volList = new ArrayList<>();
    Avion avionExample = new Avion("ExampleModel", "ExampleManufacturer", "ABC123", 8000.0, 200);
 
 
-VolSimple volSimpleExample = new VolSimple("ABC001", "France", "Germany", "Paris Airport", "Berlin Airport",
-        LocalDate.of(2023, 12, 1), avionExample, 500.0f, "Direct");
+VolSimple volSimpleExample = new VolSimple("TO8865", "Tunisia", "France", "Tunis Airport", "France Airport",
+        LocalDate.of(2023, 11, 30), avionExample, 900.0f, "1ere classe");
+VolSimple volSimpleExample2 = new VolSimple("TU755", "Tunisia", "France", "Tunis Airport", "France Airport",
+        LocalDate.of(2023, 11, 30), avionExample, 500.0f, "economy");
 
-
-VolAllerRetour volAllerRetourExample = new VolAllerRetour("ABC002", "USA", "Canada", "New York Airport", "Toronto Airport",
+VolAllerRetour volAllerRetourExample = new VolAllerRetour("TU002", "Tunisia", "France", "New York Airport", "Toronto Airport",
         LocalDate.of(2023, 11, 15), avionExample, 700.0f, LocalDate.of(2023, 11, 30));
 
 
 volList.add(volSimpleExample);
+volList.add(volSimpleExample2);
 volList.add(volAllerRetourExample);
         volList.stream().forEach(System.out::println);
         launch();
@@ -129,6 +131,11 @@ volList.add(volAllerRetourExample);
         scene.setRoot(newSceneRoot);
     }
     
-    
+          public static void openPageSieges() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_sieges.fxml"));
+        Parent newSceneRoot = fxmlLoader.load();
+        Parent currentRoot = scene.getRoot();
+        scene.setRoot(newSceneRoot);
+    }
 
 }
