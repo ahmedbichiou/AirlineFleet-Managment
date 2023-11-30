@@ -4,7 +4,9 @@
  */
 package controllers;
 
+import classes.Vol;
 import com.mycompany.cote_client.App;
+import static com.mycompany.cote_client.App.volList;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
@@ -53,18 +55,30 @@ public class Page_voir_offresController implements Initializable {
     private ListView<Map.Entry<Integer, String>> hashMapListView;
     
   
+    public void etape_1() throws Exception{
     
+    App.openClientReservation();
+    }
+     public void etape_2() throws Exception{
+    
+    App.openPageSelectionRegionDestination();
+    }
+     public void etape_3() throws Exception{
+         App.openPage_choix_Pays();
+     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        /*
-        Map<Integer, String> exampleHashMap = new HashMap<>();
-          int key = 0;
-for (Avion value : compte_ouvert.getList_Avions().values()) {
-            System.out.println("Value: " + value);
-            exampleHashMap.put(key, value.toString());
-            key++;
-        }
+     
+     Map<Integer, String> exampleHashMap = new HashMap<>();
+int key = 0;
+
+for (Vol vol : volList) {
+    
+    System.out.println("Value: " + vol);
+    exampleHashMap.put(key, vol.toString());
+    key++;
+}
      
 
 
@@ -79,8 +93,8 @@ for (Avion value : compte_ouvert.getList_Avions().values()) {
             public ListCell<Map.Entry<Integer, String>> call(ListView<Map.Entry<Integer, String>> param) {
                 return new ListCell<Map.Entry<Integer, String>>() {
                     private final ImageView imageView = new ImageView();
-                    private final Button editButton = new Button("Editer ");
-                    private final Button deleteButton = new Button("Delete");
+                    private final Button editButton = new Button("Choisir");
+                    
                     private final Button negativeButton = new Button("negative");   
                     private final Button negativeButton2 = new Button("negative");  
                     private final Button negativeButton3 = new Button("negative");  
@@ -89,36 +103,37 @@ for (Avion value : compte_ouvert.getList_Avions().values()) {
 protected void updateItem(Map.Entry<Integer, String> entry, boolean empty) {
     super.updateItem(entry, empty);
     
-//negativeButton.getStyleClass().add("image-button1");
-//negativeButton2.getStyleClass().add("image-button2");
-//negativeButton3.getStyleClass().add("image-button2");
-//negativeButton4.getStyleClass().add("image-button2");
- //editButton.getStyleClass().add("btn_login");
- //deleteButton.getStyleClass().add("btn_login2");
+negativeButton.getStyleClass().add("image-button1");
+negativeButton2.getStyleClass().add("image-button2");
+negativeButton3.getStyleClass().add("image-button2");
+negativeButton4.getStyleClass().add("image-button2");
+ editButton.getStyleClass().add("btn_login");
+
     if (empty || entry == null) {
         setText(null);
         setGraphic(null);
     } else {
         setText(entry.getValue());
-   String showImage= "Images/Icons/Airbus_A320.png";
+   String showImage= "Images/Icons/Transavia.png";
 
 
          Image image = new Image(showImage);
                             imageView.setImage(image);
                              imageView.setPreserveRatio(false);
-                            imageView.setFitWidth(170);
+                            imageView.setFitWidth(110);
                             imageView.setFitHeight(85);
 
 
         editButton.setOnAction(event -> handleEditButton(entry));
-        deleteButton.setOnAction(event -> handleDeleteButton(entry));
+    
 
 
         Region spacer = new Region();
         spacer.setMinWidth(10);
 
-        VBox buttonsContainer = new VBox(negativeButton,editButton,negativeButton2, deleteButton);
-        HBox vBox = new HBox(imageView,negativeButton3, buttonsContainer,negativeButton4);
+        VBox buttonsContainer = new VBox(negativeButton,editButton,negativeButton2);
+       
+        HBox vBox = new HBox(buttonsContainer, imageView);
         HBox.setHgrow(vBox, javafx.scene.layout.Priority.ALWAYS); // Make VBox expand horizontally
 
         setGraphic(vBox);
@@ -131,13 +146,11 @@ protected void updateItem(Map.Entry<Integer, String> entry, boolean empty) {
                
 
 
-     private void handleDeleteButton(Map.Entry<Integer, String> entry) {
-                 
-    }
+   
                 };
             }
         }); 
-*/
+
     }
    }
 

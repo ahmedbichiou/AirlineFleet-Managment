@@ -21,6 +21,15 @@ public class Vol {
     protected Avion avion;
     protected float prix;
     protected List<Client> clients;
+    protected int[][] Sieges = new int[27][6];
+
+    public int[][] getSieges() {
+        return Sieges;
+    }
+
+    public void setSieges(int[][] Sieges) {
+        this.Sieges = Sieges;
+    }
 
     // Constructor
     public Vol(String refVol, String paysDepart, String paysDest, String aeroportDep, String aeroportDest,
@@ -33,7 +42,11 @@ public class Vol {
         this.dateAller = dateAller;
         this.avion = avion;
         this.prix = prix;
-        
+        for (int i = 0; i < 27; i++) {
+    for (int j = 0; j < 6; j++) {
+        Sieges[i][j] = 0;
+    }
+}
     }
 
     // Getters and setters
