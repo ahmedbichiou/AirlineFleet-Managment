@@ -4,10 +4,13 @@
  */
 package controllers;
 
+import classes.Reservation;
+import classes.ReservationVolAllerRetour;
 import com.mycompany.cote_client.App;
 import static controllers.PageSelectionRegionController.selectedRegionDepart;
 import static controllers.PageSelectionRegionDestinationController.selectedRegionArrive;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -35,6 +38,8 @@ public class Page_choix_PaysController implements Initializable {
 private CheckBox allerRetourCheckbox;
     @FXML
   private  DatePicker retour;
+     @FXML
+  private  DatePicker aller;
     @FXML
     private Text retour_label;
   
@@ -150,15 +155,27 @@ switch (selectedRegionArrive) {
      
    @FXML
     private ToggleButton allerRetourToggleButton;
-
+ boolean isSelected = false ;
      @FXML
     private void handleAllerRetourToggleButton() {
-        boolean isSelected = allerRetourToggleButton.isSelected();
+         isSelected = allerRetourToggleButton.isSelected();
         retour.setVisible(!isSelected);
         retour_label.setVisible(!isSelected);
     }
+   
+   public static Reservation  reservation;
      public void rechercherOffre() throws Exception{
-    
-     App.openPage_voir_offres();
+      String Pays_depart = dep_combo.getValue();
+        String Pays_destination = dest_combo.getValue();
+       LocalDate date_aller = aller.getValue();
+      if(isSelected == false)
+      {
+       LocalDate  date_retour = retour.getValue();
+           reservation = new ReservationVolAllerRetour(Pays_depart,Pays_destination,date_aller,date_retour);
+      }else if(isSelected == true){
+          reservation = new Reservation(Pays_depart,Pays_destination,date_aller);
+      }
+      System.out.println(reservation);
+     //App.openPage_voir_offres();
     }
 }
