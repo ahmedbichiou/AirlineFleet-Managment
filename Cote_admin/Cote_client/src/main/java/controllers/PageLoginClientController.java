@@ -4,6 +4,8 @@
  */
 package controllers;
 
+import classes.Client;
+import classes.ClientManager;
 import com.mycompany.cote_client.App;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -11,9 +13,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 
@@ -26,7 +25,7 @@ public class PageLoginClientController implements Initializable {
 
     
     @FXML
-    private TextField nom_login;
+    private TextField email;
     @FXML
     private TextField password_login;
     @FXML
@@ -36,6 +35,9 @@ public class PageLoginClientController implements Initializable {
     @FXML
     private Button btn_creation;
     @FXML
+    private Text error;
+    
+    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {        
@@ -48,24 +50,34 @@ public class PageLoginClientController implements Initializable {
    
   
     public boolean verifClient() throws Exception {
-        return true;
+         String userEmail = email.getText();
+        String userPassword = password_login.getText();
+        Client client = ClientManager.getClientByEmail(userEmail);
+
+        if (client != null && client.getMdp().equals(userPassword)) {
+            ClientManager.setAuthenticatedClient(client);
+            return true; 
+        }
+
+        // Wrong credentials
+        return false;
     }
-   
+
     public void openMenuClient() throws Exception {
-        boolean result= verifClient();  
+        boolean result = verifClient();
         if (result) {
             App.openMenuClient();
-        }
-        else{
-            //wrong confidentiels
+        } else {
+            error.setText("email ou mot de passe incorrect!");
         }
     }
     public void openClientAccCreation() throws Exception {
         App.openClientAccCreation();
     }
+    
     private void hints() 
     {
-        nom_login.setPromptText("Enter votre nom");
+        email.setPromptText("Enter votre adresse email");
         password_login.setPromptText("Enter votre mot de passe");
     }
     private void styleclasses()
@@ -73,7 +85,7 @@ public class PageLoginClientController implements Initializable {
             btn_login.getStyleClass().add("btn_login");
             main_rectangle.getStyleClass().add("main_rectangle");
             btn_creation.getStyleClass().add("btn_creation"); 
-            nom_login.getStyleClass().add( "text-field-custom");
+            email.getStyleClass().add( "text-field-custom");
             password_login.getStyleClass().add( "text-field-custom");
     }
 }

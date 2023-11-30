@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ConsulterVolClientController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="controllers.ConsulterVolClientController">
     <stylesheets>
-        <URL value="@/Styles/ConsulterVolClient.css"/>
+        <URL value="@/Styles/ConsulterVolClient.css" />
     </stylesheets>
+   <children>
+      <Button layoutY="71.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="80.0" styleClass="image-button" stylesheets="@../../../Styles/ConsulterVolClient.css" />
+   </children>
 </AnchorPane>
