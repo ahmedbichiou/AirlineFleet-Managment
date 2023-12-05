@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Classes;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 /**
@@ -17,6 +18,8 @@ public class Compagnie_aerienne {
     private String paysOrigine;
     private int anneeFondation;
     private Map<String,Avion> list_Avions;
+   
+     private Map<String,Vol> list_vols;
 
 
     public Compagnie_aerienne(String nom, String mot_pass, String paysOrigine, int anneeFondation) {
@@ -25,7 +28,7 @@ public class Compagnie_aerienne {
         this.paysOrigine = paysOrigine;
         this.anneeFondation = anneeFondation;
         this.list_Avions = new HashMap<>();
-
+        this.list_vols= new HashMap<>();
     }
 
     public String getNom() {
@@ -75,6 +78,21 @@ public class Compagnie_aerienne {
         }
         System.out.println();
     }
+public void afficherVols() {
+    System.out.println("Liste des vols :");
+    for (Map.Entry<String, Vol> entry : list_vols.entrySet()) {
+        System.out.println("ID : " + entry.getKey() + ", Vol : " + entry.getValue());
+    }
+    System.out.println();
+}
+
+    public Map<String, Vol> getList_vols() {
+        return list_vols;
+    }
+
+    public void setList_vols(Map<String, Vol> list_vols) {
+        this.list_vols = list_vols;
+    }
 
     public Map<String, Avion> getList_Avions() {
         return list_Avions;
@@ -89,6 +107,10 @@ public class Compagnie_aerienne {
         list_Avions.put(reference, avion);
         System.out.println("Avion ajouté avec succès. ID : " + reference + ", Avion : " + avion);
     }
+    public void ajouterVol(String reference, Vol vol) {
+    list_vols.put(reference, vol);
+    System.out.println("Vol ajouté avec succès. ID : " + reference + ", Vol : " + vol);
+}
 
     // Méthode pour supprimer un avion
     public void supprimerAvion(String reference) {
@@ -99,6 +121,16 @@ public class Compagnie_aerienne {
             System.out.println("Avion avec l'ID " + reference + " non trouvé.");
         }
     }
+    
+    public void supprimerVol(String reference) {
+    if (list_vols.containsKey(reference)) {
+        Vol volSupprime = list_vols.remove(reference);
+        System.out.println("Vol supprimé avec succès. ID : " + reference + ", Vol : " + volSupprime);
+    } else {
+        System.out.println("Vol avec l'ID " + reference + " non trouvé.");
+    }
+}
+
 
     @Override
     public String toString() {

@@ -1,30 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.image.ImageView?> 
-<?import javafx.geometry.*?>
-<?import java.net.URL?>
-<?import javafx.scene.image.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Page_ajout_volController" styleClass="mainFxmlClass" prefHeight="700.0" prefWidth="600.0">
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Page_ajout_volController">
     <stylesheets>
         <URL value="@/styles/page_ajout_vol.css" />
     </stylesheets>
-        <Button layoutY="12.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="73.0" styleClass="image-button" onAction="#handleBack" />
-        <ImageView fx:id="Image_utilisateur" fitHeight="120.0" fitWidth="159.0" layoutX="115.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true" />
-    <VBox spacing="15" alignment="TOP_CENTER" styleClass="form-container" AnchorPane.bottomAnchor="100" AnchorPane.leftAnchor="100" AnchorPane.rightAnchor="100" AnchorPane.topAnchor="100">
-        <Label text="Ajouter Vol" styleClass="title-label" />
-        <TextField fx:id="txtFlightNumber" promptText="Numéro de vol" styleClass="text-field"/>
-        <TextField fx:id="txtDepartureCity" promptText="Ville de départ" styleClass="text-field"/>
-        <TextField fx:id="txtArrivalCity" promptText="Ville d'arrivée" styleClass="text-field"/>
-        <DatePicker fx:id="datePickerDeparture" promptText="Date de départ" styleClass="date-picker"/>
-        <DatePicker fx:id="datePickerArrival" promptText="Date d'arrivée" styleClass="date-picker"/>
-        <VBox>
-        <!-- Existing elements -->
-        <Label text="Type d'Avion" styleClass="form-label" />
-        <ComboBox fx:id="comboBoxPlaneType" promptText="Choisir le type d'avion" styleClass="combo-box"/>
-        <!-- Continue with the rest of the form -->
-        </VBox>
-        <Button text="Ajouter Vol" onAction="#addFlight" styleClass="action-button"/>
-    </VBox>
+   <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#b6b7b80e" height="650.0" layoutX="18.0" layoutY="29.0" stroke="#00000043" strokeType="INSIDE" width="571.0" />
+     <Label layoutX="177.0" layoutY="41.0" prefHeight="64.0" prefWidth="245.0" text="Ajouter Vol" textAlignment="CENTER" textFill="ORANGE">
+      <font>
+         <Font name="System Bold" size="43.0" />
+      </font></Label>
+     <TextField fx:id="numero_vol" layoutX="60.0" layoutY="613.0" prefHeight="50.0" prefWidth="183.0" promptText="Numéro de vol" styleClass="text-field-custom" />
+     <DatePicker fx:id="date_depart" layoutX="49.0" layoutY="273.0" prefHeight="50.0" prefWidth="224.0" promptText="Date de départ" styleClass="date-picker" />
+     <DatePicker fx:id="date_arrivee" layoutX="322.0" layoutY="273.0" prefHeight="50.0" prefWidth="224.0" promptText="Date d'arrivée" />
+     <Button layoutX="246.0" layoutY="613.0" onAction="#addVol" prefHeight="50.0" prefWidth="318.0" styleClass="btn_login" text="Ajouter Vol" />
+  <ComboBox fx:id="Type_Avion" layoutX="49.0" layoutY="473.0" prefHeight="50.0" prefWidth="224.0" promptText="Choisir le type d'avion" />
+   <DatePicker fx:id="Date_de_retour" layoutX="355.0" layoutY="409.0" prefHeight="50.0" prefWidth="196.0" promptText="Date de retour" />
+   <ToggleButton fx:id="allerRetourToggleButton" layoutX="311.0" layoutY="409.0" mnemonicParsing="false" onAction="#handleAllerRetourToggleButton" prefHeight="50.0" prefWidth="44.0" styleClass="toggle-button" text="R" />
+   <Button layoutY="41.0" mnemonicParsing="false" onAction="#openmenu_principal_admin" prefHeight="50.0" prefWidth="80.0" styleClass="image-button" />
+   <TextField fx:id="Prix" layoutX="49.0" layoutY="409.0" prefHeight="50.0" prefWidth="224.0" promptText="Prix" styleClass="text-field-custom" />
+   <ComboBox fx:id="Aeroport_depart" layoutX="49.0" layoutY="337.0" prefHeight="50.0" prefWidth="224.0" promptText="Choisir Aeroport depart" />
+   <ComboBox fx:id="Aeroport_arrivee" layoutX="322.0" layoutY="337.0" prefHeight="50.0" prefWidth="224.0" promptText="Choisir Aeroport arrivée" />
+   <Line endX="-100.0" endY="193.60000610351562" layoutX="403.0" layoutY="195.0" startX="-100.0" startY="10.399993896484375" stroke="#00000050" />
+   <ComboBox fx:id="pays_depart" layoutX="160.0" layoutY="205.0" onAction="#refresh_aerport_dep" prefHeight="50.0" prefWidth="116.0" promptText="Pays depart" />
+   <ComboBox fx:id="pays_arrivee" layoutX="430.0" layoutY="205.0" onAction="#refresh_aerport_arr" prefHeight="50.0" prefWidth="116.0" promptText="Pays arrivée" />
+   <ToggleButton fx:id="Type_btn" layoutX="311.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleTypeToggleButton" prefHeight="50.0" prefWidth="44.0" styleClass="toggle-button" text="T" />
+   <ComboBox fx:id="type" layoutX="355.0" layoutY="473.0" prefHeight="50.0" prefWidth="196.0" promptText="Choisir type" />
+   <ComboBox fx:id="Region_depart" layoutX="49.0" layoutY="205.0" onAction="#refresh_dep" prefHeight="50.0" prefWidth="104.0" promptText="Region" />
+   <ComboBox fx:id="Region_arrivee" layoutX="322.0" layoutY="205.0" onAction="#refresh_arriv" prefHeight="50.0" prefWidth="104.0" promptText="Region" />
+   <Text layoutX="128.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Depart">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Text>
+   <Text layoutX="390.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arrive" wrappingWidth="72.6136474609375">
+      <font>
+         <Font size="21.0" />
+      </font>
+   </Text>
+   <Text fx:id="erreur" fill="RED" layoutX="271.0" layoutY="602.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="267.73675537109375" />
 </AnchorPane>

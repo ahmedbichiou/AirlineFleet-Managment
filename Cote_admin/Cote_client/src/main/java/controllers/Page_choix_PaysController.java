@@ -74,10 +74,7 @@ ObservableList<String> asia_airports = FXCollections.observableArrayList(asiaAir
 
 List<String> oceaniaAirports = new ArrayList<>();
 oceaniaAirports.add("Australia");
-oceaniaAirports.add("New Zealand");
-oceaniaAirports.add("Australia");
-oceaniaAirports.add("Australia");
-oceaniaAirports.add("USA");
+
 ObservableList<String> oceania_airports = FXCollections.observableArrayList(oceaniaAirports);
 
 List<String> northAmericaAirports = new ArrayList<>();
