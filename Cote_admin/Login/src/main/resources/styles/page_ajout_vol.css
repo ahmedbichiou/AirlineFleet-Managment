@@ -6,64 +6,37 @@
 
 }
 
-.header-box {
-  -fx-padding: 10;
-  -fx-background-color: #f0f0f0; /* Light grey background for the header */
+.btn_login {
+   -fx-background-color: #2196F3; /* Button background color */
+    -fx-text-fill: white;          /* Button text color */
+    -fx-font-size: 14px;           /* Button text size */
+    -fx-font-weight: bold;         /* Button text weight */
+    -fx-padding: 10;            /* Button padding */
+    -fx-background-radius: 8px;    /* Rounded corners */
+    -fx-background-insets: 0 0 0 0, 0 0 1 0; /* Elevated effect */
+   
 }
 
-.back-button {
-  -fx-background-color: transparent; /* No background color */
-  -fx-padding: 5;
+.btn_login:hover {
+    -fx-background-color: #1565C0; /* Button background color on hover */
 }
 
-.back-button:hover {
-  -fx-background-color: #e0e0e0; /* Slightly darker grey on hover */
-}
-.form-container {
-  -fx-background-color: #ffffff; /* white background */
-  -fx-background-radius: 5;
-  -fx-padding: 20;
-  -fx-alignment: center;
-}
-
-.title-label {
-  -fx-font-size: 20px;
-  -fx-font-weight: bold;
-  -fx-text-fill: #333; /* dark grey color for text */
-}
-
-.text-field, .date-picker {
-  -fx-pref-width: 400;
-  -fx-pref-height: 35;
-  -fx-background-color: #ffffff; /* white background */
-  -fx-border-color: #D3D3D3; /* Dark grey border */
-  -fx-border-width: 1; /* Border width */
-  -fx-border-radius: 5;
-  -fx-padding: 4 8; /* padding inside text fields */
-}
-
-.text-field:focused {
-  -fx-border-color: #FFA500; /* Orange border for focused text field */
+.btn_login:pressed {
+    -fx-background-color: #0D47A1; /* Button background color when pressed */
 }
 
 
-.date-picker {
-  -fx-pref-width: 400;
-  -fx-pref-height: 45;
+.text-field-custom {
+    -fx-background-color: transparent;
+    -fx-border-color: gray;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 2; /* Set the radius according to your preference */
 }
 
-.action-button {
-  -fx-background-color: orange; /* yellow color for the button */
-  -fx-text-fill: #ffffff; /* white text */
-  -fx-pref-width: 400;
-  -fx-pref-height: 40;
-  -fx-font-weight: bold;
-  -fx-font-size: 14px;
-  -fx-border-radius: 35; /* rounded corners */
-}
-
-.action-button:hover {
-  -fx-background-color: #0099ff;
+.text-field-custom:focused {
+    -fx-border-color: orange;
+    -fx-border-width: 2;
+    -fx-border-radius: 4; 
 }
 
 .image-button {
@@ -75,27 +48,17 @@
     -fx-background-color: transparent; /* Make background transparent */
 }
 
-.radio-button {
-    /* Style your radio buttons here */
+.toggle-button {
+    -fx-background-color: orange;
+    
+    -fx-font-weight: bold;         /* Button text weight */
+    -fx-padding: 10;            /* Button padding */
+
 }
 
-.radio-button .image-view {
-    /* You may need to set a specific size for your images */
-    -fx-fit-height: 50; /* Adjust as necessary */
-    -fx-fit-width: 50;  /* Adjust as necessary */
+/* Style when selected */
+.toggle-button:selected {
+    -fx-background-color: #cccccc;
+    
+    
 }
-
-.combo-box {
-    -fx-pref-width: 400;
-    -fx-pref-height: 35;
-    -fx-background-color: #ffffff; /* white background */
-    -fx-border-color: #D3D3D3; /* light grey border */
-    -fx-border-width: 1; /* border width */
-    -fx-border-radius: 5;
-    -fx-padding: 4 8; /* padding inside combo box */
-}
-
-.combo-box:hover {
-    -fx-background-color: #0099ff;
-}
-
