@@ -75,7 +75,7 @@ for (Vol vol : volArray) {
         {
             
             
-                    System.out.println("Value: " + vol);
+                    
                 exampleHashMap.put(key, vol.toString());
                 key++; 
                 

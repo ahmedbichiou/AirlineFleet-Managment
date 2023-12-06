@@ -6,6 +6,7 @@ package Controllers;
 
 import Classes.Avion;
 import static Controllers.Page_LoginController.compte_ouvert;
+import OracleSGBD.CRUD;
 import com.mycompany.login.App;
 import java.net.URL;
 import java.util.HashMap;
@@ -172,7 +173,7 @@ negativeButton4.getStyleClass().add("image-button2");
 
                     private void handleDeleteButton(Map.Entry<Integer, String> entry) {
                         System.out.println("Delete button clicked for item: " + entry);
-             
+                        CRUD.deleteAvion(extractFromAvionString(entry.getValue(),"reference='"));
                         compte_ouvert.getList_Avions().remove(extractFromAvionString(entry.getValue(),"reference='")) ;
                         try { 
                             App.open_afficher_avion();

@@ -9,7 +9,7 @@ package OracleSGBD;
  * @author Spray
  */
 
-/*
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -22,12 +22,16 @@ public class OracleDBInitializer {
 
             // Create Avion table
             statement.execute("CREATE TABLE Avion (" +
-                    "reference VARCHAR2(50) PRIMARY KEY," +
-                    "modele VARCHAR2(50)," +
-                    "compagnieFabricante VARCHAR2(50)," +
-                    "portee NUMBER," +
-                    "capacite NUMBER" +
-                    ")");
+                  "reference VARCHAR2(50) PRIMARY KEY," +
+                  "modele VARCHAR2(50)," +
+                  "compagnieFabricante VARCHAR2(50)," +
+                  "portee NUMBER," +
+                  "capacite NUMBER," +
+                  "siege_1ereclass NUMBER," +
+                  "capacite_cargo_kg NUMBER," +
+                  "owner VARCHAR2(50)" +
+                  ")");
+
 
             // Create Vol table
             statement.execute("CREATE TABLE Vol (" +
@@ -73,4 +77,3 @@ public class OracleDBInitializer {
         OracleDBConnection.closeConnection();
     }
 }
-*/
