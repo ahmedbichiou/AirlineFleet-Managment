@@ -23,21 +23,20 @@
          <Font name="System Bold" size="43.0" />
       </font></Label>
      <TextField fx:id="numero_vol" layoutX="60.0" layoutY="613.0" prefHeight="50.0" prefWidth="183.0" promptText="Numéro de vol" styleClass="text-field-custom" />
-     <DatePicker fx:id="date_depart" layoutX="49.0" layoutY="273.0" prefHeight="50.0" prefWidth="224.0" promptText="Date de départ" styleClass="date-picker" />
-     <DatePicker fx:id="date_arrivee" layoutX="322.0" layoutY="273.0" prefHeight="50.0" prefWidth="224.0" promptText="Date d'arrivée" />
+     <DatePicker fx:id="date_depart" layoutX="49.0" layoutY="342.0" prefHeight="50.0" prefWidth="224.0" promptText="Date de départ" styleClass="date-picker" />
      <Button layoutX="246.0" layoutY="613.0" onAction="#addVol" prefHeight="50.0" prefWidth="318.0" styleClass="btn_login" text="Ajouter Vol" />
   <ComboBox fx:id="Type_Avion" layoutX="49.0" layoutY="473.0" prefHeight="50.0" prefWidth="224.0" promptText="Choisir le type d'avion" />
-   <DatePicker fx:id="Date_de_retour" layoutX="355.0" layoutY="409.0" prefHeight="50.0" prefWidth="196.0" promptText="Date de retour" />
-   <ToggleButton fx:id="allerRetourToggleButton" layoutX="311.0" layoutY="409.0" mnemonicParsing="false" onAction="#handleAllerRetourToggleButton" prefHeight="50.0" prefWidth="44.0" styleClass="toggle-button" text="R" />
+   <DatePicker fx:id="Date_de_retour" layoutX="354.0" layoutY="342.0" prefHeight="50.0" prefWidth="196.0" promptText="Date de retour" />
+   <ToggleButton fx:id="allerRetourToggleButton" layoutX="310.0" layoutY="342.0" mnemonicParsing="false" onAction="#handleAllerRetourToggleButton" prefHeight="50.0" prefWidth="44.0" styleClass="toggle-button" text="R" />
    <Button layoutY="41.0" mnemonicParsing="false" onAction="#openmenu_principal_admin" prefHeight="50.0" prefWidth="80.0" styleClass="image-button" />
    <TextField fx:id="Prix" layoutX="49.0" layoutY="409.0" prefHeight="50.0" prefWidth="224.0" promptText="Prix" styleClass="text-field-custom" />
-   <ComboBox fx:id="Aeroport_depart" layoutX="49.0" layoutY="337.0" prefHeight="50.0" prefWidth="224.0" promptText="Choisir Aeroport depart" />
-   <ComboBox fx:id="Aeroport_arrivee" layoutX="322.0" layoutY="337.0" prefHeight="50.0" prefWidth="224.0" promptText="Choisir Aeroport arrivée" />
-   <Line endX="-100.0" endY="193.60000610351562" layoutX="403.0" layoutY="195.0" startX="-100.0" startY="10.399993896484375" stroke="#00000050" />
+   <ComboBox fx:id="Aeroport_depart" layoutX="49.0" layoutY="272.0" prefHeight="50.0" prefWidth="224.0" promptText="Choisir Aeroport depart" />
+   <ComboBox fx:id="Aeroport_arrivee" layoutX="322.0" layoutY="272.0" prefHeight="50.0" prefWidth="224.0" promptText="Choisir Aeroport arrivée" />
+   <Line endX="-100.0" endY="129.79998779296875" layoutX="403.0" layoutY="195.0" startX="-100.0" startY="10.399993896484375" stroke="#00000050" />
    <ComboBox fx:id="pays_depart" layoutX="160.0" layoutY="205.0" onAction="#refresh_aerport_dep" prefHeight="50.0" prefWidth="116.0" promptText="Pays depart" />
    <ComboBox fx:id="pays_arrivee" layoutX="430.0" layoutY="205.0" onAction="#refresh_aerport_arr" prefHeight="50.0" prefWidth="116.0" promptText="Pays arrivée" />
-   <ToggleButton fx:id="Type_btn" layoutX="311.0" layoutY="473.0" mnemonicParsing="false" onAction="#handleTypeToggleButton" prefHeight="50.0" prefWidth="44.0" styleClass="toggle-button" text="T" />
-   <ComboBox fx:id="type" layoutX="355.0" layoutY="473.0" prefHeight="50.0" prefWidth="196.0" promptText="Choisir type" />
+   <ToggleButton fx:id="Type_btn" layoutX="310.0" layoutY="406.0" mnemonicParsing="false" onAction="#handleTypeToggleButton" prefHeight="50.0" prefWidth="44.0" styleClass="toggle-button" text="T" />
+   <ComboBox fx:id="type" layoutX="354.0" layoutY="406.0" prefHeight="50.0" prefWidth="196.0" promptText="Choisir type" />
    <ComboBox fx:id="Region_depart" layoutX="49.0" layoutY="205.0" onAction="#refresh_dep" prefHeight="50.0" prefWidth="104.0" promptText="Region" />
    <ComboBox fx:id="Region_arrivee" layoutX="322.0" layoutY="205.0" onAction="#refresh_arriv" prefHeight="50.0" prefWidth="104.0" promptText="Region" />
    <Text layoutX="128.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Depart">

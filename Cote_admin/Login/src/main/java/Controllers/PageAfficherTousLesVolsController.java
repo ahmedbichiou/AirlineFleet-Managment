@@ -197,7 +197,15 @@ System.out.println("date_retour: " + dateRetour);
 }
 
    private void handleEditButton(Map.Entry<Integer, String> entry) {
+          System.out.println("edit button clicked for item: " + entry);
                       
+                        try { 
+                            Vol volTo_modifier =  compte_ouvert.getList_vols().get(extractFromVolString(entry.getValue(),"refVol='"));
+                            System.out.println("afficahge avant le passage "+volTo_modifier);
+                            App.open_modifier_vol(volTo_modifier);
+                        } catch (Exception ex) {
+                            ex.printStackTrace();
+                        }                
    }
 
                

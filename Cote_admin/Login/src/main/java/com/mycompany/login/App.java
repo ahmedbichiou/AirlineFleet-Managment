@@ -2,9 +2,11 @@ package com.mycompany.login;
 
 import Classes.Avion;
 import Classes.Compagnie_aerienne;
+import Classes.Vol;
 import Controllers.Page_afficher_modifier_avionController;
 import Controllers.Page_ajout_avion_formController;
 import Controllers.Page_ajout_avoin_finalController;
+import Controllers.Page_modifier_volController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -269,7 +271,7 @@ public class App extends Application {
     controller.setAvion_selected(avionTo_modifier);
 
     Stage newStage = new Stage();
-    newStage.setTitle("Inscription");
+    newStage.setTitle("Modifier");
 
     Scene newScene = new Scene(newSceneRoot);
     newStage.setScene(newScene);
@@ -283,7 +285,27 @@ public class App extends Application {
 
     newStage.show();
 }
-    
+    public static void open_modifier_vol(Vol VolTo_modifier) throws Exception {
+    FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_modifier_vol.fxml"));
+    Parent newSceneRoot = fxmlLoader.load();
+    Page_modifier_volController controller = fxmlLoader.getController();
+    controller.setVol_selected(VolTo_modifier);
+
+    Stage newStage = new Stage();
+    newStage.setTitle("Modifier");
+
+    Scene newScene = new Scene(newSceneRoot);
+    newStage.setScene(newScene);
+
+    Image icon = new Image("Images/icon_stage.png");
+    newStage.getIcons().add(icon);
+    newStage.setTitle("Flight Booking");
+
+    // Set the stage and call setup
+    controller.setStageAndSetup(newStage);
+
+    newStage.show();
+}
     
  //end added by ahmed 11/25 3:31 by ahmed     
 }
