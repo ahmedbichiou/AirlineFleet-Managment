@@ -22,10 +22,8 @@ Controllers\Page_affichage_avionController.class
 Controllers\Page_ajout_volController.class
 Controllers\Flight.class
 Controllers\Page_ajout_avion_formController.class
-Controllers\FlightCardController.class
 Controllers\Page_modifier_volController.class
 Classes\AvionPetitTaille.class
 Classes\VolAllerRetour.class
-Classes\Flight.class
 Controllers\Page_annuler_volController.class
 Classes\Avion.class

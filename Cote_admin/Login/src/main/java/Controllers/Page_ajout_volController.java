@@ -83,8 +83,7 @@ public class Page_ajout_volController implements Initializable {
     private ComboBox<String> pays_arrivee;
     @FXML
     private DatePicker date_depart;
-    @FXML
-    private DatePicker date_arrivee;
+
     @FXML
     private ComboBox<String> Type_Avion; // Assuming the ComboBox holds Strings
     @FXML

@@ -2,7 +2,6 @@ C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Controllers\Page_afficher_modifier_avionController.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Controllers\Page_ajout_avionController.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Controllers\Page_LoginController.java
-C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Controllers\FlightCardController.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Controllers\Menu_principal_adminController.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Controllers\Flight.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Classes\Pays_et_Aeroport.java
@@ -18,10 +17,11 @@ C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Classes\Vol.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Controllers\Page_ajout_avoin_finalController.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Controllers\Page_modifier_volController.java
+C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\OracleSGBD\OracleDBConnection.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\com\mycompany\login\App.java
+C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\OracleSGBD\OracleDBInitializer.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Classes\Compagnie_aerienne.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Classes\VolSimple.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Controllers\Page_affichage_avionController.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Classes\Client.java
-C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Classes\Flight.java
 C:\Users\Spray\Desktop\Projet_Java_git\ProjetJava\Cote_admin\Login\src\main\java\Controllers\PageAfficherTousLesVolsController.java

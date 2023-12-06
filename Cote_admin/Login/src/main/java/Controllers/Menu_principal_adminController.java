@@ -4,10 +4,14 @@
  */
 package Controllers;
 
+import Classes.AvionGrandeTaille;
+import Classes.VolSimple;
 import com.mycompany.login.App;
 import Controllers.Page_LoginController;
+import static Controllers.Page_LoginController.compte_ouvert;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -54,6 +58,27 @@ public class Menu_principal_adminController implements Initializable {
         showAccount();
         Initbackgrounds();
         Page_LoginController.getCompte_ouvert().afficherAvions();
+           AvionGrandeTaille avionGrandeTaille = new AvionGrandeTaille(
+                "B737",
+                "Boeing",
+                "5",
+                8000.0, // Replace with the actual portee value
+                500,    // Replace with the actual capacite value
+                200000  // Replace with the actual cargo capacity in kilograms
+        );
+        compte_ouvert.ajouterAvion("5", avionGrandeTaille);
+            VolSimple volSimple = new VolSimple(
+                "V123",
+                "USA",
+                "France",
+                "JFK",
+                "CDG",
+                LocalDate.of(2023, 12, 1), // Replace with the actual date value
+                avionGrandeTaille,
+                1500.0f, // Replace with the actual price value
+                "Direct"
+        );
+          compte_ouvert.ajouterVol("V123", volSimple);
     }  
     private void Initbackgrounds()
             
