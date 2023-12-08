@@ -5,6 +5,7 @@
 package Controllers;
 
 import Classes.AvionGrandeTaille;
+import Classes.Vol;
 import Classes.VolSimple;
 import com.mycompany.login.App;
 import Controllers.Page_LoginController;
@@ -13,6 +14,7 @@ import OracleSGBD.CRUD;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -82,6 +84,7 @@ public class Menu_principal_adminController implements Initializable {
         );
           compte_ouvert.ajouterVol("V123", volSimple);*/
        CRUD.retrieveAvionsFromDatabase(compte_ouvert.getList_Avions(),compte_ouvert.getNom());
+       CRUD.retrieveDataFromDB(compte_ouvert.getNom(), compte_ouvert.getList_vols());
     }  
     private void Initbackgrounds()
             

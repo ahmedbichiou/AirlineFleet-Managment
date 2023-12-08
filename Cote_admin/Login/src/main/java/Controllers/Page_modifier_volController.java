@@ -3,6 +3,7 @@ package Controllers;
 import Classes.Vol;
 import Classes.VolAllerRetour;
 import static Controllers.Page_LoginController.compte_ouvert;
+import OracleSGBD.CRUD;
 import com.mycompany.login.App;
 import java.net.URL;
 import java.time.LocalDate;
@@ -65,7 +66,7 @@ public class Page_modifier_volController implements Initializable {
            }
           
          
-         
+                CRUD.updateDateAller(VolTo_modify.getRefVol(),datePickerDeparture.getValue());
                 compte_ouvert.getList_vols().remove(VolTo_modify.getRefVol()) ;
               
               

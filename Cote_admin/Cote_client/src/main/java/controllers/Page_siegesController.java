@@ -23,6 +23,7 @@ public class Page_siegesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         System.out.println(reservation);
+        
     }    
      public void etape_1() throws Exception{
     

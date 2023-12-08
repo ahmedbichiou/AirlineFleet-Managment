@@ -5,6 +5,7 @@ import Classes.Vol;
 import Classes.VolAllerRetour;
 import Classes.VolSimple;
 import static Controllers.Page_LoginController.compte_ouvert;
+import OracleSGBD.CRUD;
 import com.mycompany.login.App;
 import java.net.URL;
 import java.util.Collection;
@@ -215,6 +216,7 @@ System.out.println("date_retour: " + dateRetour);
                       System.out.println("Delete button clicked for item: " + entry);
              
                         compte_ouvert.getList_vols().remove(extractFromVolString(entry.getValue(),"refVol='")) ;
+                        CRUD.deleteVol(extractFromVolString(entry.getValue(),"refVol='"));
                         try { 
                             App.open_Affichage_vols();
                         } catch (Exception ex) {

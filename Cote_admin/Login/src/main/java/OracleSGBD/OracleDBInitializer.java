@@ -32,30 +32,23 @@ public class OracleDBInitializer {
                   "owner VARCHAR2(50)" +
                   ")");
 
-
-            // Create Vol table
-            statement.execute("CREATE TABLE Vol (" +
-                    "refVol VARCHAR2(50) PRIMARY KEY," +
-                    "paysDepart VARCHAR2(50)," +
-                    "paysDest VARCHAR2(50)," +
-                    "aeroportDep VARCHAR2(50)," +
-                    "aeroportDest VARCHAR2(50)," +
+String createTableQuery = "CREATE TABLE Vol (" +
+                    "refVol VARCHAR2(200) PRIMARY KEY," +
+                    "paysDepart VARCHAR2(200)," +
+                    "paysDest VARCHAR2(200)," +
+                    "aeroportDep VARCHAR2(200)," +
+                    "aeroportDest VARCHAR2(200)," +
                     "dateAller DATE," +
-                    "refAvion VARCHAR2(50) REFERENCES Avion(reference)," +
-                    "prix NUMBER" +
-                    ")");
+                    "refAvion VARCHAR2(200)," +
+                    "prix NUMBER," +
+                    "typeVol VARCHAR2(200)," +
+                    "dateRetour DATE," +
+                    "owner VARCHAR2(200)" +
+                    ")";
 
-            // Create VolSimple table
-            statement.execute("CREATE TABLE VolSimple (" +
-                    "refVol VARCHAR2(50) PRIMARY KEY REFERENCES Vol(refVol)," +
-                    "typeVol VARCHAR2(50)" +
-                    ")");
-
-            // Create VolAllerRetour table
-            statement.execute("CREATE TABLE VolAllerRetour (" +
-                    "refVol VARCHAR2(50) PRIMARY KEY REFERENCES Vol(refVol)," +
-                    "dateRetour DATE" +
-                    ")");
+            // Execute the query
+            statement.execute(createTableQuery);
+           
 
             // Create Compagnie_aerienne table
             statement.execute("CREATE TABLE Compagnie_aerienne (" +

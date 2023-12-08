@@ -5,6 +5,7 @@
 package Controllers;
 
 import Classes.Compagnie_aerienne;
+import OracleSGBD.CRUD;
 import com.mycompany.login.App;
 import static com.mycompany.login.App.compagnies;
 import java.net.URL;
@@ -90,6 +91,7 @@ public class Page_Creation_CompteController implements Initializable {
     else if(App.searchCompagnieByNom(nom_inscri.getText()) == null)
     {
        compagnies.add(v); 
+       CRUD.insertIntoDatabase(v);
        App.showAllCompagnies();
        App.openConfirmation_inscri();
     } else{
