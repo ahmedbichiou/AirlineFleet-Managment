@@ -61,7 +61,7 @@
          <Font name="System Bold" size="25.0" />
       </font>
    </Text>
-   <Text layoutX="536.0" layoutY="661.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sieges">
+   <Text layoutX="518.0" layoutY="660.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>

@@ -52,6 +52,16 @@ public class Page_siegesController implements Initializable {
     private Text Depart2;
     @FXML
     private Text Destination2;
+    
+    public  static Stage myStage;
+    
+    public  static  void setStage(Stage s)
+    {
+        myStage = s;
+    }
+    
+    
+          
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         System.out.println(reservation);
@@ -75,22 +85,26 @@ public class Page_siegesController implements Initializable {
     }    
      public void etape_1() throws Exception{
     
-    App.openClientReservation();
+    App.openEtape1();
     }
      public void etape_2() throws Exception{
     
-    App.openPageSelectionRegionDestination();
+    App.openEtape2();
     }
      public void etape_3() throws Exception{
-         App.openPage_choix_Pays();
+         App.openEtape3();
      }
      public void etape_4() throws Exception{
-         App.openPage_voir_offres();
+         App.openEtape4();
      }
      
      public void confirmerReservation() throws Exception{
-         ClientManager.getAuthenticatedClient().setMyReservation(reservation);
-         App.openMenuClient();
+        
+         //App.openMenuClient();
+          myStage.close();
+         App.openPageMenu();
+        
+         
      }
      
      public void annulerReservation() throws Exception{

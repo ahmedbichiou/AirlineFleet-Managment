@@ -90,9 +90,9 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="544.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sieges">
+      <Text layoutX="527.0" layoutY="578.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="11.0" />
          </font>
       </Text>
    </children>

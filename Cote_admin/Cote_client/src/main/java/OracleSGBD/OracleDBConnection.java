@@ -8,7 +8,7 @@ package OracleSGBD;
 
 /**
  *
- * @author Spray
+ * @author Medini
  */
 import java.sql.Connection;
 import java.sql.DriverManager;

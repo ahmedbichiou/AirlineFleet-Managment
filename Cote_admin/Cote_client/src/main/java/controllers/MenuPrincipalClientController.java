@@ -44,7 +44,7 @@ public class MenuPrincipalClientController implements Initializable {
     }
     
     public void openClientConsulterVol() throws Exception {
-        App.openClientConsulterVol();
+        App.openPageConsulter();
     }
     
     public void back() throws Exception{

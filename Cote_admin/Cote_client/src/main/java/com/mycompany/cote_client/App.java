@@ -6,6 +6,7 @@ import classes.Client;
 import classes.Vol;
 import classes.VolAllerRetour;
 import classes.VolSimple;
+import controllers.Page_siegesController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,6 +27,7 @@ import javafx.scene.image.Image;
 public class App extends Application {
 
     private static Scene scene;
+    private static Stage  myStage;
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -37,6 +39,7 @@ public class App extends Application {
         stage.setTitle("Flight Booking");
         stage.setScene(scene);
         stage.show();
+        myStage = stage;
     }
 
 
@@ -123,11 +126,100 @@ volList.stream().forEach(System.out::println);
         scene.setRoot(newSceneRoot);
     }
     
+             
+             
+             
+             /*
           public static void openPageSieges() throws Exception {
+              
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_sieges.fxml"));
         Parent newSceneRoot = fxmlLoader.load();
         Parent currentRoot = scene.getRoot();
+       
         scene.setRoot(newSceneRoot);
-    }
+    } */
 
+         public static  void openPageSieges() throws Exception {
+       
+       
+            
+           FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_sieges.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage anotherStage = new Stage();
+             Page_siegesController p = new Page_siegesController();
+        p.setStage(anotherStage);
+          Image icon = new Image("Images/icon_stage.png");
+       anotherStage.getIcons().add(icon);
+       anotherStage.setTitle("Flight Booking");
+            anotherStage.setScene(scene);
+            anotherStage.show();
+         }
+          public static  void openPageMenu() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("MenuPrincipalClient.fxml"));
+        scene = new Scene(fxmlLoader.load(), 600, 700);
+       
+         Image icon = new Image("Images/icon_stage.png");
+        myStage.getIcons().add(icon);
+        myStage.setTitle("Flight Booking");
+        myStage.setScene(scene);
+        myStage.show();
+     }
+          
+              public static  void openEtape1() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("PageSelectionRegion.fxml"));
+        scene = new Scene(fxmlLoader.load(), 600, 700);
+        
+         Image icon = new Image("Images/icon_stage.png");
+        myStage.getIcons().add(icon);
+        myStage.setTitle("Flight Booking");
+        myStage.setScene(scene);
+        myStage.show();
+     }
+        public static  void openEtape2() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("PageSelectionRegionDestination.fxml"));
+        scene = new Scene(fxmlLoader.load(), 600, 700);
+        
+         Image icon = new Image("Images/icon_stage.png");
+        myStage.getIcons().add(icon);
+        myStage.setTitle("Flight Booking");
+        myStage.setScene(scene);
+        myStage.show();
+     }
+        public static  void openEtape3() throws Exception {
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_choix_Pays.fxml"));
+        scene = new Scene(fxmlLoader.load(), 600, 700);
+        
+         Image icon = new Image("Images/icon_stage.png");
+        myStage.getIcons().add(icon);
+        myStage.setTitle("Flight Booking");
+        myStage.setScene(scene);
+        myStage.show();
+     }
+                public static  void openEtape4() throws Exception {
+          FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("Page_voir_offres.fxml"));
+        scene = new Scene(fxmlLoader.load(), 600, 700);
+        
+         Image icon = new Image("Images/icon_stage.png");
+        myStage.getIcons().add(icon);
+        myStage.setTitle("Flight Booking");
+        myStage.setScene(scene);
+        myStage.show();
+     }
+             
+                public static  void openPageConsulter() throws Exception {
+       
+       
+            
+          FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("ConsulterVolClient.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            Stage anotherStage = new Stage();
+           
+      
+         Image icon = new Image("Images/icon_stage.png");
+       anotherStage.getIcons().add(icon);
+       anotherStage.setTitle("Reservation");
+            anotherStage.setScene(scene);
+            anotherStage.show();
+         } 
+                 
 }

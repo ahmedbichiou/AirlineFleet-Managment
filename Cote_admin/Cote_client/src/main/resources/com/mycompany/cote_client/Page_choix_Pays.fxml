@@ -95,9 +95,9 @@
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="536.0" layoutY="519.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sieges">
+      <Text layoutX="517.0" layoutY="520.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirmation">
          <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="11.0" />
          </font>
       </Text>
       <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="175.0" layoutY="467.0" pickOnBounds="true" preserveRatio="true">
