@@ -16,36 +16,46 @@
     </stylesheets>
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0084ff2b" height="669.0" layoutX="16.0" layoutY="17.0" stroke="TRANSPARENT" strokeType="INSIDE" width="568.0" />
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#2e6ad15c" height="302.0" layoutX="61.0" layoutY="364.0" stroke="#c4a1a100" strokeType="INSIDE" width="230.0" />
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#2e6ad15c" height="302.0" layoutX="321.0" layoutY="364.0" stroke="#c4a1a100" strokeType="INSIDE" width="236.0" />
       <Text fx:id="nomClt" layoutX="132.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="bonjour, nom !" textAlignment="CENTER" wrappingWidth="325.60003662109375">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>
       </Text>
-      <Button fx:id="button_reserver" layoutX="102.0" layoutY="364.0" mnemonicParsing="false" onAction="#openClientReservation" styleClass="button_choix" stylesheets="@../../../Styles/MenuPrincipalClient.css" text="Réserver un vol" textAlignment="CENTER" />
-      <Button fx:id="button_consulter" layoutX="359.0" layoutY="364.0" mnemonicParsing="false" onAction="#openClientConsulterVol" styleClass="button_choix" stylesheets="@../../../Styles/MenuPrincipalClient.css" text="Consulter mes vols" />
       <ImageView fitHeight="169.0" fitWidth="568.0" layoutX="16.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Images/background1.jpg" />
          </image>
       </ImageView>
       <Circle fill="DODGERBLUE" layoutX="300.0" layoutY="200.0" radius="50.0" stroke="BLACK" strokeType="INSIDE" />
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#2ba3ff2b" height="207.0" layoutX="31.0" layoutY="453.0" stroke="TRANSPARENT" strokeType="INSIDE" width="332.0" />
-      <Rectangle arcHeight="50.0" arcWidth="50.0" fill="#2ba3ff2b" height="207.0" layoutX="368.0" layoutY="453.0" stroke="TRANSPARENT" strokeType="INSIDE" width="202.0" />
-      <Text fill="WHITE" layoutX="107.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destinations populaires" textAlignment="CENTER">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </Text>
-      <Text fill="#fffefe" layoutX="432.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Support">
-         <font>
-            <Font name="System Bold" size="17.0" />
-         </font>
-      </Text>
       <Button layoutX="497.0" layoutY="32.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="80.0" styleClass="image-button" stylesheets="@../../../Styles/MenuPrincipalClient.css" />
       <ImageView fitHeight="70.0" fitWidth="72.0" layoutX="264.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Images/default.png" />
          </image>
       </ImageView>
+      <Text layoutX="339.0" layoutY="396.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consulter ma reservation" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="339.0" layoutY="531.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../Images/reservation.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="button_consulter" layoutX="321.0" layoutY="364.0" mnemonicParsing="false" onAction="#openClientConsulterVol" prefHeight="302.0" prefWidth="236.0" styleClass="transparent-button" stylesheets="@../../../Styles/MenuPrincipalClient.css" />
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="98.0" layoutY="504.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+            <Image url="@../../../Images/reservationBG.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="111.0" layoutY="395.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Réserver un vol">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Button fx:id="button_reserver" layoutX="61.0" layoutY="364.0" mnemonicParsing="false" onAction="#openClientReservation" prefHeight="302.0" prefWidth="230.0" styleClass="transparent-button" stylesheets="@../../../Styles/MenuPrincipalClient.css" textAlignment="CENTER" />
    </children>
 </AnchorPane>

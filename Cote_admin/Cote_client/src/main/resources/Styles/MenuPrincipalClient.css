@@ -36,3 +36,19 @@
 .bonj_client {
     text-align: center;
 }
+
+.transparent-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-border-color: transparent; /* Border color, adjust as needed */
+    -fx-border-width: 2; /* Border width, adjust as needed */
+    -fx-border-radius: 5; /* Border radius, adjust as needed */
+}
+.transparent-button:hover {
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-border-color: gray; /* Border color, adjust as needed */
+    -fx-border-width: 2; /* Border width, adjust as needed */
+    -fx-border-radius: 5; /* Border radius, adjust as needed */
+}
