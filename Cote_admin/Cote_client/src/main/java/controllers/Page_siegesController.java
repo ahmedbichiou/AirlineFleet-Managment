@@ -4,11 +4,18 @@
  */
 package controllers;
 
+import classes.Client;
+import classes.ClientManager;
+import classes.ReservationSimple;
 import com.mycompany.cote_client.App;
 import static controllers.Page_choix_PaysController.reservation;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -17,12 +24,43 @@ import javafx.fxml.Initializable;
  */
 public class Page_siegesController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private AnchorPane backg;
+    @FXML
+    private Text Passager1;
+    @FXML
+    private Text Vol1;
+    @FXML
+    private Text Datevol;
+    @FXML
+    private Text Depart1;
+    @FXML
+    private Text Destination1;
+    @FXML
+    private Text Prix;
+    @FXML
+    private Text Type;
+    @FXML
+    private Text Passager2;
+    @FXML
+    private Text Vol2;
+    @FXML
+    private Text Depart2;
+    @FXML
+    private Text Destination2;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        System.out.println(reservation);
+        Passager1.setText(ClientManager.getAuthenticatedClient().getNomClt()+" "+ClientManager.getAuthenticatedClient().getPrénomClt());
+        Vol1.setText(reservation.getRefvol());
+        Datevol.setText(reservation.getDate_aller().toString());
+        Depart1.setText(reservation.getPays_depart());
+        Destination1.setText(reservation.getPays_destination());
+        Prix.setText( String.valueOf(reservation.getPrix()));
+        Type.setText(((ReservationSimple) reservation).getType());
+        Passager2.setText(ClientManager.getAuthenticatedClient().getNomClt()+" "+ClientManager.getAuthenticatedClient().getPrénomClt());
+        Vol2.setText(reservation.getRefvol());
+        Depart2.setText(reservation.getPays_depart());
+        Destination2.setText(reservation.getPays_destination());
     }    
      public void etape_1() throws Exception{
     
@@ -37,5 +75,14 @@ public class Page_siegesController implements Initializable {
      }
      public void etape_4() throws Exception{
          App.openPage_voir_offres();
+     }
+     
+     public void confirmerReservation() throws Exception{
+         ClientManager.getAuthenticatedClient().setMyReservation(reservation);
+         App.openMenuClient();
+     }
+     
+     public void annulerReservation() throws Exception{
+         App.openPage_choix_Pays();
      }
 }

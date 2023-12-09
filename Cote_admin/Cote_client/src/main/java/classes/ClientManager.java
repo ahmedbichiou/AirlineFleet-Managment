@@ -17,6 +17,8 @@ import java.util.regex.Pattern;
 public class ClientManager {
  private static Map<String, Client> clientsByEmail = new HashMap<>();
  private static Client authenticatedClient;
+
+ 
  
     static {
         clientsByEmail.put("mohammed@gmail.com", new Client("mohammed", "karim", LocalDate.of(1990, 5, 15), "mohammed@gmail.com", "1911300401"));

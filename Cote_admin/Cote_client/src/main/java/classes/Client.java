@@ -16,6 +16,7 @@ public class Client {
     private LocalDate dateNaiss;
     private String email;
     private String mdp;
+    private Reservation myReservation;
 
     public Client(String nomClt, String prénomClt, LocalDate dateNaiss, String email, String mdp) {
         this.nomClt = nomClt;
@@ -23,6 +24,15 @@ public class Client {
         this.dateNaiss = dateNaiss;
         this.email = email;
         this.mdp = mdp;
+        myReservation = null;
+    }
+
+    public Reservation getMyReservation() {
+        return myReservation;
+    }
+
+    public void setMyReservation(Reservation myReservation) {
+        this.myReservation = myReservation;
     }
 
     public String getNomClt() {
