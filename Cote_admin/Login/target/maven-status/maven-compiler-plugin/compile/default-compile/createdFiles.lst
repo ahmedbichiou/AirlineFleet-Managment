@@ -1,4 +1,6 @@
 Controllers\Page_affichage_avionController$1$1.class
+OracleSGBD\CRUD.class
+OracleSGBD\OracleDBInitializer.class
 Controllers\Page_afficher_modifier_avionController.class
 Classes\Vol.class
 Controllers\Page_confirmation_inscriController.class
@@ -16,6 +18,7 @@ Classes\Compagnie_aerienne.class
 Classes\Client.class
 Controllers\Page_ajout_avoin_finalController.class
 Controllers\Menu_principal_adminController.class
+OracleSGBD\OracleDBConnection.class
 com\mycompany\login\App.class
 module-info.class
 Controllers\Page_affichage_avionController.class

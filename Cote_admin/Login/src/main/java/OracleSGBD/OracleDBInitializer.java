@@ -9,7 +9,7 @@ package OracleSGBD;
  * @author Spray
  */
 
-/*
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -22,36 +22,56 @@ public class OracleDBInitializer {
 
             // Create Avion table
             statement.execute("CREATE TABLE Avion (" +
-                    "reference VARCHAR2(50) PRIMARY KEY," +
-                    "modele VARCHAR2(50)," +
-                    "compagnieFabricante VARCHAR2(50)," +
-                    "portee NUMBER," +
-                    "capacite NUMBER" +
-                    ")");
+                  "reference VARCHAR2(50) PRIMARY KEY," +
+                  "modele VARCHAR2(50)," +
+                  "compagnieFabricante VARCHAR2(50)," +
+                  "portee NUMBER," +
+                  "capacite NUMBER," +
+                  "siege_1ereclass NUMBER," +
+                  "capacite_cargo_kg NUMBER," +
+                  "owner VARCHAR2(50)" +
+                  ")");
 
-            // Create Vol table
-            statement.execute("CREATE TABLE Vol (" +
-                    "refVol VARCHAR2(50) PRIMARY KEY," +
-                    "paysDepart VARCHAR2(50)," +
-                    "paysDest VARCHAR2(50)," +
-                    "aeroportDep VARCHAR2(50)," +
-                    "aeroportDest VARCHAR2(50)," +
+String createTableQuery = "CREATE TABLE Vol (" +
+                    "refVol VARCHAR2(200) PRIMARY KEY," +
+                    "paysDepart VARCHAR2(200)," +
+                    "paysDest VARCHAR2(200)," +
+                    "aeroportDep VARCHAR2(200)," +
+                    "aeroportDest VARCHAR2(200)," +
                     "dateAller DATE," +
-                    "refAvion VARCHAR2(50) REFERENCES Avion(reference)," +
-                    "prix NUMBER" +
-                    ")");
+                    "refAvion VARCHAR2(200)," +
+                    "prix NUMBER," +
+                    "typeVol VARCHAR2(200)," +
+                    "dateRetour DATE," +
+                    "owner VARCHAR2(200)" +
+                    ")";
 
-            // Create VolSimple table
-            statement.execute("CREATE TABLE VolSimple (" +
-                    "refVol VARCHAR2(50) PRIMARY KEY REFERENCES Vol(refVol)," +
-                    "typeVol VARCHAR2(50)" +
-                    ")");
+            // Execute the query
+            statement.execute(createTableQuery);
+            
+ String createTableQuery2 = "CREATE TABLE Client (" +
+        "nomClt VARCHAR2(50)," +
+        "prénomClt VARCHAR2(50)," +
+        "dateNaiss DATE," +
+        "email VARCHAR2(100) PRIMARY KEY," +
+        "mdp VARCHAR2(50)," +
+        "myReservation VARCHAR2(255)" +  // Adjust the size accordingly
+        ")";
 
-            // Create VolAllerRetour table
-            statement.execute("CREATE TABLE VolAllerRetour (" +
-                    "refVol VARCHAR2(50) PRIMARY KEY REFERENCES Vol(refVol)," +
-                    "dateRetour DATE" +
-                    ")");
+statement.execute(createTableQuery2);
+
+ String createTableQuery3 = "CREATE TABLE Reservation (" +
+                    "Pays_depart VARCHAR2(50)," +
+                    "Pays_destination VARCHAR2(50)," +
+                    "date_aller DATE," +
+                    "refavion VARCHAR2(50)," +
+                    "refvol VARCHAR2(50)," +
+                    "prix NUMBER," +
+                    "type VARCHAR2(50)," +
+                    "date_retour DATE" +
+                    ")";
+
+            statement.execute(createTableQuery3);
 
             // Create Compagnie_aerienne table
             statement.execute("CREATE TABLE Compagnie_aerienne (" +
@@ -73,4 +93,3 @@ public class OracleDBInitializer {
         OracleDBConnection.closeConnection();
     }
 }
-*/

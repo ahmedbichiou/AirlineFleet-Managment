@@ -16,6 +16,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 import Controllers.Page_LoginController;
+import static Controllers.Page_LoginController.compte_ouvert;
+import OracleSGBD.CRUD;
 /**
  * FXML Controller class
  *
@@ -122,6 +124,7 @@ public void showImage(String img) {
           
        try {
     Page_LoginController.getCompte_ouvert().ajouterAvion(avion_selected.getReference(), avion_selected);
+    CRUD.createAvion(avion_selected,compte_ouvert.getNom());
     App.openmenu_principal_admin();
 } catch (Exception e) {
     

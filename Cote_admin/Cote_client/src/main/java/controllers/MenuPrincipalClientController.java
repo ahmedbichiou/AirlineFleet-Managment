@@ -34,7 +34,9 @@ public class MenuPrincipalClientController implements Initializable {
         Client authenticatedClient = ClientManager.getAuthenticatedClient();
         if (authenticatedClient != null) {
             nomClt.setText("Bonjour, " + authenticatedClient.getNomClt()+" !");
+            System.out.println( authenticatedClient.getMyReservation());
         }
+        
     } 
     
     public void openClientReservation() throws Exception {

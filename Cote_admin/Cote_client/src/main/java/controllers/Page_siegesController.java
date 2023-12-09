@@ -4,6 +4,10 @@
  */
 package controllers;
 
+import OracleSGBD.CRUD;
+import classes.Client;
+import classes.ClientManager;
+import classes.Reservation;
 import com.mycompany.cote_client.App;
 import static controllers.Page_choix_PaysController.reservation;
 import java.net.URL;
@@ -23,6 +27,12 @@ public class Page_siegesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         System.out.println(reservation);
+        // added NEW COPY TO NEXT IN GITHUB
+        CRUD.insertReservation(reservation);
+       Client authenticatedClient = ClientManager.getAuthenticatedClient();
+       authenticatedClient.setMyReservation(reservation);
+       CRUD.updateClientReservation(authenticatedClient.getEmail(), reservation.getRefvol());
+        // added NEW COPY TO NEXT IN GITHUB
     }    
      public void etape_1() throws Exception{
     

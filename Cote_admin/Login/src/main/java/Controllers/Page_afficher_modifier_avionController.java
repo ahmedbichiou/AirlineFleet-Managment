@@ -7,6 +7,7 @@ package Controllers;
 import Classes.Avion;
 import static Controllers.Page_LoginController.compte_ouvert;
 import static Controllers.Page_affichage_avionController.extractFromAvionString;
+import OracleSGBD.CRUD;
 import com.mycompany.login.App;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -51,7 +52,9 @@ public class Page_afficher_modifier_avionController implements Initializable {
         }else{
             if(Page_LoginController.getCompte_ouvert().getList_Avions().get(avion_reference.getText())== null)
                     {
+                CRUD.updateReference(avionTo_modify.getReference(),avion_reference.getText().toString());
                 compte_ouvert.getList_Avions().remove(avionTo_modify.getReference()) ;
+                
                 avionTo_modify.setReference(avion_reference.getText().toString());
                 compte_ouvert.ajouterAvion(avionTo_modify.getReference(),avionTo_modify);
                 

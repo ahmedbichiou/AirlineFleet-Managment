@@ -35,8 +35,6 @@ public class ReservationSimple extends Reservation {
                 ", refavion='" + refavion + '\'' +
                 ", refvol='" + refvol + '\'' +
                 ", prix='" + prix +'\'' +
-                ", SiegesH='" + SiegesH +'\'' +
-                ", siegesV='" + siegesV +'\'' +
                 ", type=" + type + '}'+ '\'' +
                 '}';
     }

@@ -39,6 +39,7 @@ import Classes.Vol;
 import Classes.VolAllerRetour;
 import Classes.VolSimple;
 import static Controllers.Page_LoginController.compte_ouvert;
+import OracleSGBD.CRUD;
 import com.mycompany.login.App;
 import java.net.URL;
 import java.time.LocalDate;
@@ -430,6 +431,7 @@ boolean selected_type = false;
                                                dateRetour);   
           if (!compte_ouvert.getList_vols().containsKey(refVol)) {
        compte_ouvert.getList_vols().put(refVol, vol);
+       CRUD.insertVolIntoDatabase(vol,compte_ouvert.getNom());
         System.out.println("Vol ajouté avec succès. ID : " + refVol + ", Vol : " + vol);
          App.openmenu_principal_admin();
     } else {
@@ -460,6 +462,7 @@ boolean selected_type = false;
                                                type_vol);  
                 if (!compte_ouvert.getList_vols().containsKey(refVol)) {
        compte_ouvert.getList_vols().put(refVol, vol);
+       CRUD.insertVolIntoDatabase(vol,compte_ouvert.getNom());
         System.out.println("Vol ajouté avec succès. ID : " + refVol + ", Vol : " + vol);
          App.openmenu_principal_admin();
     } else {

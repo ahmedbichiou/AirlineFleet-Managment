@@ -15,6 +15,9 @@ public class VolSimple extends Vol {
     private String typeVol;
 
     // Constructor
+    
+    
+    
     public VolSimple(String refVol, String paysDepart, String paysDest, String aeroportDep, String aeroportDest,
                      LocalDate dateAller, Avion avion, float prix, String typeVol) {
         super(refVol, paysDepart, paysDest, aeroportDep, aeroportDest, dateAller, avion, prix);

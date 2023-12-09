@@ -7,6 +7,8 @@ import Controllers.Page_afficher_modifier_avionController;
 import Controllers.Page_ajout_avion_formController;
 import Controllers.Page_ajout_avoin_finalController;
 import Controllers.Page_modifier_volController;
+import OracleSGBD.CRUD;
+import static OracleSGBD.OracleDBInitializer.createTables;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -56,7 +58,10 @@ public class App extends Application {
         compagnies.add(Tunisair4);
         
         compagnies.add(yes2);
+        
+        //createTables();
         //end added by ahmed 11/25 3.32
+        CRUD.loadCompagniesFromDatabase(compagnies);
         launch();
     }
     

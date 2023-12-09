@@ -105,11 +105,11 @@ public void afficherVols() {
     // Méthode pour ajouter un avion
     public void ajouterAvion(String reference, Avion avion) {
         list_Avions.put(reference, avion);
-        System.out.println("Avion ajouté avec succès. ID : " + reference + ", Avion : " + avion);
+        //System.out.println("Avion ajouté avec succès. ID : " + reference + ", Avion : " + avion);
     }
     public void ajouterVol(String reference, Vol vol) {
     list_vols.put(reference, vol);
-    System.out.println("Vol ajouté avec succès. ID : " + reference + ", Vol : " + vol);
+    //System.out.println("Vol ajouté avec succès. ID : " + reference + ", Vol : " + vol);
 }
 
     // Méthode pour supprimer un avion
