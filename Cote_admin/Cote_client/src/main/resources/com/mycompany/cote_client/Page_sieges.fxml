@@ -10,73 +10,140 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Page_siegesController">
+<AnchorPane id="AnchorPane" fx:id="backg" prefHeight="700.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Page_siegesController">
     <stylesheets>
         <URL value="@/Styles/page_sieges.css" />
     </stylesheets>
    <children>
-      <Circle fill="#1f9bff" layoutX="543.0" layoutY="634.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="#1f9bff" layoutX="425.0" layoutY="635.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
-      <Circle fill="#1f9bff" layoutX="300.0" layoutY="637.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#1f9bff" layoutX="703.0" layoutY="636.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#1f9bff" layoutX="495.0" layoutY="634.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Circle fill="#1f9bff" layoutX="341.0" layoutY="636.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
       <Circle fill="DODGERBLUE" layoutX="51.0" layoutY="636.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
       <Text layoutX="14.0" layoutY="674.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Region départ" textAlignment="CENTER" wrappingWidth="73.99999999999989">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text layoutX="286.0" layoutY="675.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pays">
+      <Text layoutX="328.0" layoutY="680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pays">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Text layoutX="408.0" layoutY="674.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Offres">
+      <Text layoutX="477.0" layoutY="680.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Offres">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Line endX="-22.800018310546875" layoutX="172.0" layoutY="636.0" startX="-94.80001831054688" stroke="#175fe5" strokeWidth="2.0" />
-      <Line endX="-22.800018310546875" layoutX="296.0" layoutY="636.0" startX="-94.80001831054688" stroke="#3565de" strokeWidth="2.0" />
+      <Line endX="-3.0" layoutX="172.0" layoutY="636.0" startX="-102.0" stroke="#175fe5" strokeWidth="2.0" />
+      <Line endX="26.0" layoutX="296.0" layoutY="636.0" startX="-94.80001831054688" stroke="#3565de" strokeWidth="2.0" />
       <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="39.0" layoutY="624.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Images/Icons/tick.png" />
          </image>
       </ImageView>
-      <Circle fill="#1f9bff" layoutX="176.0" layoutY="634.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
-      <Text fill="WHITE" layoutX="536.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
+      <Circle fill="#1f9bff" layoutX="188.0" layoutY="634.0" radius="19.0" stroke="BLACK" strokeType="INSIDE" />
+      <Text fill="WHITE" layoutX="696.0" layoutY="644.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>
       </Text>
-      <Text layoutX="525.0" layoutY="674.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sieges">
+      <Text layoutX="678.0" layoutY="681.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sieges">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="164.0" layoutY="622.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="176.0" layoutY="624.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Images/Icons/tick.png" />
          </image>
       </ImageView>
-      <Button fx:id="etape_1" layoutX="22.0" layoutY="612.0" mnemonicParsing="false" onAction="#etape_1" prefHeight="88.0" prefWidth="57.0" styleClass="transparent-button" text="Button" />
-      <Text layoutX="139.0" layoutY="674.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Region destination" textAlignment="CENTER" wrappingWidth="73.99999999999989">
+      <Button fx:id="etape_1" layoutX="22.0" layoutY="604.0" mnemonicParsing="false" onAction="#etape_1" prefHeight="88.0" prefWidth="57.0" styleClass="transparent-button" text="Button" />
+      <Text layoutX="151.0" layoutY="674.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Region destination" textAlignment="CENTER" wrappingWidth="73.99999999999989">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Text>
-      <Button fx:id="etape_2" layoutX="147.0" layoutY="611.0" mnemonicParsing="false" onAction="#etape_2" prefHeight="88.0" prefWidth="57.0" styleClass="transparent-button" text="Button" />
-      <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="288.0" layoutY="624.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="etape_2" layoutX="159.0" layoutY="611.0" mnemonicParsing="false" onAction="#etape_2" prefHeight="88.0" prefWidth="57.0" styleClass="transparent-button" text="Button" />
+      <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="329.0" layoutY="625.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Images/Icons/tick.png" />
          </image>
       </ImageView>
-      <Button fx:id="etape_3" layoutX="270.0" layoutY="604.0" mnemonicParsing="false" onAction="#etape_3" prefHeight="88.0" prefWidth="57.0" styleClass="transparent-button" text="Button" />
-      <Line endX="-17.20001220703125" layoutX="415.0" layoutY="636.0" startX="-86.79998779296875" stroke="#3565de" strokeWidth="2.0" />
-      <Line endX="-23.5999755859375" layoutX="541.0" layoutY="634.0" startX="-86.79998779296875" stroke="#3565de" strokeWidth="2.0" />
-      <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="413.0" layoutY="624.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="etape_3" layoutX="312.0" layoutY="604.0" mnemonicParsing="false" onAction="#etape_3" prefHeight="88.0" prefWidth="57.0" styleClass="transparent-button" text="Button" />
+      <Line endX="33.0" layoutX="443.0" layoutY="637.0" startX="-83.0" stroke="#3565de" strokeWidth="2.0" />
+      <Line endX="79.0" layoutX="604.0" layoutY="636.0" startX="-90.0" stroke="#3565de" strokeWidth="2.0" />
+      <ImageView fitHeight="24.0" fitWidth="26.0" layoutX="483.0" layoutY="622.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Images/Icons/tick.png" />
          </image>
       </ImageView>
-      <Button fx:id="etape_4" layoutX="396.0" layoutY="602.0" mnemonicParsing="false" onAction="#etape_4" prefHeight="88.0" prefWidth="57.0" styleClass="transparent-button" text="Button" />
+      <Button fx:id="etape_4" layoutX="466.0" layoutY="604.0" mnemonicParsing="false" onAction="#etape_4" prefHeight="88.0" prefWidth="57.0" styleClass="transparent-button" text="Button" />
+      <ImageView fitHeight="273.0" fitWidth="790.0" layoutX="5.0" layoutY="183.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../Images/faceTicket.png" />
+         </image>
+      </ImageView>
+      <Text fill="#ebb305" layoutX="109.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Voulez vous confirmer votre réservation?" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+      <Button layoutX="466.0" layoutY="515.0" mnemonicParsing="false" onAction="#confirmerReservation" styleClass="btn_login" text="Confirmer réservation" />
+      <Text fx:id="Passager1" fill="#3e6b90" layoutX="146.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="163.84375">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="Vol1" fill="#3e6b90" layoutX="270.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="57.60000000000002">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="Datevol" fill="#3e6b90" layoutX="145.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="81.33673095703125">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="Depart1" fill="#3e6b90" layoutX="232.0" layoutY="321.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="81.33673095703125">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="Destination1" fill="#3e6b90" layoutX="145.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="81.33673095703125">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="Prix" fill="#3e6b90" layoutX="259.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="57.60000000000002">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="Type" fill="#3e6b90" layoutX="359.0" layoutY="249.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="101.0">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Text>
+      <Text fx:id="Passager2" fill="WHITE" layoutX="550.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="163.84375">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="Vol2" fill="WHITE" layoutX="676.0" layoutY="351.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="57.60000000000002">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="Destination2" fill="WHITE" layoutX="632.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="81.33673095703125">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="Depart2" fill="WHITE" layoutX="550.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="81.33673095703125">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Button layoutX="217.0" layoutY="515.0" mnemonicParsing="false" onAction="#annulerReservation" styleClass="btn_login" text="Annuler" />
    </children>
 </AnchorPane>
