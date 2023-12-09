@@ -84,17 +84,19 @@ public class Page_siegesController implements Initializable {
         Destination2.setText(reservation.getPays_destination());
     }    
      public void etape_1() throws Exception{
-    
+     myStage.close();
     App.openEtape1();
     }
      public void etape_2() throws Exception{
-    
+     myStage.close();
     App.openEtape2();
     }
      public void etape_3() throws Exception{
+          myStage.close();
          App.openEtape3();
      }
      public void etape_4() throws Exception{
+          myStage.close();
          App.openEtape4();
      }
      
