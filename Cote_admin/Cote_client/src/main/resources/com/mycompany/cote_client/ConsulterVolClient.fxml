@@ -1,80 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="backg" prefHeight="550.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ConsulterVolClientController">
+<AnchorPane id="AnchorPane" fx:id="backg" prefHeight="293.0" prefWidth="800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ConsulterVolClientController">
     <stylesheets>
         <URL value="@/Styles/ConsulterVolClient.css" />
     </stylesheets>
    <children>
-      <Button layoutY="71.0" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="80.0" styleClass="image-button" stylesheets="@../../../Styles/ConsulterVolClient.css" />
-      <ImageView fx:id="imageTicket" fitHeight="256.0" fitWidth="785.0" layoutX="9.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageTicket" fitHeight="256.0" fitWidth="785.0" layoutX="8.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../Images/faceTicket.png" />
          </image>
       </ImageView>
-      <Text fx:id="Passager1" fill="#3e6b90" layoutX="150.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.73675537109375">
+      <Text fx:id="Passager1" fill="#3e6b90" layoutX="149.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.73675537109375">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="Vol1" fill="#3e6b90" layoutX="276.0" layoutY="223.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="55.73675537109375">
+      <Text fx:id="Vol1" fill="#3e6b90" layoutX="275.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="55.73675537109375">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="Datevol" fill="#3e6b90" layoutX="150.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.79998779296875">
+      <Text fx:id="Datevol" fill="#3e6b90" layoutX="149.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.79998779296875">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="Depart1" fill="#3e6b90" layoutX="235.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.79998779296875">
+      <Text fx:id="Depart1" fill="#3e6b90" layoutX="234.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.79998779296875">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="Destination1" fill="#3e6b90" layoutX="150.0" layoutY="323.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="103.20001220703125">
+      <Text fx:id="Destination1" fill="#3e6b90" layoutX="149.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="103.20001220703125">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="Prix" fill="#3e6b90" layoutX="263.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="66.13671875">
+      <Text fx:id="Prix" fill="#3e6b90" layoutX="262.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="66.13671875">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="Type" fill="#3e6b90" layoutX="362.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="110.93670654296875">
+      <Text fx:id="Type" fill="#3e6b90" layoutX="341.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="175.93670654296875">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Text>
-      <Text fx:id="Passager2" fill="WHITE" layoutX="551.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.73675537109375">
+      <Text fx:id="Passager2" fill="WHITE" layoutX="550.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="119.73675537109375">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="Vol2" fill="WHITE" layoutX="675.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="55.73675537109375">
+      <Text fx:id="Vol2" fill="WHITE" layoutX="674.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="55.73675537109375">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="Depart2" fill="WHITE" layoutX="550.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.79998779296875">
+      <Text fx:id="Depart2" fill="WHITE" layoutX="549.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="72.79998779296875">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="Destination2" fill="WHITE" layoutX="633.0" layoutY="369.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="103.20001220703125">
+      <Text fx:id="Destination2" fill="WHITE" layoutX="632.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="103.20001220703125">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="msg" fill="ORANGE" layoutX="304.0" layoutY="267.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="228.79998779296875">
+      <Text fx:id="msg" fill="ORANGE" layoutX="303.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="228.79998779296875">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
