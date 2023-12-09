@@ -35,8 +35,6 @@ public class ReservationVolAllerRetour extends Reservation {
                 ", refavion='" + refavion + '\'' +
                 ", refvol='" + refvol + '\'' +
                 ", prix='" + prix +'\'' +
-                ", SiegesH='" + SiegesH +'\'' +
-                ", siegesV='" + siegesV +'\'' +
                 ", date_retour=" + date_retour + '\'' +
                 '}';
     }

@@ -17,8 +17,7 @@ public abstract class Reservation {
    protected String refavion;
    protected String refvol;
       protected float prix;
-     protected int SiegesH;
-     protected int siegesV;
+
 
     public String getRefavion() {
         return refavion;
@@ -35,7 +34,7 @@ public abstract class Reservation {
     public void setRefvol(String refvol) {
         this.refvol = refvol;
     }
- 
+  
       public Reservation(String pays_depart, String pays_destination, LocalDate date_aller) {
         this.Pays_depart = pays_depart;
         this.Pays_destination = pays_destination;
@@ -82,21 +81,7 @@ public abstract class Reservation {
         this.prix = prix;
     }
 
-    public int getSiegesH() {
-        return SiegesH;
-    }
-
-    public void setSiegesH(int SiegesH) {
-        this.SiegesH = SiegesH;
-    }
-
-    public int getSiegesV() {
-        return siegesV;
-    }
-
-    public void setSiegesV(int siegesV) {
-        this.siegesV = siegesV;
-    }
+  
 
     @Override
     public String toString() {
@@ -107,7 +92,5 @@ public abstract class Reservation {
                 ", refavion='" + refavion + '\'' +
                 ", refvol='" + refvol + '\'' +
                 ", prix='" + prix +'\'' +
-                ", SiegesH='" + SiegesH +'\'' +
-                ", siegesV='" + siegesV +'\'' +
                 '}';}
 }

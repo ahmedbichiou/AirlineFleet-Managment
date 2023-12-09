@@ -4,10 +4,12 @@
  */
 package controllers;
 
+import OracleSGBD.CRUD;
 import classes.Client;
 import classes.ClientManager;
 import com.mycompany.cote_client.App;
 import java.net.URL;
+import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -52,6 +54,8 @@ public class PageLoginClientController implements Initializable {
     public boolean verifClient() throws Exception {
          String userEmail = email.getText();
         String userPassword = password_login.getText();
+        CRUD.retrieveClientsFromDB(ClientManager.getClientsByEmail());
+       
         Client client = ClientManager.getClientByEmail(userEmail);
 
         if (client != null && client.getMdp().equals(userPassword)) {

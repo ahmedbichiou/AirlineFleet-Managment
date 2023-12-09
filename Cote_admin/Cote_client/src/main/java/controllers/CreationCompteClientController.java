@@ -4,6 +4,7 @@
  */
 package controllers;
 
+import OracleSGBD.CRUD;
 import classes.Client;
 import classes.ClientManager;
 import com.mycompany.cote_client.App;
@@ -61,8 +62,10 @@ public class CreationCompteClientController implements Initializable {
 
     Client newClient = new Client(nom, prenom, dateNaiss, email, password);
      String resultMessage = ClientManager.addClient(newClient);
+     
     if (resultMessage.equals("")) {
         App.openConfirmationInscritClient();
+        CRUD.insertClient(newClient);
     } else {
         error.setText(resultMessage);
     }

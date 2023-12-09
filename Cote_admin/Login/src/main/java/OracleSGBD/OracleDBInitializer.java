@@ -48,7 +48,30 @@ String createTableQuery = "CREATE TABLE Vol (" +
 
             // Execute the query
             statement.execute(createTableQuery);
-           
+            
+ String createTableQuery2 = "CREATE TABLE Client (" +
+        "nomClt VARCHAR2(50)," +
+        "prénomClt VARCHAR2(50)," +
+        "dateNaiss DATE," +
+        "email VARCHAR2(100) PRIMARY KEY," +
+        "mdp VARCHAR2(50)," +
+        "myReservation VARCHAR2(255)" +  // Adjust the size accordingly
+        ")";
+
+statement.execute(createTableQuery2);
+
+ String createTableQuery3 = "CREATE TABLE Reservation (" +
+                    "Pays_depart VARCHAR2(50)," +
+                    "Pays_destination VARCHAR2(50)," +
+                    "date_aller DATE," +
+                    "refavion VARCHAR2(50)," +
+                    "refvol VARCHAR2(50)," +
+                    "prix NUMBER," +
+                    "type VARCHAR2(50)," +
+                    "date_retour DATE" +
+                    ")";
+
+            statement.execute(createTableQuery3);
 
             // Create Compagnie_aerienne table
             statement.execute("CREATE TABLE Compagnie_aerienne (" +
