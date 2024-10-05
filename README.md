@@ -28,7 +28,7 @@ Les utilisateurs ont la possibilité de créer un compte pour gérer leurs rése
 #### b. Gestion des avions
 - Création, modification et suppression d'avions.
 - Visualisation de la liste des avions existants.
-- 
+  
 ![Screenshot 2024-10-05 195744](https://github.com/user-attachments/assets/fba5d431-7561-4fa3-9145-52508f6cf688)
 
 
@@ -36,7 +36,7 @@ Les utilisateurs ont la possibilité de créer un compte pour gérer leurs rése
 - Création, modification et suppression de vols.
 - Visualisation de la liste des vols existants.
 
-- 
+  
 ![Screenshot 2024-10-05 195842](https://github.com/user-attachments/assets/8ae792b1-7bf2-4a4b-b512-cbb92b187466)
 
 
@@ -44,7 +44,7 @@ Les utilisateurs ont la possibilité de créer un compte pour gérer leurs rése
 - Visualisation des réservations effectuées par les clients.
 - Possibilité de modifier ou d'annuler des réservations.
 
-- 
+  
 ![Screenshot 2024-10-05 195914](https://github.com/user-attachments/assets/f9d7fda1-1ee9-4dcb-b29d-6e1264ec2a71)
 
 
